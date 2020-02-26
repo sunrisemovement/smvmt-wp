@@ -22,3 +22,7 @@ This monorepo project effectively houses two different codebases. The `smvmt-plu
 Once you have run `lando start` a new `wp` directory is built out, where the WordPress core files live. This directory is included in the gitignore, and shouldn't be changed.
 
 The `smvmt_db.sql` file represents a default sql database, which is imported on first install of the site. This is useful in making sure that all developers start from the same place in terms of default content.
+
+### WP Credentials
+
+The sql file that comes with the repo sets up one admin account out of the box. You can login at `smvmt.lndo.site/wp-admin`. Username: `admin`, password: `admin`. This is for development purposes ONLY, and a produciton site will employ more rigorous security standards.
