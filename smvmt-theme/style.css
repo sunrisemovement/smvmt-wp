@@ -1,0 +1,96 @@
+/*
+Theme Name: smvmt-theme
+Text Domain: smvmt-theme
+Version: 1.0
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Description: Custom WordPress theme Sunrise Movement
+Tags: activism, sunrise
+Author: Sunrise Movement
+Author URI: https://sunrisemovement.org
+Theme URI: https://sunrisemovemnt.org/theme
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.smvmt-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.smvmt-container--nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+.smvmt-header {
+    width: 100%;
+    background: rgb(56, 56, 56);
+}
+
+.smvmt-branding {
+    font-size: 1.6em;
+    color: #fff;
+}
+
+.smvmt-nav {
+    display: flex;
+    align-items: center;
+}
+
+.smvmt-nav li {
+    display: block;
+}
+
+.smvmt-nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.smvmt-nav > ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.smvmt-main {
+    flex: 1;
+}
+
+.smvmt-main > * {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.smvmt-main > .alignfull {
+    max-width: 100%;
+}
+
+.smvmt-footer {
+    width: 100%;
+    height: 220px;
+    background: rgb(150, 64, 64);
+}

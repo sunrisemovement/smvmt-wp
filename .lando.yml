@@ -1,0 +1,13 @@
+name: smvmt
+recipe: wordpress
+env_file:
+  - .env
+config:
+  webroot: wp
+  php: '7.2'
+  via: apache:2.4
+  database: mysql:5.7
+services:
+  appserver:
+    run:
+      - bash /app/bin/setup.sh
