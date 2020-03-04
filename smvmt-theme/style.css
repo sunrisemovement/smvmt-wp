@@ -80,9 +80,15 @@ body {
 }
 
 .smvmt-main > * {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    max-width: 900px;
+    max-width: 660px;
     margin: 0 auto;
+}
+
+.smvmt-main > .alignwide {
+    max-width: 900px;
 }
 
 .smvmt-main > .alignfull {
