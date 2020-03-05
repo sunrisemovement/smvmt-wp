@@ -11,11 +11,16 @@
  * @since 1.0.0
  */
 
+// Get ACF fields
+$footer = get_field('footer_type');
+
 ?>
 
-        <footer class="smvmt-footer">
+        <?php if ($footer !== 'none') { ?>
+            <footer class="smvmt-footer <?php echo 'smvmt-footer--' . $footer; ?>">
             
-        </footer>
+            </footer>
+        <?php } ?>
 
 		<?php wp_footer(); ?>
 

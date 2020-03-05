@@ -60,3 +60,23 @@ function smvmt_theme_register_scripts() {
 add_action( 'wp_enqueue_scripts', 'smvmt_theme_register_scripts' );
 
 add_filter('show_admin_bar', '__return_false');
+
+/**
+ * Register ACF Fields
+ */
+
+function smvmt_theme_register_field_groups() {
+	if ( function_exists('acf_add_local_field_group') ) {
+		include_once get_template_directory() . '/includes/acf/field-groups.php';
+	}
+}
+
+add_action('acf/init', 'smvmt_theme_register_field_groups');
+
+/*------------------------------------*\
+	Includes
+\*------------------------------------*/
+
+// customizer settings
+require_once get_stylesheet_directory() . '/includes/customizer/customizer.php';
+

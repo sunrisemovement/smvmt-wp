@@ -20,9 +20,34 @@ get_header(); ?>
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <div class="smvmt-container">
-        <h2><?php the_title(); ?>
-    </div>
+    <?php
+        $title = get_field('title_type');
+
+        switch ($title) {
+            case 'simple':
+                ?>
+                <div class="smvmt-container">
+                    <h2><?php the_title(); ?>
+                </div>
+                <?php
+                break;
+            case 'expanded':
+                ?>
+                <div class="smvmt-container">
+                    <h2><?php the_title(); ?>
+                </div>
+                <?php
+                break;
+            case 'none':
+                break;
+            default: 
+                ?>
+                <div class="smvmt-container">
+                    <h2><?php the_title(); ?>
+                </div>
+                <?php
+        }
+    ?>
 
     <?php the_content(); ?>
 

@@ -11,3 +11,14 @@ services:
   appserver:
     run:
       - bash /app/bin/setup.sh
+tooling: 
+  export-db:
+    service: appserver
+    description: Exports WP database to smvmt_db.sql
+    cmd:
+      - bash /app/bin/export_db.sh
+  import-db:
+    service: appserver
+    description: Imports WP database from smvmt_db.sql
+    cmd:
+      - bash /app/bin/import_db.sh

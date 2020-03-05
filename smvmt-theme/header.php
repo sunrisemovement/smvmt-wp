@@ -9,6 +9,9 @@
  * @since 1.0.0
  */
 
+// Get ACF Settings for page
+$header = get_field('header_type');
+
 ?><!DOCTYPE html>
 
 <html <?php language_attributes(); ?>>
@@ -30,9 +33,10 @@
 
 		<?php
 		wp_body_open();
-		?>
+		
+		if ($header !== 'none') { ?>
 
-        <header class="smvmt-header">
+        <header class="smvmt-header <?php echo 'smvmt-header--' . $header; ?>">
 
 			<div class="smvmt-container smvmt-container--nav">
 
@@ -48,4 +52,6 @@
 
 			</div>
 
-        </header>
+		</header>
+		
+		<?php } ?>

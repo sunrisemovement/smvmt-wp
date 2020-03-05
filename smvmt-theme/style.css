@@ -23,12 +23,51 @@ with others.
 html, body {
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: rgb(233, 233, 233);
+    color: #191e23;
+}
+
+/* Typogrpahy */
+
+h1 {
+    font-size: 3.24em;
+}
+
+h2 {
+    font-size: 2.44em;
+}
+
+h3 {
+    font-size: 1.56em;
+}
+
+h1 {
+    margin: .67em 0;
+}
+
+h2, h3 {
+    margin: 1em 0;
+}
+
+h1, h2, h3, .has-large-font-size {
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+p {
+    margin: 0.8em 0 1.2em 0;
+}
+
+.has-large-font-size {
+    margin: 0.2em 0 0.4em 0;
 }
 
 .smvmt-container {
@@ -47,11 +86,18 @@ body {
 .smvmt-header {
     width: 100%;
     background: rgb(56, 56, 56);
+    z-index: 899;
+}
+
+.smvmt-header--transparent {
+    position: absolute;
+    background: none;
 }
 
 .smvmt-branding {
     font-size: 1.6em;
     color: #fff;
+    text-decoration: none;
 }
 
 .smvmt-nav {
@@ -61,6 +107,15 @@ body {
 
 .smvmt-nav li {
     display: block;
+    padding: 0 16px;
+}
+
+.smvmt-nav li:first-of-type {
+    padding-left: 0;
+}
+
+.smvmt-nav li:last-of-type {
+    padding-right: 0;
 }
 
 .smvmt-nav a {
@@ -85,10 +140,29 @@ body {
     width: 100%;
     max-width: 660px;
     margin: 0 auto;
+    margin-bottom: 32px;
 }
 
 .smvmt-main > .alignwide {
     max-width: 900px;
+}
+
+.wp-block-cover__inner-container,
+.wp-block-group__inner-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.wp-block-group {
+    padding: 22px 0 28px 0;
+}
+
+.wp-block-button {
+    margin-top: 1.4em;
+    margin-bottom: 1.6em;
 }
 
 .smvmt-main > .alignfull {
@@ -98,5 +172,13 @@ body {
 .smvmt-footer {
     width: 100%;
     height: 220px;
-    background: rgb(150, 64, 64);
+    background: rgb(53, 53, 53);
+}
+
+.smvmt-footer--dark {
+    background: rgb(53, 53, 53);
+}
+
+.smvmt-footer--light {
+    background: rgb(221, 221, 221);
 }

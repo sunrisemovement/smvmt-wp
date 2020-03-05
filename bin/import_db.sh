@@ -1,0 +1,1 @@
+wp db import $LANDO_MOUNT/smvmt_db.sql --path=$LANDO_WEBROOT

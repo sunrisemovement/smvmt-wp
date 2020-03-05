@@ -38,7 +38,7 @@ wp plugin activate smvmt-plugin --path=$LANDO_WEBROOT
 ln -sF $LANDO_MOUNT/smvmt-theme $LANDO_WEBROOT/wp-content/themes/smvmt-theme
 wp theme activate smvmt-theme --path=$LANDO_WEBROOT
 
-wp plugin install advanced-custom-fields --activate
-wp plugin install kirki --activate
+wp plugin install advanced-custom-fields --activate --path=$LANDO_WEBROOT
+wp plugin install kirki --activate --path=$LANDO_WEBROOT
 
 wp db import $LANDO_MOUNT/smvmt_db.sql --path=$LANDO_WEBROOT
