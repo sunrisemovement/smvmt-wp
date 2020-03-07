@@ -26,8 +26,10 @@ get_header(); ?>
         switch ($title) {
             case 'simple':
                 ?>
-                <div class="smvmt-container">
-                    <h2><?php the_title(); ?>
+                <div class="smvmt-title smvmt-title--simple">
+                    <div class="smvmt-container">
+                        <h2><?php the_title(); ?>
+                    </div>
                 </div>
                 <?php
                 break;
@@ -42,8 +44,10 @@ get_header(); ?>
                 break;
             default: 
                 ?>
-                <div class="smvmt-container">
-                    <h2><?php the_title(); ?>
+                <div class="smvmt-title smvmt-title--simple">
+                    <div class="smvmt-container">
+                        <h2><?php the_title(); ?>
+                    </div>
                 </div>
                 <?php
         }

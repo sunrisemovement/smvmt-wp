@@ -41,7 +41,7 @@ $header = get_field('header_type');
 			<div class="smvmt-container smvmt-container--nav">
 
 				<a class="smvmt-branding" href="<?php echo site_url(); ?>">
-					Sunrise Movement
+					<span class="smvmt-branding__site-name">Sunrise Movement</span>
 				</a>
 
 				<?php wp_nav_menu([

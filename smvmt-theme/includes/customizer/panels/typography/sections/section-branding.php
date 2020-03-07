@@ -14,14 +14,13 @@ Kirki::add_field( 'smvmt_theme', [
 	'section'     => 'typography_branding',
 	'default'     => [
 		'font-family'    => 'Roboto',
-        'color'          => '#333333',
-        'font-size'      => '26px',
+		'text-transform' => 'uppercase',
 	],
 	'priority'    => 10,
 	'transport'   => 'auto',
 	'output'      => [
 		[
-			'element' => ['.branding h2'],
+			'element' => ['.smvmt-branding__site-name'],
 		],
 	],
 ] );
@@ -33,14 +32,13 @@ Kirki::add_field( 'smvmt_theme', [
 	'section'     => 'typography_branding',
 	'default'     => [
 		'font-family'    => 'Roboto',
-        'color'          => '#333333',
-        'font-size'      => '16px',
+		'text-transform' => 'uppercase',
 	],
 	'priority'    => 10,
 	'transport'   => 'auto',
 	'output'      => [
 		[
-			'element' => ['.branding p'],
+			'element' => ['smvmt-branding__tagline'],
 		],
 	],
 ] );

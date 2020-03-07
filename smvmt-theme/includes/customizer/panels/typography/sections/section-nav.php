@@ -14,53 +14,13 @@ Kirki::add_field( 'smvmt_theme', [
 	'section'     => 'typography_nav',
 	'default'     => [
 		'font-family'    => 'Roboto',
-		'color'          => '#333333',
-		'font-size'		 => '16px',
+		'text-transform' => 'uppercase',
 	],
 	'priority'    => 10,
 	'transport'   => 'auto',
 	'output'      => [
 		[
-			'element' => ['.primary a', '.mobile-toggle'],
-		],
-	],
-] );
-
-Kirki::add_field( 'smvmt_theme', [
-	'type'        => 'typography',
-	'settings'    => 'secondary_nav_typography',
-	'label'       => esc_html__( 'Secondary Nav Typography', 'smvmt-theme' ),
-	'section'     => 'typography_nav',
-	'default'     => [
-		'font-family'    => 'Roboto',
-		'color'          => '#333333',
-		'font-size'		 => '16px',
-	],
-	'priority'    => 10,
-	'transport'   => 'auto',
-	'output'      => [
-		[
-			'element' => ['.secondary a'],
-		],
-	],
-] );
-
-
-Kirki::add_field( 'smvmt_theme', [
-	'type'        => 'typography',
-	'settings'    => 'super_nav_typography',
-	'label'       => esc_html__( 'Super Nav Typography', 'smvmt-theme' ),
-	'section'     => 'typography_nav',
-	'default'     => [
-		'font-family'    => 'Roboto',
-		'color'          => '#aaa',
-		'font-size'		 => '16px',
-	],
-	'priority'    => 10,
-	'transport'   => 'auto',
-	'output'      => [
-		[
-			'element' => ['.super a'],
+			'element' => ['.smvmt-nav a'],
 		],
 	],
 ] );

@@ -14,13 +14,14 @@ Kirki::add_field( 'smvmt_theme', [
 	'section'     => 'typography_headers',
 	'default'     => [
 		'font-family'    => 'Roboto',
+		'text-transform' => 'none',
 		'color'          => '#333333',
 	],
 	'priority'    => 10,
 	'transport'   => 'auto',
 	'output'      => [
 		[
-			'element' => ['h1', 'h2', 'h3', 'h4', 'h5', 'p.has-large-font-size'],
+			'element' => ['h1', 'h2', 'h3', 'h4', 'h5', 'p.has-large-font-size', 'p.has-huge-font-size'],
 		],
 	],
 ] );

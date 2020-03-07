@@ -57,17 +57,28 @@ h2, h3 {
     margin: 1em 0;
 }
 
-h1, h2, h3, .has-large-font-size {
-    line-height: 1.4;
-    font-weight: 600;
+h1, h2, h3, .has-large-font-size, .has-huge-font-size {
+    line-height: 1.1;
 }
 
 p {
     margin: 0.8em 0 1.2em 0;
 }
 
-.has-large-font-size {
+p.has-large-font-size, p.has-huge-font-size {
     margin: 0.2em 0 0.4em 0;
+}
+
+.smvmt-title {
+    width: 100%;
+    max-width: 100%!important;
+    background: rgb(224, 224, 224);
+}
+
+.smvmt-title h2 {
+    text-align: center;
+    font-size: 3.24em;
+    line-height: 1;
 }
 
 .smvmt-container {
@@ -152,8 +163,12 @@ p {
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 900px;
+    max-width: 660px;
     margin: 0 auto;
+}
+
+.wp-block-group__inner-container {
+    max-width: 900px;
 }
 
 .wp-block-group {
