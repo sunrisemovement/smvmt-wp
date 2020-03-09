@@ -30,6 +30,11 @@ wp core install \
 	--admin_email="admin@smvmt.org" \
 	--skip-email
 
+# Link db uploads folder
+ln -sF $LANDO_MOUNT/db/uploads $LANDO_WEBROOT/wp-content/uploads
+rm -rf $LANDO_WEBROOT/wp-content/uploads
+cp -R $LANDO_MOUNT/db/uploads $LANDO_WEBROOT/wp-content
+
 # Link our plugin
 ln -sF $LANDO_MOUNT/smvmt-plugin $LANDO_WEBROOT/wp-content/plugins/smvmt-plugin
 wp plugin activate smvmt-plugin --path=$LANDO_WEBROOT
@@ -41,4 +46,4 @@ wp theme activate smvmt-theme --path=$LANDO_WEBROOT
 wp plugin install advanced-custom-fields --activate --path=$LANDO_WEBROOT
 wp plugin install kirki --activate --path=$LANDO_WEBROOT
 
-wp db import $LANDO_MOUNT/smvmt_db.sql --path=$LANDO_WEBROOT
+wp db import $LANDO_MOUNT/db/smvmt_db.sql --path=$LANDO_WEBROOT
