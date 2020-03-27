@@ -1,0 +1,105 @@
+/**
+ * Slide Up
+ */
+.smvmt-desktop {
+    .smvmt-menu-animation-slide-up {
+        > .menu-item {
+            > .smvmt-full-megamenu-wrapper,
+            > .sub-menu,
+            > .sub-menu .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(0.5em);
+                transition: visibility .2s ease, transform .2s ease;
+            }
+            &.focus > .smvmt-full-megamenu-wrapper,
+            &:hover > .smvmt-full-megamenu-wrapper,
+            &.focus > .sub-menu,
+            &:hover > .sub-menu,
+            .menu-item.focus > .sub-menu,
+            .menu-item:hover > .sub-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
+            }
+        }
+        > .full-width-mega {
+            &.menu-item {
+                &.focus > .smvmt-full-megamenu-wrapper,
+                &:hover > .smvmt-full-megamenu-wrapper {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    /**
+     * Slide Down
+     */
+
+    .smvmt-menu-animation-slide-down {
+        > .menu-item {
+            > .smvmt-full-megamenu-wrapper,
+            > .sub-menu,
+            > .sub-menu .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-0.5em);
+                transition: visibility .2s ease, transform .2s ease;
+            }
+            &.focus > .smvmt-full-megamenu-wrapper,
+            &:hover > .smvmt-full-megamenu-wrapper,
+            &.focus > .sub-menu,
+            &:hover > .sub-menu,
+            .menu-item.focus > .sub-menu,
+            .menu-item:hover > .sub-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                transition: opacity .2s ease, visibility .2s ease, transform .2s ease;
+            }
+        }
+        > .full-width-mega {
+            &.menu-item {
+                &.focus > .smvmt-full-megamenu-wrapper,
+                &:hover > .smvmt-full-megamenu-wrapper {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    /**
+     * Fade
+     */
+    .smvmt-menu-animation-fade {
+        > .menu-item {
+            > .smvmt-full-megamenu-wrapper,
+            > .sub-menu,
+            > .sub-menu .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity ease-in-out .3s;
+            }
+            &.focus > .smvmt-full-megamenu-wrapper,
+            &:hover > .smvmt-full-megamenu-wrapper,
+            &.focus > .sub-menu,
+            &:hover > .sub-menu,
+            .menu-item.focus > .sub-menu,
+            .menu-item:hover > .sub-menu {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity ease-in-out .3s;
+            }
+        }
+        > .full-width-mega {
+            &.menu-item {
+                &.focus > .smvmt-full-megamenu-wrapper,
+                &:hover > .smvmt-full-megamenu-wrapper {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

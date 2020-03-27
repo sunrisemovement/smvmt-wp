@@ -1,0 +1,24 @@
+.smvmt-header-stick-slide-active .smvmt-flyout-menu-enable.smvmt-header-break-point #masthead .main-header-bar-navigation {
+    display: none !important;
+}
+
+.smvmt-header-stick-fade-active .smvmt-flyout-menu-enable.smvmt-header-break-point #masthead .main-header-bar-navigation {
+    display: none !important;
+}
+
+.smvmt-flyout-menu-overlay .smvmt-stick-primary-below-wrapper.smvmt-sticky-active {
+    z-index: 5;
+}
+
+.smvmt-fullscreen-menu-overlay #smvmt-fixed-header {
+	z-index: 9;
+}
+
+/**
+ * Need to override the overflow-y which is given form the javascript
+ * To fix the rendering problem with the flyout menu
+ */
+.smvmt-flyout-menu-enable.smvmt-primary-sticky-enabled .main-header-bar,
+.smvmt-flyout-menu-enable.smvmt-primary-sticky-enabled .smvmt-stick-primary-below-wrapper{
+    overflow-y: unset !important;
+}

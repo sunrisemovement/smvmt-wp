@@ -1,199 +1,39 @@
-/*
-Theme Name: smvmt-theme
-Text Domain: smvmt-theme
-Version: 1.0
-Requires at least: 4.7
-Requires PHP: 5.2.4
-Description: Custom WordPress theme Sunrise Movement
-Tags: activism, sunrise
-Author: Sunrise Movement
-Author URI: https://sunrisemovement.org
-Theme URI: https://sunrisemovemnt.org/theme
+/**
+Theme Name: smvmt
+Theme URI: https://wpsmvmt.com/
+Author: Brainstorm Force
+Author URI: https://wpsmvmt.com/about/
+Description: smvmt is fast, fully customizable & beautiful WordPress theme suitable for blog, personal portfolio, business website and WooCommerce storefront. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, smvmt comes with Schema.org code integrated and is Native AMP ready so search engines will love your site. It offers special features and templates so it works perfectly with all page builders like Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi, etc. Some of the other features: # WooCommerce Ready # Responsive # RTL & Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. smvmt is fast, fully customizable and WooCommerce ready theme that you can use for building any kind of website!
+Version: 2.3.4
 License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: smvmt
+Domain Path: /languages
+Tags: custom-menu, custom-logo, entertainment, one-column, two-columns, left-sidebar, e-commerce, right-sidebar, custom-colors, editor-style, featured-images, full-width-template, microformats, post-formats, rtl-language-support, theme-options, threaded-comments, translation-ready, blog
 
-All files, unless otherwise stated, are released under the GNU General Public
-License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+smvmt WordPress Theme, Copyright 2020 WPsmvmt.
+smvmt is distributed under the terms of the GNU GPL.
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned
-with others.
-*/
+smvmt is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-html, body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1.8;
-}
+Normalizing styles have been helped along thanks to the fine work of.
+Nicolas Gallagher and Jonathan Neal https://necolas.github.com/normalize.css/
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: rgb(233, 233, 233);
-    color: #191e23;
-}
+smvmt icon font is based on IcoMoon-Free vector icon by Keyamoon.
+IcoMoon-Free vector icon distributed under terms of CC BY 4.0 or GPL. (https://creativecommons.org/licenses/by/4.0/ or https://www.gnu.org/licenses/gpl.html)
+Source: https://keyamoon.com/
 
-/* Typogrpahy */
+Flexibility is a JavaScript polyfill for Flexbox By Jonathan Neal, 10up. (https://github.com/jonathantneal/flexibility)
+Licensed under MIT ( https://github.com/jonathantneal/flexibility/blob/master/LICENSE.md )
 
-h1 {
-    font-size: 3.24em;
-}
+Screenshot image is a collage of actual sites created using the smvmt WordPress Theme.
+Images that appear in the collage are licensed under CC0.
 
-h2 {
-    font-size: 2.44em;
-}
+smvmt default breadcrumb is based on Breadcrumb Trail by Justin Tadlock. (https://github.com/justintadlock/breadcrumb-trail)
+Breadcrumb Trail is distributed under the terms of the GNU GPL v2 or later.
 
-h3 {
-    font-size: 1.56em;
-}
+https://undraw.co/illustrations
+https://fontawesome.com/icons
 
-h1 {
-    margin: .67em 0;
-}
-
-h2, h3 {
-    margin: 1em 0;
-}
-
-h1, h2, h3, .has-large-font-size, .has-huge-font-size {
-    line-height: 1.1;
-}
-
-p {
-    margin: 0.8em 0 1.2em 0;
-}
-
-p.has-large-font-size, p.has-huge-font-size {
-    margin: 0.2em 0 0.4em 0;
-}
-
-.smvmt-title {
-    width: 100%;
-    max-width: 100%!important;
-    background: rgb(224, 224, 224);
-}
-
-.smvmt-title h2 {
-    text-align: center;
-    font-size: 3.24em;
-    line-height: 1;
-}
-
-.smvmt-container {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.smvmt-container--nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-}
-
-.smvmt-header {
-    width: 100%;
-    background: rgb(56, 56, 56);
-    z-index: 899;
-}
-
-.smvmt-header--transparent {
-    position: absolute;
-    background: none;
-}
-
-.smvmt-branding {
-    font-size: 1.6em;
-    color: #fff;
-    text-decoration: none;
-}
-
-.smvmt-nav {
-    display: flex;
-    align-items: center;
-}
-
-.smvmt-nav li {
-    display: block;
-    padding: 0 16px;
-}
-
-.smvmt-nav li:first-of-type {
-    padding-left: 0;
-}
-
-.smvmt-nav li:last-of-type {
-    padding-right: 0;
-}
-
-.smvmt-nav a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.smvmt-nav > ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-}
-
-.smvmt-main {
-    flex: 1;
-}
-
-.smvmt-main > * {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 660px;
-    margin: 0 auto;
-    margin-bottom: 32px;
-}
-
-.smvmt-main > .alignwide {
-    max-width: 900px;
-}
-
-.wp-block-cover__inner-container,
-.wp-block-group__inner-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 660px;
-    margin: 0 auto;
-}
-
-.wp-block-group__inner-container {
-    max-width: 900px;
-}
-
-.wp-block-group {
-    padding: 22px 0 28px 0;
-}
-
-.wp-block-button {
-    margin-top: 1.4em;
-    margin-bottom: 1.6em;
-}
-
-.smvmt-main > .alignfull {
-    max-width: 100%;
-}
-
-.smvmt-footer {
-    width: 100%;
-    height: 220px;
-    background: rgb(53, 53, 53);
-}
-
-.smvmt-footer--dark {
-    background: rgb(53, 53, 53);
-}
-
-.smvmt-footer--light {
-    background: rgb(221, 221, 221);
-}
+/* Note: The CSS files are loaded from assets/css/ folder. */

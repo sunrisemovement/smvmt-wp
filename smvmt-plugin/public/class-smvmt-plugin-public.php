@@ -3,7 +3,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       smvmt.org/plugin
+ * @link       smvmt.org
  * @since      1.0.0
  *
  * @package    Smvmt_Plugin
@@ -18,7 +18,7 @@
  *
  * @package    Smvmt_Plugin
  * @subpackage Smvmt_Plugin/public
- * @author     smvmt <plugin@smvmt.org>
+ * @author     smvmt <info@smvmt.org>
  */
 class Smvmt_Plugin_Public {
 

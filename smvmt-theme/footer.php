@@ -1,28 +1,39 @@
 <?php
 /**
- * The template for displaying the footer
+ * The template for displaying the footer.
  *
- * Contains the closing tags
+ * Contains the closing of the #content div and all content after.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package smvmt
- * @subpackage smvmt theme
  * @since 1.0.0
  */
 
-// Get ACF fields
-$footer = get_field('footer_type');
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 ?>
+			<?php SMVMT_content_bottom(); ?>
 
-        <?php if ($footer !== 'none') { ?>
-            <footer class="smvmt-footer <?php echo 'smvmt-footer--' . $footer; ?>">
-            
-            </footer>
-        <?php } ?>
+			</div> <!-- smvmt-container -->
 
-		<?php wp_footer(); ?>
+		</div><!-- #content -->
+
+		<?php SMVMT_content_after(); ?>
+
+		<?php SMVMT_footer_before(); ?>
+
+		<?php SMVMT_footer(); ?>
+
+		<?php SMVMT_footer_after(); ?>
+
+	</div><!-- #page -->
+
+	<?php SMVMT_body_bottom(); ?>
+
+	<?php wp_footer(); ?>
 
 	</body>
 </html>

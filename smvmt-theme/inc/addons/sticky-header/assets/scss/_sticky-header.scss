@@ -1,0 +1,185 @@
+/**
+ * 	Sticky Header Layouts
+ */
+.smvmt-sticky-active {
+	position: fixed !important;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	width: 100%; /** Internet browser does move the sticky header to the left side due to `margin: 0 auto;`. To fix this we have set the 100% width. */
+}
+
+.smvmt-nav-up {
+    transform: translateY(-100%);
+}
+
+.site-header .sticky-custom-logo {
+    display: none;
+}
+
+.smvmt-primary-sticky-header-active li.smvmt-masthead-custom-menu-items a,
+.smvmt-primary-sticky-header-active li.smvmt-masthead-custom-menu-items a:hover,
+.smvmt-primary-sticky-header-active li.smvmt-masthead-custom-menu-items a:focus {
+    background: transparent;
+}
+
+.smvmt-offcanvas-active .smvmt-above-header,
+.smvmt-fullscreen-active .smvmt-above-header {
+	z-index: 4;
+}
+
+.smvmt-offcanvas-active .smvmt-above-header.smvmt-sticky-active,
+.smvmt-fullscreen-active .smvmt-above-header.smvmt-sticky-active {
+	z-index: 0;
+}
+
+#smvmt-fixed-header {
+	position : fixed;
+	visibility : hidden;
+	top : 0;
+	left: 0;
+	width: 100%;
+
+	.main-header-bar {
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	}
+}
+
+#smvmt-fixed-header.smvmt-header-slide {
+	transform: translateY(-100%);
+	transition: transform 0.3s linear, top 0.3s linear, visibility 0.3s linear;
+}
+
+#smvmt-fixed-header.smvmt-header-fade {
+	opacity: 0;
+	transition: opacity 0.3s linear;
+}
+.main-header-bar{
+	&.smvmt-sticky-active {
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	}
+}
+
+.smvmt-sticky-custom-logo .smvmt-header-sticked {
+	.custom-logo-link,
+	.custom-mobile-logo-link{
+	    display: none;
+	}
+
+	.sticky-custom-logo {
+	    display: inline-block;
+	}
+
+	.site-title,
+	.site-description {
+		display: none;
+	}
+}
+
+.smvmt-sticky-custom-logo.smvmt-primary-sticky-header-active {
+	&.smvmt-header-break-point.smvmt-replace-site-logo-transparent.smvmt-theme-transparent-header {
+		.transparent-custom-logo {
+			display:none;
+		}
+	}
+}
+
+.smvmt-header-stick-slide-active,
+.smvmt-header-stick-fade-active,
+.smvmt-header-stick-scroll-active {
+	.smvmt-sticky-custom-logo.smvmt-primary-sticky-header-active {
+		&.smvmt-header-break-point.smvmt-replace-site-logo-transparent.smvmt-theme-transparent-header {
+			.transparent-custom-logo {
+				display:inline-block;
+			}
+		}
+	}
+}
+
+.smvmt-sticky-main-shrink {
+	.smvmt-sticky-shrunk.main-header-bar,
+	.smvmt-sticky-shrunk .main-header-bar {
+		line-height : 55px;
+
+		.smvmt-site-identity {
+			padding-top : 0.5em;
+			padding-bottom : 0.5em;
+		}
+	}
+
+	.smvmt-sticky-shrunk #site-navigation {
+		line-height : 3;
+	}
+
+	.smvmt-sticky-shrunk .site-logo-img img {
+		max-height: 55px !important;
+		width: auto;
+	}
+
+	/* Mobile Header */
+	&.smvmt-header-break-point .smvmt-sticky-shrunk {
+
+		.main-header-bar,
+		&.main-header-bar {
+			padding-bottom: 0;
+		}
+		.smvmt-mobile-menu-buttons {
+			line-height : 0;
+		    padding-bottom: 0.5em;
+		}
+
+		.site-branding {
+		    padding-bottom: 0.5em;
+		}
+
+	}
+}
+
+.smvmt-header-break-point .smvmt-sticky-active .sticky-custom-logo img {
+  display: block;
+}
+
+// Sticky Header Logo with Mobile Header Logo
+.smvmt-header-break-point {
+
+	.smvmt-has-mobile-header-logo {
+		.smvmt-header-sticked {
+			.sticky-custom-logo{
+				img {
+					display: block;
+				}
+			}
+			.smvmt-mobile-header-logo{
+				display: none;
+			}
+    	}
+    }
+
+	.smvmt-header-sticked {
+		.sticky-custom-logo{
+			img {
+				display: block;
+			}
+		}
+	}
+
+    &.smvmt-inherit-site-logo-sticky {
+    	.smvmt-has-mobile-header-logo {
+	    	.smvmt-header-sticked {
+			    .custom-logo-link img {
+			    	display: none;
+			    }
+
+			    .custom-mobile-logo-link img {
+			    	display: inline-block;
+			    }
+			}
+    	}
+	}
+}
+
+.above-header-toggle-on {
+	.main-header-bar {
+		z-index: 1;
+	}
+}

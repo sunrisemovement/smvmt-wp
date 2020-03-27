@@ -1,0 +1,11 @@
+.elementor-page {
+
+	// Box Layout and padded layout style
+
+    &.smvmt-box-layout,
+    &.smvmt-padded-layout {
+        #page {
+            overflow: hidden;
+        }
+    }
+}

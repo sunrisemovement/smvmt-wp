@@ -3,7 +3,7 @@
 /**
  * Fired during plugin activation
  *
- * @link       smvmt.org/plugin
+ * @link       smvmt.org
  * @since      1.0.0
  *
  * @package    Smvmt_Plugin
@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    Smvmt_Plugin
  * @subpackage Smvmt_Plugin/includes
- * @author     smvmt <plugin@smvmt.org>
+ * @author     smvmt <info@smvmt.org>
  */
 class Smvmt_Plugin_Activator {
 

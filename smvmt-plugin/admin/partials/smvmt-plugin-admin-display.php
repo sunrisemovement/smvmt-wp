@@ -5,7 +5,7 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       smvmt.org/plugin
+ * @link       smvmt.org
  * @since      1.0.0
  *
  * @package    Smvmt_Plugin

@@ -1,0 +1,69 @@
+/**
+ * smvmt Theme compatibility with Visual Composer
+ */
+
+.js_active {
+
+ 	.vc_row {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+ 	.smvmt-plain-container {
+
+		// Removed article margin
+		&.smvmt-single-post {
+			.hentry,
+			#primary {
+				margin: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+			.entry-header {
+				margin-top: 4em;
+
+				&.smvmt-header-without-markup {
+					margin-top: 0;
+					margin-bottom: 0;
+				}
+
+				&.smvmt-no-title.smvmt-no-meta {
+					margin-bottom: 0;
+				}
+
+				@media (max-width: $mx-col-md) {
+					margin-top: 1.5em;
+				}
+			}
+
+			@media (max-width: $mx-col-md) {
+				#secondary {
+					margin-top: 1.5em;
+				}
+			}
+		}
+
+	}
+
+	.smvmt-plain-container,
+ 	.smvmt-page-builder-template {
+		&.smvmt-left-sidebar,
+		&.smvmt-right-sidebar {
+			.vc_row[data-vc-full-width] {
+				max-width: 100%;
+				left: 0 !important;
+			}
+		}
+	}
+
+	.smvmt-left-sidebar,
+	.smvmt-right-sidebar {
+		.vc_row[data-vc-full-width] {
+			max-width: 100%;
+			left: 0 !important;
+			padding-right: 0 !important;
+			padding-left: 0 !important;
+ 		}
+ 	}
+}

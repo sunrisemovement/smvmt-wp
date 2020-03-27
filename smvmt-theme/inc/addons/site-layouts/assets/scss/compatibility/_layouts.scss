@@ -1,0 +1,18 @@
+.smvmt-separate-container {
+    &.smvmt-box-layout {
+        #content .smvmt-container {
+            padding-left: 0;
+            padding-right: 0;
+
+            @media (max-width: $mx-col-md) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            @media (max-width: $mx-col-sm) {
+                padding-left: 0.54em;
+                padding-right: 0.54em;
+            }
+        }
+    }
+}

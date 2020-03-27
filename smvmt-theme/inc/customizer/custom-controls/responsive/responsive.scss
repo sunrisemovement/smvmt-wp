@@ -1,0 +1,87 @@
+.smvmt-responsive-btns {
+  display: inline-block;
+  float: right;
+  line-height: 1;
+  margin-top: 6px;
+  > li {
+    margin-bottom: 0;
+    display: none;
+    &.active {
+      display: inline-block;
+    }
+  }
+  button[type="button"] {
+    padding: 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    opacity: .75;
+    outline: none;
+    > i {
+      width: 15px;
+      height: 15px;
+      font-size: 15px;
+    }
+  }
+}
+
+.smvmt-field-settings-modal {
+  .smvmt-responsive-btns {
+    margin-top: 6px;
+  }
+}
+
+.customize-control-smvmt-responsive .input-wrapper {
+  overflow: hidden;
+  input {
+    display: none;
+    width: 82%;
+    float: none;
+    &.active {
+      display: block;
+    }
+  }
+  .smvmt-responsive-select {
+    width: 50px;
+    margin: 0;
+    display: none;
+    padding: .1em;
+    margin-left: 2px;
+    float: none;
+  }
+  .smvmt-responsive-input.active + .smvmt-responsive-select {
+    display: block;
+    width: 17%;
+    float: none;
+  }
+  .smvmt-non-reponsive {
+    &.smvmt-responsive-input {
+      display: inline-block;
+      &.active {
+        display: inline-block;
+      }
+    }
+    &.smvmt-responsive-select {
+      display: inline-block;
+    }
+  }
+}
+
+#customize-control-smvmt-settings-font-size-body.customize-control-smvmt-responsive .input-wrapper {
+  display: inline-block;
+  .smvmt-responsive-select {
+    display: none;
+  }
+  .smvmt-responsive-input {
+    width: 100%;
+  }
+}
+
+.input-wrapper.smvmt-responsive-wrapper {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-right: 0;
+    align-items: flex-start;
+    flex: 0 1;
+    width: 100%;
+}

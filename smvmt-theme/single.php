@@ -1,27 +1,39 @@
 <?php
 /**
- * The main template file
+ * The template for displaying all single posts.
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package smvmt
- * @subpackage smvmt theme
  * @since 1.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 get_header(); ?>
 
-<main class="smvmt-main">
+<?php if ( smvmt_page_layout() == 'left-sidebar' ) : ?>
 
-<div class="smvmt-container">
-    <h1>Page Title</h1>
-</div>
+	<?php get_sidebar(); ?>
 
-</main>
+<?php endif ?>
 
-<?php get_footer();
+	<div id="primary" <?php smvmt_primary_class(); ?>>
+
+		<?php smvmt_primary_content_top(); ?>
+
+		<?php smvmt_content_loop(); ?>
+
+		<?php smvmt_primary_content_bottom(); ?>
+
+	</div><!-- #primary -->
+
+<?php if ( smvmt_page_layout() == 'right-sidebar' ) : ?>
+
+	<?php get_sidebar(); ?>
+
+<?php endif ?>
+
+<?php get_footer(); ?>

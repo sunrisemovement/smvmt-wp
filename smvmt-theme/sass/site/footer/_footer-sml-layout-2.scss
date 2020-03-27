@@ -1,0 +1,45 @@
+@import "../variables-site/structure";
+
+	.footer-sml-layout-2 {
+		.smvmt-small-footer-section-1,
+		.smvmt-small-footer-section-2 {
+			text-align: center;
+		}
+
+		@media (min-width: $col-md) {
+			.smvmt-small-footer-section-1 {
+			    text-align: left;
+				.menu-item {
+					a {
+						padding: 0 1em 0 0;
+					}
+				}
+			}
+			.smvmt-small-footer-section-2 {
+			    text-align: right;
+				.menu-item {
+					a {
+						padding: 0 0 0 1em;
+					}
+				}
+			}
+		}
+	}
+
+.smvmt-header-break-point {
+	.footer-sml-layout-2 {
+
+		@media (max-width: $mx-col-md) {
+			.smvmt-small-footer-section-2 {
+				margin-top: 1em;
+			}
+		}
+
+	}
+}
+
+@media screen and ( min-color-index:0 ) and ( -webkit-min-device-pixel-ratio:0 ) {
+    .smvmt-small-footer-wrap .smvmt-row:before {
+        display: block;
+    }
+}

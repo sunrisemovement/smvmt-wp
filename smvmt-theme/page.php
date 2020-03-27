@@ -1,62 +1,44 @@
 <?php
 /**
- * The main template file
+ * The template for displaying all pages.
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package smvmt
- * @subpackage smvmt theme
  * @since 1.0.0
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 get_header(); ?>
 
-<main class="smvmt-main">
+<?php if ( smvmt_page_layout() == 'left-sidebar' ) : ?>
 
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php get_sidebar(); ?>
 
-    <?php
-        $title = get_field('title_type');
+<?php endif ?>
 
-        switch ($title) {
-            case 'simple':
-                ?>
-                <div class="smvmt-title smvmt-title--simple">
-                    <div class="smvmt-container">
-                        <h2><?php the_title(); ?>
-                    </div>
-                </div>
-                <?php
-                break;
-            case 'expanded':
-                ?>
-                <div class="smvmt-container">
-                    <h2><?php the_title(); ?>
-                </div>
-                <?php
-                break;
-            case 'none':
-                break;
-            default: 
-                ?>
-                <div class="smvmt-title smvmt-title--simple">
-                    <div class="smvmt-container">
-                        <h2><?php the_title(); ?>
-                    </div>
-                </div>
-                <?php
-        }
-    ?>
+	<div id="primary" <?php smvmt_primary_class(); ?>>
 
-    <?php the_content(); ?>
+		<?php smvmt_primary_content_top(); ?>
 
-    <?php endwhile; endif; ?>
-    
-</main>
+		<?php SMVMT_content_page_loop(); ?>
 
-<?php get_footer();
+		<?php smvmt_primary_content_bottom(); ?>
+
+	</div><!-- #primary -->
+
+<?php if ( smvmt_page_layout() == 'right-sidebar' ) : ?>
+
+	<?php get_sidebar(); ?>
+
+<?php endif ?>
+
+<?php get_footer(); ?>

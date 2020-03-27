@@ -1,82 +1,158 @@
 <?php
 /**
- * smvmt theme functions
+ * smvmt functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package smvmt
- * @subpackage smvmt theme
  * @since 1.0.0
  */
 
-/**
- * Setup theme support
- */
-function smvmt_theme_support() {
-    add_theme_support( 'post-thumbnails' );
-    
-    add_theme_support(
-		'html5',
-		array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-			'script',
-			'style',
-		)
-    );
-    
-    load_theme_textdomain( 'smvmt-theme' );
-
-    add_theme_support( 'align-wide' );
-
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
 }
 
-add_action( 'after_setup_theme', 'smvmt_theme_support' );
+/**
+ * Define Constants
+ */
+define( 'SMVMT_THEME_VERSION', '2.3.4' );
+define( 'SMVMT_THEME_SETTINGS', 'smvmt-settings' );
+define( 'SMVMT_THEME_DIR', trailingslashit( get_template_directory() ) );
+define( 'SMVMT_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 
 /**
- * Register and Enqueue Styles.
+ * Setup helper functions of smvmt.
  */
-function smvmt_theme_register_styles() {
-
-	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array(), '1.0.0' );
-	//wp_enqueue_style( 'smvmt-style', get_template_directory_uri() . '/assets/bundle.css', array(), '1.0.0' );
-
-}
-
-add_action( 'wp_enqueue_scripts', 'smvmt_theme_register_styles' );
+require_once SMVMT_THEME_DIR . 'inc/core/class-smvmt-theme-options.php';
+require_once SMVMT_THEME_DIR . 'inc/core/class-theme-strings.php';
+require_once SMVMT_THEME_DIR . 'inc/core/common-functions.php';
 
 /**
- * Register and Enqueue Scripts.
+ * Update theme
  */
-function smvmt_theme_register_scripts() {
+require_once SMVMT_THEME_DIR . 'inc/theme-update/class-smvmt-theme-update.php';
+require_once SMVMT_THEME_DIR . 'inc/theme-update/smvmt-update-functions.php';
+require_once SMVMT_THEME_DIR . 'inc/theme-update/class-smvmt-theme-background-updater.php';
+require_once SMVMT_THEME_DIR . 'inc/theme-update/class-smvmt-pb-compatibility.php';
 
-    //wp_enqueue_script( 'smvmt-theme-js', get_template_directory_uri() . '/assets/bundle.js', array(), '1.0.0', true );
-
-}
-
-add_action( 'wp_enqueue_scripts', 'smvmt_theme_register_scripts' );
-
-add_filter('show_admin_bar', '__return_false');
 
 /**
- * Register ACF Fields
+ * Fonts Files
  */
-
-function smvmt_theme_register_field_groups() {
-	if ( function_exists('acf_add_local_field_group') ) {
-		include_once get_template_directory() . '/includes/acf/field-groups.php';
-	}
+require_once SMVMT_THEME_DIR . 'inc/customizer/class-smvmt-font-families.php';
+if ( is_admin() ) {
+	require_once SMVMT_THEME_DIR . 'inc/customizer/class-smvmt-fonts-data.php';
 }
 
-add_action('acf/init', 'smvmt_theme_register_field_groups');
+require_once SMVMT_THEME_DIR . 'inc/customizer/class-smvmt-fonts.php';
 
-/*------------------------------------*\
-	Includes
-\*------------------------------------*/
+require_once SMVMT_THEME_DIR . 'inc/core/class-smvmt-walker-page.php';
+require_once SMVMT_THEME_DIR . 'inc/core/class-smvmt-enqueue-scripts.php';
+require_once SMVMT_THEME_DIR . 'inc/core/class-gutenberg-editor-css.php';
+require_once SMVMT_THEME_DIR . 'inc/class-smvmt-dynamic-css.php';
 
-// customizer settings
-require_once get_stylesheet_directory() . '/includes/customizer/customizer.php';
+/**
+ * Custom template tags for this theme.
+ */
+require_once SMVMT_THEME_DIR . 'inc/core/class-smvmt-attr.php';
+require_once SMVMT_THEME_DIR . 'inc/template-tags.php';
 
+require_once SMVMT_THEME_DIR . 'inc/widgets.php';
+require_once SMVMT_THEME_DIR . 'inc/core/theme-hooks.php';
+require_once SMVMT_THEME_DIR . 'inc/admin-functions.php';
+require_once SMVMT_THEME_DIR . 'inc/core/sidebar-manager.php';
+
+/**
+ * Markup Functions
+ */
+require_once SMVMT_THEME_DIR . 'inc/extras.php';
+require_once SMVMT_THEME_DIR . 'inc/blog/blog-config.php';
+require_once SMVMT_THEME_DIR . 'inc/blog/blog.php';
+require_once SMVMT_THEME_DIR . 'inc/blog/single-blog.php';
+/**
+ * Markup Files
+ */
+require_once SMVMT_THEME_DIR . 'inc/template-parts.php';
+require_once SMVMT_THEME_DIR . 'inc/class-smvmt-loop.php';
+require_once SMVMT_THEME_DIR . 'inc/class-smvmt-mobile-header.php';
+
+/**
+ * Functions and definitions.
+ */
+require_once SMVMT_THEME_DIR . 'inc/class-smvmt-after-setup-theme.php';
+
+// Required files.
+require_once SMVMT_THEME_DIR . 'inc/core/class-smvmt-admin-helper.php';
+
+require_once SMVMT_THEME_DIR . 'inc/schema/class-smvmt-schema.php';
+
+if ( is_admin() ) {
+
+	/**
+	 * Admin Menu Settings
+	 */
+	require_once SMVMT_THEME_DIR . 'inc/core/class-smvmt-admin-settings.php';
+	require_once SMVMT_THEME_DIR . 'inc/lib/notices/class-smvmt-notices.php';
+
+	/**
+	 * Metabox additions.
+	 */
+	require_once SMVMT_THEME_DIR . 'inc/metabox/class-smvmt-meta-boxes.php';
+}
+
+require_once SMVMT_THEME_DIR . 'inc/metabox/class-smvmt-meta-box-operations.php';
+
+
+/**
+ * Customizer additions.
+ */
+require_once SMVMT_THEME_DIR . 'inc/customizer/class-smvmt-customizer.php';
+
+
+/**
+ * Compatibility
+ */
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-jetpack.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/woocommerce/class-smvmt-woocommerce.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/edd/class-smvmt-edd.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/lifterlms/class-smvmt-lifterlms.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/learndash/class-smvmt-learndash.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-beaver-builder.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-bb-ultimate-addon.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-contact-form-7.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-visual-composer.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-site-origin.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-gravity-forms.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-bne-flyout.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-ubermeu.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-divi-builder.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-amp.php';
+require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-yoast-seo.php';
+require_once SMVMT_THEME_DIR . 'inc/addons/transparent-header/class-smvmt-ext-transparent-header.php';
+require_once SMVMT_THEME_DIR . 'inc/addons/breadcrumbs/class-smvmt-breadcrumbs.php';
+require_once SMVMT_THEME_DIR . 'inc/addons/heading-colors/class-smvmt-heading-colors.php';
+require_once SMVMT_THEME_DIR . 'inc/addons/header-sections/class-smvmt-ext-header-sections.php';
+require_once SMVMT_THEME_DIR . 'inc/addons/colors-and-background/class-smvmt-ext-colors-and-background.php';
+require_once SMVMT_THEME_DIR . 'inc/addons/site-layouts/class-smvmt-ext-site-layouts.php';
+require_once SMVMT_THEME_DIR . 'inc/addons/sticky-header/class-smvmt-ext-sticky-header.php';
+
+
+require_once SMVMT_THEME_DIR . 'inc/class-smvmt-filesystem.php';
+
+// Elementor Compatibility requires PHP 5.4 for namespaces.
+if ( version_compare( PHP_VERSION, '5.4', '>=' ) ) {
+	require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-elementor.php';
+	require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-elementor-pro.php';
+}
+
+// Beaver Themer compatibility requires PHP 5.3 for anonymus functions.
+if ( version_compare( PHP_VERSION, '5.3', '>=' ) ) {
+	require_once SMVMT_THEME_DIR . 'inc/compatibility/class-smvmt-beaver-themer.php';
+}
+
+/**
+ * Load deprecated functions
+ */
+require_once SMVMT_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
+require_once SMVMT_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
+require_once SMVMT_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';

@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       smvmt.org/plugin
+ * @link       smvmt.org
  * @since      1.0.0
  *
  * @package    Smvmt_Plugin
@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    Smvmt_Plugin
  * @subpackage Smvmt_Plugin/includes
- * @author     smvmt <plugin@smvmt.org>
+ * @author     smvmt <info@smvmt.org>
  */
 class Smvmt_Plugin {
 
@@ -98,6 +98,16 @@ class Smvmt_Plugin {
 	 * @access   private
 	 */
 	private function load_dependencies() {
+
+		/**
+		 * Load Ultimate Gutenberg Addons
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'vendor/ultimate-addons-for-gutenberg/ultimate-addons-for-gutenberg.php';
+
+		/**
+		 * Load Advanced Custom Fields
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'vendor/advanced-custom-fields/acf.php';
 
 		/**
 		 * The class responsible for orchestrating the actions and filters of the

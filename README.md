@@ -1,28 +1,19 @@
-# smvmt-wp
- sunrise movment WordPress theme + plugin
+## smvmt-wp project
 
-### 👷 Setting up a development environment with Lando
+This project aims to build a robust set of WordPress tools for Sunrise National and Hubs across the country.
 
-We’re experimenting with a system to make setting up all software needed for development easier. Lando is Docker-based, but should make things a bit easier than most Docker setups.
+## smvmt-theme
 
-* Install [Lando](https://docs.devwithlando.io/). We've tested it up to RC7.
-* Clone this repository locally. If you are using Windows, make sure you've set `git` to use UNIX line endings.
-* In a terminal go to the directory of the local repository clone.
-* Run `lando start`.
-* Wait for a few minutes for everything to begin loading. Subsequent starts will be much faster but you’ll need to give it time for the very first start.
-* You should see a `BOOMSHAKALAKA!!!` line 🎉
-* In the `APPSERVER URLS` section of the output note the third URL (it should start with `http://smvmt.lndo.site` and maybe have a port).
-* Logs are accessible via the [lando logs](https://docs.devwithlando.io/cli/logs.html) command. If you mostly care about PHP error log, a useful command is: `lando logs -s appserver -t -f`.
-* If needed, you can SSH into the local appserver by running the command `lando ssh` while the server is running.
+The smvmt-theme is a fork of the Astra theme, slightly slimmed down to fit our exact needs. Overtime, this theme should only become more lean, as we determine what customizeability is actually necessary for Sunrise.
 
-### File Structure
+## smvmt-plugin
 
-This monorepo project effectively houses two different codebases. The `smvmt-plugin` directory is home to the a custom plugin, building out the site's core functionality. The theme lives in the `smvmt-theme` directory. Each of these folders have their own npm setups, their own webpack configuations, and can really be thought of as two seperate projects, living in the same repo. 
+The smvmt-plugin is a blank slate, generated using the wppb.me generator. Currently, it is only used to provide Advanced Custom Fields and Ultimate Addons for Gutenberg in a controlled way. Ultimately, this plugin should be used for providing support for custom post types like events, calls, etc. Similar to smvmt-theme, this plugin should be made more lean over time as we know exactly which blocks Hubs will use, and which they won't.
 
-Once you have run `lando start` a new `wp` directory is built out, where the WordPress core files live. This directory is included in the gitignore, and shouldn't be changed.
+## Development
 
-The `smvmt_db.sql` file represents a default sql database, which is imported on first install of the site. This is useful in making sure that all developers start from the same place in terms of default content.
+Clone smvmt-theme into the themes directory of your local WP install. Then, run `npm install` to install dependencies. Once installed, run `npm install -g grunt-cli` to install Grunt cli globally. Finally, run various Grunt tasks found toward the bottom of the Gruntfile to build styles, js, language files, etc.
 
-### WP Credentials
+To get started with the smvmt-plugin, simply clone that directory into the plugins directory of local WP install. At this time, the plugin has no build steps.
 
-The sql file that comes with the repo sets up one admin account out of the box. You can login at `smvmt.lndo.site/wp-admin`. Username: `admin`, password: `admin`. This is for development purposes ONLY, and a produciton site will employ more rigorous security standards.
+Once both are installed and ready for development, activate the `smvmt` theme and `smvmt-plugin` plugin in your WordPress admin dashboard.

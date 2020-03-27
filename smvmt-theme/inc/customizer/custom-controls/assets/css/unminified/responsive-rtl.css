@@ -1,0 +1,96 @@
+.smvmt-responsive-btns {
+  display: inline-block;
+  float: left;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.smvmt-responsive-btns > li {
+  margin-bottom: 0;
+  display: none;
+}
+
+.smvmt-responsive-btns > li.active {
+  display: inline-block;
+}
+
+.smvmt-responsive-btns button[type="button"] {
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  opacity: .75;
+  outline: none;
+}
+
+.smvmt-responsive-btns button[type="button"] > i {
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+}
+
+.smvmt-field-settings-modal .smvmt-responsive-btns {
+  margin-top: 6px;
+}
+
+.customize-control-smvmt-responsive .input-wrapper {
+  overflow: hidden;
+}
+
+.customize-control-smvmt-responsive .input-wrapper input {
+  display: none;
+  width: 82%;
+  float: none;
+}
+
+.customize-control-smvmt-responsive .input-wrapper input.active {
+  display: block;
+}
+
+.customize-control-smvmt-responsive .input-wrapper .smvmt-responsive-select {
+  width: 50px;
+  margin: 0;
+  display: none;
+  padding: .1em;
+  margin-right: 2px;
+  float: none;
+}
+
+.customize-control-smvmt-responsive .input-wrapper .smvmt-responsive-input.active + .smvmt-responsive-select {
+  display: block;
+  width: 17%;
+  float: none;
+}
+
+.customize-control-smvmt-responsive .input-wrapper .smvmt-non-reponsive.smvmt-responsive-input {
+  display: inline-block;
+}
+
+.customize-control-smvmt-responsive .input-wrapper .smvmt-non-reponsive.smvmt-responsive-input.active {
+  display: inline-block;
+}
+
+.customize-control-smvmt-responsive .input-wrapper .smvmt-non-reponsive.smvmt-responsive-select {
+  display: inline-block;
+}
+
+#customize-control-smvmt-settings-font-size-body.customize-control-smvmt-responsive .input-wrapper {
+  display: inline-block;
+}
+
+#customize-control-smvmt-settings-font-size-body.customize-control-smvmt-responsive .input-wrapper .smvmt-responsive-select {
+  display: none;
+}
+
+#customize-control-smvmt-settings-font-size-body.customize-control-smvmt-responsive .input-wrapper .smvmt-responsive-input {
+  width: 100%;
+}
+
+.input-wrapper.smvmt-responsive-wrapper {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-left: 0;
+  align-items: flex-start;
+  flex: 0 1;
+  width: 100%;
+}

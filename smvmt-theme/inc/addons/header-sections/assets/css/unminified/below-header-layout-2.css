@@ -1,0 +1,17 @@
+/*----------  Media Query min-width Structure   ----------*/
+/*----------  Media Query max-width Structure   ----------*/
+/*----------  Break-point min-width Structure   ----------*/
+/*----------  Break-point max-width Structure   ----------*/
+.smvmt-below-header-2 .below-header-section-1 {
+  flex: auto;
+}
+
+.smvmt-header-break-point .smvmt-below-header-2 .below-header-user-select .user-select {
+  padding-left: 0;
+}
+
+.smvmt-header-break-point .smvmt-below-header-2 .below-header-user-select > .smvmt-flex {
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+}

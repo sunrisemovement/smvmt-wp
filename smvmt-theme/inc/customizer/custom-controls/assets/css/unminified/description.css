@@ -1,0 +1,13 @@
+.customize-control-smvmt-description .smvmt-description {
+  font-style: italic;
+}
+
+.customize-control-smvmt-description a.button {
+  margin-top: 10px;
+  font-style: normal;
+}
+
+.customize-control-smvmt-description p {
+  margin: 0;
+  cursor: initial;
+}
