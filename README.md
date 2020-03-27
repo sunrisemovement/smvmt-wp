@@ -10,6 +10,8 @@ The smvmt-theme is a fork of the Astra theme project (https://github.com/brainst
 
 The smvmt-plugin is a blank slate, generated using the wppb.me generator. Currently, it is only used to provide Advanced Custom Fields and Ultimate Addons for Gutenberg in a controlled way. Ultimately, this plugin should be used for providing support for custom post types like events, calls, etc. Similar to smvmt-theme, this plugin should be made more lean over time as we know exactly which blocks Hubs will use, and which they won't.
 
+One reason for including UAG, is that we could start building out a template library like the Gutenberg Hub template library (https://templates.gutenberghub.com/) but have access to more rich design options than vanilla gutenberg. Hubs could then visit the central template library and copy/paste fully designed blocks they like directly onto their site. 
+
 ## Development
 
 First, setup a local install of WordPress. One easy solution for this is Local (https://localwp.com/). If you are using Local, you can find the path of your WP install in the `Local Sites` directory.
