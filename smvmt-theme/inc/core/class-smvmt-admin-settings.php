@@ -112,18 +112,6 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 
 			add_action( 'customize_controls_enqueue_scripts', __CLASS__ . '::customizer_scripts' );
 
-			add_action( 'admin_menu', __CLASS__ . '::add_admin_menu', 99 );
-
-			add_action( 'SMVMT_menu_general_action', __CLASS__ . '::general_page' );
-
-			add_action( 'SMVMT_header_right_section', __CLASS__ . '::top_header_right_section' );
-
-			add_action( 'SMVMT_welcome_page_content', __class__ . '::SMVMT_available_plugins', 30 );
-
-			// AJAX.
-			add_action( 'wp_ajax_smvmt-sites-plugin-activate', __CLASS__ . '::required_plugin_activate' );
-			add_action( 'wp_ajax_smvmt-sites-plugin-deactivate', __CLASS__ . '::required_plugin_deactivate' );
-
 		}
 
 		/**
