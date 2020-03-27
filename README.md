@@ -16,6 +16,8 @@ First, setup a local install of WordPress. One easy solution for this is Local (
 
 Clone this repo (smvmt-wp) to a known directory (ex: a GitHub project folder).
 
+We're gonna use symbolic links to 'add' our plugin and theme to our local WP install. If you're curious to learn more about symbolic links (or symlinks) see this Wikipedia page: https://en.wikipedia.org/wiki/Symbolic_link .
+
 Use `ln -sF [**your smvmt-wp repo path**]/smvmt-theme [**your wp install path**]/wp-content/themes` to link the theme directory in your smvmt-wp directory to your local WP install's theme directory.
 
 Then, from within your smvmt-wp directory, use `cd smvmt-theme` to enter the theme directory. Run `npm install` to install dependencies. Once installed, run `npm install -g grunt-cli` to install Grunt cli globally. Finally, run various Grunt tasks found toward the bottom of the Gruntfile to build styles, js, language files, etc (ex: `grunt style`).
