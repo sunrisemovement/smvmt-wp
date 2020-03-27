@@ -272,7 +272,7 @@ if ( ! class_exists( 'SMVMT_Beaver_Themer' ) ) :
 							remove_action( 'SMVMT_masthead', 'SMVMT_masthead_primary_template' );
 						} else {
 							add_filter(
-								'ast_main_header_display',
+								'smvmt_main_header_display',
 								function( $display_header ) {
 
 									return 'disabled';
@@ -285,7 +285,7 @@ if ( ! class_exists( 'SMVMT_Beaver_Themer' ) ) :
 					if ( 'disabled' === $footer_layout ) {
 
 						add_filter(
-							'ast_footer_sml_layout',
+							'smvmt_footer_sml_layout',
 							function( $is_footer ) {
 
 								return 'disabled';

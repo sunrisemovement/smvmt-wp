@@ -1278,7 +1278,7 @@ endif;
  * @return string
  */
 function smvmt_get_fonts_display_property() {
-	return apply_filters( 'SMVMT_fonts_display_property', 'fallback' );
+	return apply_filters( 'smvmt_fonts_display_property', 'fallback' );
 }
 
 /**

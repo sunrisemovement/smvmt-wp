@@ -235,22 +235,22 @@ if ( ! class_exists( 'Astra_Notices' ) ) :
 
 			wp_enqueue_script( 'astra-notices' );
 
-			do_action( 'astra_notice_before_markup' );
+			do_action( 'smvmt_notice_before_markup' );
 
-			do_action( "astra_notice_before_markup_{$notice['id']}" );
+			do_action( "smvmt_notice_before_markup_{$notice['id']}" );
 
 			?>
 			<div id="<?php echo esc_attr( $notice['id'] ); ?>" class="<?php echo esc_attr( $notice['classes'] ); ?>" data-repeat-notice-after="<?php echo esc_attr( $notice['repeat-notice-after'] ); ?>">
 				<div class="notice-container">
-					<?php do_action( "astra_notice_inside_markup_{$notice['id']}" ); ?>
+					<?php do_action( "smvmt_notice_inside_markup_{$notice['id']}" ); ?>
 					<?php echo wp_kses_post( $notice['message'] ); ?>
 				</div>
 			</div>
 			<?php
 
-			do_action( "astra_notice_after_markup_{$notice['id']}" );
+			do_action( "smvmt_notice_after_markup_{$notice['id']}" );
 
-			do_action( 'astra_notice_after_markup' );
+			do_action( 'smvmt_notice_after_markup' );
 
 		}
 

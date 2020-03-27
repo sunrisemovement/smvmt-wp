@@ -425,7 +425,7 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 		 */
 		public static function SMVMT_available_plugins() {
 
-			$SMVMT_addon_tagline = apply_filters(
+			$smvmt_addon_tagline = apply_filters(
 				'SMVMT_available_plugins',
 				sprintf(
 					/* translators: %1s smvmt Theme */
@@ -515,7 +515,7 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 				?>
 
 				<div class="postbox">
-					<h2 class="hndle smvmt-normal-cusror smvmt-addon-heading smvmt-flex"><span><?php echo esc_html( $SMVMT_addon_tagline ); ?></span>
+					<h2 class="hndle smvmt-normal-cusror smvmt-addon-heading smvmt-flex"><span><?php echo esc_html( $smvmt_addon_tagline ); ?></span>
 					</h2>
 						<div class="smvmt-addon-list-section">
 							<?php
@@ -742,12 +742,12 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 				if ( version_compare( $SMVMT_global_options['smvmt-addon-auto-version'], '1.2.1' ) < 0 ) {
 
 					// If addon is not updated & White Label for Addon is added then show the white labelewd pro name.
-					$SMVMT_addon_name        = smvmt_get_addon_name();
-					$update_SMVMT_addon_link = smvmt_get_pro_url( 'https://wpsmvmt.com/?p=25258', 'smvmt-dashboard', 'update-to-smvmt-pro', 'welcome-page' );
+					$smvmt_addon_name        = smvmt_get_addon_name();
+					$update_smvmt_addon_link = smvmt_get_pro_url( 'https://wpsmvmt.com/?p=25258', 'smvmt-dashboard', 'update-to-smvmt-pro', 'welcome-page' );
 					if ( class_exists( 'SMVMT_Ext_White_Label_Markup' ) ) {
 						$plugin_data = SMVMT_Ext_White_Label_Markup::$branding;
 						if ( ! empty( $plugin_data['smvmt-pro']['name'] ) ) {
-							$update_SMVMT_addon_link = '';
+							$update_smvmt_addon_link = '';
 						}
 					}
 
@@ -755,7 +755,7 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 					$message = sprintf(
 						/* translators: %1$1s: Addon Name, %2$2s: Minimum Required version of the smvmt Addon */
 						__( 'Update to the latest version of %1$2s to make changes in settings below.', 'smvmt' ),
-						( ! empty( $update_SMVMT_addon_link ) ) ? '<a href=' . esc_url( $update_SMVMT_addon_link ) . ' target="_blank" rel="noopener">' . $SMVMT_addon_name . '</a>' : $SMVMT_addon_name
+						( ! empty( $update_smvmt_addon_link ) ) ? '<a href=' . esc_url( $update_smvmt_addon_link ) . ' target="_blank" rel="noopener">' . $smvmt_addon_name . '</a>' : $smvmt_addon_name
 					);
 
 					printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );

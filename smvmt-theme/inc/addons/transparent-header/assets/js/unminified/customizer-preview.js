@@ -17,7 +17,7 @@
 		setting.bind( function( logo_width ) {
 			if ( logo_width['desktop'] != '' || logo_width['tablet'] != '' || logo_width['mobile'] != '' ) {
 				var dynamicStyle = '.smvmt-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo img {max-width: ' + logo_width['desktop'] + 'px;} .smvmt-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo .smvmt-logo-svg { width: ' + logo_width['desktop'] + 'px;} @media( max-width: 768px ) { .smvmt-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo img {max-width: ' + logo_width['tablet'] + 'px;} .smvmt-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo .smvmt-logo-svg { width: ' + logo_width['tablet'] + 'px;} } @media( max-width: 544px ) { .smvmt-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo img {max-width: ' + logo_width['mobile'] + 'px;} .smvmt-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo .smvmt-logo-svg { width: ' + logo_width['mobile'] + 'px;} }';
-				SMVMT_add_dynamic_css( 'transparent-header-logo-width', dynamicStyle );
+				smvmt_add_dynamic_css( 'transparent-header-logo-width', dynamicStyle );
 			}
 			else{
 				wp.customize.preview.send( 'refresh' );
@@ -37,7 +37,7 @@
 			dynamicStyle += 'border-bottom-width: ' + border + 'px';
 			dynamicStyle += '}';
 
-			SMVMT_add_dynamic_css( 'transparent-header-main-sep', dynamicStyle );
+			smvmt_add_dynamic_css( 'transparent-header-main-sep', dynamicStyle );
 
 		} );
 	} );
@@ -56,7 +56,7 @@
 				var dynamicStyle = ' body.smvmt-theme-transparent-header.smvmt-desktop .main-header-bar { border-bottom-color: ' + color + '; } ';
 					dynamicStyle += ' body.smvmt-theme-transparent-header.smvmt-header-break-point .site-header { border-bottom-color: ' + color + '; } ';
 
-				SMVMT_add_dynamic_css( 'transparent-header-main-sep-color', dynamicStyle );
+				smvmt_add_dynamic_css( 'transparent-header-main-sep-color', dynamicStyle );
 			}
 
 		} );
@@ -146,7 +146,7 @@
 					dynamicStyle += 'border-style: solid;';
 					dynamicStyle += '}';
 
-				SMVMT_add_dynamic_css( 'header-main-rt-section-button-border-size', dynamicStyle );
+				smvmt_add_dynamic_css( 'header-main-rt-section-button-border-size', dynamicStyle );
 			}
 
 		} );

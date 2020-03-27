@@ -98,7 +98,7 @@ if ( ! class_exists( 'SMVMT_Control_Settings_Group' ) && class_exists( 'WP_Custo
 				}
 			}
 
-			$this->json['ast_fields'] = $config;
+			$this->json['smvmt_fields'] = $config;
 		}
 
 		/**

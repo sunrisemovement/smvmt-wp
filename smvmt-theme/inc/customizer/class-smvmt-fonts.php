@@ -78,7 +78,7 @@ final class SMVMT_Fonts {
 	public static function get_fonts() {
 
 		do_action( 'smvmt_get_fonts' );
-		return apply_filters( 'SMVMT_add_fonts', self::$fonts );
+		return apply_filters( 'smvmt_add_fonts', self::$fonts );
 	}
 
 	/**
@@ -104,7 +104,7 @@ final class SMVMT_Fonts {
 				$google_fonts[ $name ] = $font['variants'];
 
 				// Add Subset.
-				$subset = apply_filters( 'SMVMT_font_subset', '', $name );
+				$subset = apply_filters( 'smvmt_font_subset', '', $name );
 				if ( ! empty( $subset ) ) {
 					$font_subset[] = $subset;
 				}

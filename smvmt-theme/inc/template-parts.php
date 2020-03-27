@@ -213,7 +213,7 @@ if ( ! function_exists( 'smvmt_footer_small_footer_template' ) ) {
 	function smvmt_footer_small_footer_template() {
 
 		$small_footer_layout = smvmt_get_option_meta( 'footer-sml-layout', 'footer-sml-layout-2' );
-		$small_footer_layout = apply_filters( 'ast_footer_sml_layout', $small_footer_layout );
+		$small_footer_layout = apply_filters( 'smvmt_footer_sml_layout', $small_footer_layout );
 
 		if ( 'disabled' != $small_footer_layout ) {
 

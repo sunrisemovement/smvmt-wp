@@ -42,7 +42,7 @@
             value   = control.setting._value;
 
             control.registerToggleEvents();
-            this.container.on( 'ast_settings_changed', control.onOptionChange );
+            this.container.on( 'smvmt_settings_changed', control.onOptionChange );
         },
 
         registerToggleEvents: function() {
@@ -237,12 +237,12 @@
                             var font_control = $(this).parents( '.customize-control' ).attr( 'id' );
                             font_control = font_control.replace( 'customize-control-', '' );
 
-                            control.container.trigger( 'ast_settings_changed', [ control, jQuery(this), value, font_control ] );
+                            control.container.trigger( 'smvmt_settings_changed', [ control, jQuery(this), value, font_control ] );
 
                             var font_weight_control = fontWeightContainer.parents( '.customize-control' ).attr( 'id' );
                             font_weight_control = font_weight_control.replace( 'customize-control-', '' );
 
-                            control.container.trigger( 'ast_settings_changed', [ control, fontWeightContainer, fontWeightContainer.val(), font_weight_control ] );
+                            control.container.trigger( 'smvmt_settings_changed', [ control, fontWeightContainer, fontWeightContainer.val(), font_weight_control ] );
 
                         });
 
@@ -253,7 +253,7 @@
                             name = $(this).parents( '.customize-control' ).attr( 'id' );
                             name = name.replace( 'customize-control-', '' );
 
-                            control.container.trigger( 'ast_settings_changed', [ control, jQuery(this), value, name ] );
+                            control.container.trigger( 'smvmt_settings_changed', [ control, jQuery(this), value, name ] );
                         });
 
                     break;
@@ -282,7 +282,7 @@
                             name = $(this).parents( '.customize-control' ).attr( 'id' );
                             name = name.replace( 'customize-control-', '' );
 
-                            control.container.trigger( 'ast_settings_changed', [ control, jQuery(this), value, name ] );
+                            control.container.trigger( 'smvmt_settings_changed', [ control, jQuery(this), value, name ] );
                         });
 
                     break;
@@ -298,7 +298,7 @@
                             name = $(this).parents( '.customize-control' ).attr( 'id' );
                             name = name.replace( 'customize-control-', '' );
 
-                            control.container.trigger('ast_settings_changed', [control, input_number, value, name]);
+                            control.container.trigger('smvmt_settings_changed', [control, input_number, value, name]);
                         });
 
                         // Handle the reset button.
@@ -315,7 +315,7 @@
                             name = $(this).parents( '.customize-control' ).attr( 'id' );
                             name = name.replace( 'customize-control-', '' );
 
-                            control.container.trigger('ast_settings_changed', [control, input_number, default_value, name]);
+                            control.container.trigger('smvmt_settings_changed', [control, input_number, default_value, name]);
                         });
 
                         // Save changes.
@@ -327,7 +327,7 @@
                             name = $(this).parents( '.customize-control' ).attr( 'id' );
                             name = name.replace( 'customize-control-', '' );
 
-                            control.container.trigger('ast_settings_changed', [control, jQuery(this), value, name]);
+                            control.container.trigger('smvmt_settings_changed', [control, jQuery(this), value, name]);
                         });
 
                     break;
@@ -528,7 +528,7 @@
                         jQuery(element).val( ui.color.toString() );
                         name = jQuery(element).parents('.customize-control').attr('id');
                         name = name.replace( 'customize-control-', '' );
-                        control.container.trigger( 'ast_settings_changed', [control, jQuery( element ), ui.color.toString(), name ] );
+                        control.container.trigger( 'smvmt_settings_changed', [control, jQuery( element ), ui.color.toString(), name ] );
                     }
                 },
 
@@ -542,7 +542,7 @@
 
                     name = jQuery(element).parents('.customize-control').attr('id');
                     name = name.replace( 'customize-control-', '' );
-                    control.container.trigger( 'ast_settings_changed', [control, jQuery(element), '', name ] );
+                    control.container.trigger( 'smvmt_settings_changed', [control, jQuery(element), '', name ] );
                     wp.customize.previewer.refresh();
                 }
             });
@@ -589,7 +589,7 @@
                             name = jQuery(element).parents('.customize-control').attr('id');
                             name = name.replace( 'customize-control-', '' );
 
-                            control.container.trigger( 'ast_settings_changed', [ control, jQuery(this), newValue, name ] );
+                            control.container.trigger( 'smvmt_settings_changed', [ control, jQuery(this), newValue, name ] );
                         }
                     }
                 },
@@ -629,7 +629,7 @@
                         }
 
                         jQuery(element).val( '' );
-                        control.container.trigger( 'ast_settings_changed', [ control, jQuery(element), newValue, name ] );
+                        control.container.trigger( 'smvmt_settings_changed', [ control, jQuery(element), newValue, name ] );
                     }
 
                     name = jQuery(element).parents('.customize-control').attr('id');
@@ -692,7 +692,7 @@
                 newValue[item] = item_value;
             });
 
-            control.container.trigger( 'ast_settings_changed', [ control, element, newValue, name ] );
+            control.container.trigger( 'smvmt_settings_changed', [ control, element, newValue, name ] );
         },
 
         isJsonString: function( str ) {
@@ -1099,7 +1099,7 @@
 
             name = jQuery(element).parents('.customize-control').attr('id');
             name = name.replace( 'customize-control-', '' );
-            control.container.trigger( 'ast_settings_changed', [control, element, val, name ] );
+            control.container.trigger( 'smvmt_settings_changed', [control, element, val, name ] );
         },
 
         /**
@@ -1118,7 +1118,7 @@
 
             name = jQuery(element).parents('.customize-control').attr('id');
             name = name.replace( 'customize-control-', '' );
-            control.container.trigger( 'ast_settings_changed', [control, element, val, name ] );
+            control.container.trigger( 'smvmt_settings_changed', [control, element, val, name ] );
         },
 
         /**
@@ -1147,7 +1147,7 @@
             });
 
 
-            control.container.trigger( 'ast_settings_changed', [control, element, newValue, name ] );
+            control.container.trigger( 'smvmt_settings_changed', [control, element, newValue, name ] );
         }
     });
 

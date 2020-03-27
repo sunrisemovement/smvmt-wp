@@ -25,7 +25,7 @@ add_filter( 'smvmt_color_palettes', 'SMVMT_deprecated_color_palette', 10, 1 );
  */
 function SMVMT_deprecated_color_palette( $color_palette ) {
 
-	$color_palette = SMVMT_apply_filters_deprecated( 'smvmt_color_palletes', array( $color_palette ), '1.0.22', 'smvmt_color_palettes', '' );
+	$color_palette = smvmt_apply_filters_deprecated( 'smvmt_color_palletes', array( $color_palette ), '1.0.22', 'smvmt_color_palettes', '' );
 
 	return $color_palette;
 }
@@ -43,7 +43,7 @@ add_filter( 'SMVMT_single_post_navigation_enabled', 'SMVMT_deprecated_sigle_post
  */
 function SMVMT_deprecated_sigle_post_navigation_enabled( $post_nav ) {
 
-	$post_nav = SMVMT_apply_filters_deprecated( 'SMVMT_sigle_post_navigation_enabled', array( $post_nav ), '1.0.27', 'SMVMT_single_post_navigation_enabled', '' );
+	$post_nav = smvmt_apply_filters_deprecated( 'SMVMT_sigle_post_navigation_enabled', array( $post_nav ), '1.0.27', 'SMVMT_single_post_navigation_enabled', '' );
 
 	return $post_nav;
 }
@@ -61,12 +61,12 @@ add_filter( 'smvmt_header_section_elements', 'SMVMT_deprecated_primary_header_ma
  */
 function SMVMT_deprecated_primary_header_main_rt_section( $elements, $header ) {
 
-	$elements = SMVMT_apply_filters_deprecated( 'SMVMT_primary_header_main_rt_section', array( $elements, $header ), '1.2.2', 'smvmt_header_section_elements', '' );
+	$elements = smvmt_apply_filters_deprecated( 'SMVMT_primary_header_main_rt_section', array( $elements, $header ), '1.2.2', 'smvmt_header_section_elements', '' );
 
 	return $elements;
 }
 
-if ( ! function_exists( 'SMVMT_apply_filters_deprecated' ) ) {
+if ( ! function_exists( 'smvmt_apply_filters_deprecated' ) ) {
 	/**
 	 * smvmt Filter Deprecated
 	 *
@@ -77,7 +77,7 @@ if ( ! function_exists( 'SMVMT_apply_filters_deprecated' ) ) {
 	 * @param string $replacement Optional. The hook that should have been used. Default false.
 	 * @param string $message     Optional. A message regarding the change. Default null.
 	 */
-	function SMVMT_apply_filters_deprecated( $tag, $args, $version, $replacement = false, $message = null ) {
+	function smvmt_apply_filters_deprecated( $tag, $args, $version, $replacement = false, $message = null ) {
 		if ( function_exists( 'apply_filters_deprecated' ) ) { /* WP >= 4.6 */
 			return apply_filters_deprecated( $tag, $args, $version, $replacement, $message );
 		} else {

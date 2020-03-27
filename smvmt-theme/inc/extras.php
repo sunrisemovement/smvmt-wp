@@ -1783,7 +1783,7 @@ if ( ! function_exists( 'smvmt_get_addon_name' ) ) :
 			}
 		}
 
-		return apply_filters( 'SMVMT_addon_name', $pro_name );
+		return apply_filters( 'smvmt_addon_name', $pro_name );
 	}
 endif;
 

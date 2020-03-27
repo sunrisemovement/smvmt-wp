@@ -41,7 +41,7 @@ if ( class_exists( 'WP_Customize_Panel' ) ) {
 		 * @since  1.0.31
 		 * @var string
 		 */
-		public $type = 'ast_panel';
+		public $type = 'smvmt_panel';
 
 		/**
 		 * Get section parameters for JS.

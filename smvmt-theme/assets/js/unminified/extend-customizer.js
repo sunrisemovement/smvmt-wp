@@ -16,7 +16,7 @@
     api.section.each( function( section ) {
 
       if (
-        'ast_section' !== section.params.type ||
+        'smvmt_section' !== section.params.type ||
         'undefined' === typeof section.params.section
       ) {
 
@@ -44,7 +44,7 @@
     api.panel.each( function( panel ) {
 
       if (
-        'ast_panel' !== panel.params.type ||
+        'smvmt_panel' !== panel.params.type ||
         'undefined' === typeof panel.params.panel
       ) {
 
@@ -78,7 +78,7 @@
     attachEvents: function() {
 
       if (
-        'ast_panel' !== this.params.type ||
+        'smvmt_panel' !== this.params.type ||
         'undefined' === typeof this.params.panel
       ) {
 
@@ -132,7 +132,7 @@
     embed: function() {
 
       if (
-        'ast_panel' !== this.params.type ||
+        'smvmt_panel' !== this.params.type ||
         'undefined' === typeof this.params.panel
       ) {
 
@@ -153,7 +153,7 @@
     isContextuallyActive: function() {
 
       if (
-        'ast_panel' !== this.params.type
+        'smvmt_panel' !== this.params.type
       ) {
 
         return _panelIsContextuallyActive.call( this );
@@ -211,7 +211,7 @@
     attachEvents: function() {
 
       if (
-        'ast_section' !== this.params.type ||
+        'smvmt_section' !== this.params.type ||
         'undefined' === typeof this.params.section
       ) {
 
@@ -265,7 +265,7 @@
     embed: function() {
 
       if (
-        'ast_section' !== this.params.type ||
+        'smvmt_section' !== this.params.type ||
         'undefined' === typeof this.params.section
       ) {
 
@@ -286,7 +286,7 @@
     isContextuallyActive: function() {
 
       if (
-        'ast_section' !== this.params.type
+        'smvmt_section' !== this.params.type
       ) {
 
         return _sectionIsContextuallyActive.call( this );

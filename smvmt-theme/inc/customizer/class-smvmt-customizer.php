@@ -208,7 +208,7 @@ if ( ! class_exists( 'SMVMT_Customizer' ) ) {
 					'transport'            => null,
 					'default'              => null,
 					'selector'             => null,
-					'ast_fields'           => array(),
+					'smvmt_fields'           => array(),
 				)
 			);
 		}

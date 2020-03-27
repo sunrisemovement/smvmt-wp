@@ -1290,16 +1290,16 @@ if ( ! class_exists( 'SMVMT_Dynamic_CSS' ) ) {
 			 * smvmt Fonts
 			 */
 			if ( apply_filters( 'smvmt_enable_default_fonts', true ) ) {
-				$SMVMT_fonts          = '@font-face {';
-					$SMVMT_fonts     .= 'font-family: "smvmt";';
-					$SMVMT_fonts     .= 'src: url(' . SMVMT_THEME_URI . 'assets/fonts/smvmt.woff) format("woff"),';
-						$SMVMT_fonts .= 'url(' . SMVMT_THEME_URI . 'assets/fonts/smvmt.ttf) format("truetype"),';
-						$SMVMT_fonts .= 'url(' . SMVMT_THEME_URI . 'assets/fonts/smvmt.svg#smvmt) format("svg");';
-					$SMVMT_fonts     .= 'font-weight: normal;';
-					$SMVMT_fonts     .= 'font-style: normal;';
-					$SMVMT_fonts     .= 'font-display: ' . smvmt_get_fonts_display_property() . ';';
-				$SMVMT_fonts         .= '}';
-				$parse_css           .= $SMVMT_fonts;
+				$smvmt_fonts          = '@font-face {';
+					$smvmt_fonts     .= 'font-family: "smvmt";';
+					$smvmt_fonts     .= 'src: url(' . SMVMT_THEME_URI . 'assets/fonts/smvmt.woff) format("woff"),';
+						$smvmt_fonts .= 'url(' . SMVMT_THEME_URI . 'assets/fonts/smvmt.ttf) format("truetype"),';
+						$smvmt_fonts .= 'url(' . SMVMT_THEME_URI . 'assets/fonts/smvmt.svg#smvmt) format("svg");';
+					$smvmt_fonts     .= 'font-weight: normal;';
+					$smvmt_fonts     .= 'font-style: normal;';
+					$smvmt_fonts     .= 'font-display: ' . smvmt_get_fonts_display_property() . ';';
+				$smvmt_fonts         .= '}';
+				$parse_css           .= $smvmt_fonts;
 			}
 
 			/**

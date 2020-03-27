@@ -66,7 +66,7 @@ if ( ! class_exists( 'SMVMT_Meta_Box_Operations' ) ) {
 
 			$display_header = get_post_meta( get_the_ID(), 'smvmt-main-header-display', true );
 
-			$display_header = apply_filters( 'ast_main_header_display', $display_header );
+			$display_header = apply_filters( 'smvmt_main_header_display', $display_header );
 
 			if ( 'disabled' == $display_header ) {
 

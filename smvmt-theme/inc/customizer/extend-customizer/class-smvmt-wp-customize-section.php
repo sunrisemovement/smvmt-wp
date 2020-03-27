@@ -41,7 +41,7 @@ if ( class_exists( 'WP_Customize_Section' ) ) {
 		 * @since  1.0.31
 		 * @var string
 		 */
-		public $type = 'ast_section';
+		public $type = 'smvmt_section';
 
 		/**
 		 * Get section parameters for JS.

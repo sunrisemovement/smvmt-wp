@@ -15,7 +15,7 @@
 		'smvmt-settings[breadcrumb-font-size]',
 		'.smvmt-breadcrumbs-wrapper .trail-items span, .smvmt-breadcrumbs-wrapper a, .smvmt-breadcrumbs-wrapper .breadcrumb_last, .smvmt-breadcrumbs-wrapper span,  .smvmt-breadcrumbs-wrapper .breadcrumbs, .smvmt-breadcrumbs-wrapper .current-item, .smvmt-breadcrumbs-wrapper .last, .smvmt-breadcrumbs-wrapper .separator'
 	);
-	SMVMT_generate_outside_font_family_css(
+	smvmt_generate_outside_font_family_css(
 		'smvmt-settings[breadcrumb-font-family]',
 		'.smvmt-breadcrumbs-wrapper .trail-items span, .smvmt-breadcrumbs-wrapper a, .smvmt-breadcrumbs-wrapper .breadcrumb_last, .smvmt-breadcrumbs-wrapper span,  .smvmt-breadcrumbs-wrapper .breadcrumbs, .smvmt-breadcrumbs-wrapper .current-item, .smvmt-breadcrumbs-wrapper .last, .smvmt-breadcrumbs-wrapper .separator'
 	);

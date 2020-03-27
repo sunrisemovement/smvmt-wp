@@ -45,7 +45,7 @@ class SMVMT_Control_Radio_Image extends WP_Customize_Control {
 		if ( '' === self::$higlight_color ) {
 			self::SMVMT_set_highlight_color();
 			// Print radio image customizer css.
-			add_action( 'customize_controls_print_styles', array( $this, 'SMVMT_add_radio_img_svg_css' ) );
+			add_action( 'customize_controls_print_styles', array( $this, 'smvmt_add_radio_img_svg_css' ) );
 		}
 	}
 
@@ -55,7 +55,7 @@ class SMVMT_Control_Radio_Image extends WP_Customize_Control {
 	 * @since 2.0.0
 	 * @return void
 	 */
-	public static function SMVMT_add_radio_img_svg_css() {
+	public static function smvmt_add_radio_img_svg_css() {
 		?>
 		<style type="text/css">.smvmt-radio-img-svg svg * { fill: <?php echo self::$higlight_color; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> !important; stroke: <?php echo self::$higlight_color; ?> !important }</style>
 		<?php

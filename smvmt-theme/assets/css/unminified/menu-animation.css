@@ -33,6 +33,7 @@
 
 .smvmt-desktop .smvmt-menu-animation-slide-up > .full-width-mega.menu-item.focus > .smvmt-full-megamenu-wrapper,
 .smvmt-desktop .smvmt-menu-animation-slide-up > .full-width-mega.menu-item:hover > .smvmt-full-megamenu-wrapper {
+  -js-display: flex;
   display: flex;
 }
 
@@ -59,6 +60,7 @@
 
 .smvmt-desktop .smvmt-menu-animation-slide-down > .full-width-mega.menu-item.focus > .smvmt-full-megamenu-wrapper,
 .smvmt-desktop .smvmt-menu-animation-slide-down > .full-width-mega.menu-item:hover > .smvmt-full-megamenu-wrapper {
+  -js-display: flex;
   display: flex;
 }
 
@@ -83,5 +85,6 @@
 
 .smvmt-desktop .smvmt-menu-animation-fade > .full-width-mega.menu-item.focus > .smvmt-full-megamenu-wrapper,
 .smvmt-desktop .smvmt-menu-animation-fade > .full-width-mega.menu-item:hover > .smvmt-full-megamenu-wrapper {
+  -js-display: flex;
   display: flex;
 }
