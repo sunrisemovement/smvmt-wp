@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 
 	var pkgInfo = grunt.file.readJSON('package.json');
 
-    // smvmt Addons.
+    // smvmt addons.
     for (var i = 0; i < smvmt_theme_Addons.length; i++) {
 
         sass_dist_files.push({
