@@ -81,10 +81,10 @@ if ( ! class_exists( 'SMVMT_Woocommerce' ) ) :
 			add_filter( 'woocommerce_output_related_products_args', array( $this, 'related_products_args' ) );
 
 			// Add Cart icon in Menu.
-			add_filter( 'smvmt_get_dynamic_header_content', array( $this, 'SMVMT_header_cart' ), 10, 3 );
+			add_filter( 'smvmt_get_dynamic_header_content', array( $this, 'smvmt_header_cart' ), 10, 3 );
 
 			// Add Cart option in dropdown.
-			add_filter( 'SMVMT_header_section_elements', array( $this, 'header_section_elements' ) );
+			add_filter( 'smvmt_header_section_elements', array( $this, 'header_section_elements' ) );
 
 			// Cart fragment.
 			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
@@ -100,7 +100,7 @@ if ( ! class_exists( 'SMVMT_Woocommerce' ) ) :
 
 			add_filter( 'woocommerce_get_stock_html', 'SMVMT_woo_product_in_stock', 10, 2 );
 
-			add_filter( 'SMVMT_schema_body', array( $this, 'remove_body_schema' ) );
+			add_filter( 'smvmt_schema_body', array( $this, 'remove_body_schema' ) );
 		}
 
 		/**
@@ -555,7 +555,7 @@ if ( ! class_exists( 'SMVMT_Woocommerce' ) ) :
 				}
 
 				if ( 'disabled' === $footer_layout ) {
-					remove_action( 'SMVMT_footer_content', 'SMVMT_footer_small_footer_template', 5 );
+					remove_action( 'smvmt_footer_content', 'smvmt_footer_small_footer_template', 5 );
 				}
 			}
 		}
@@ -991,7 +991,7 @@ if ( ! class_exists( 'SMVMT_Woocommerce' ) ) :
 		 *
 		 * @since 1.0.0
 		 */
-		public function SMVMT_header_cart( $output, $section, $section_type ) {
+		public function smvmt_header_cart( $output, $section, $section_type ) {
 
 			if ( 'woocommerce' === $section_type && apply_filters( 'SMVMT_woo_header_cart_icon', true ) ) {
 

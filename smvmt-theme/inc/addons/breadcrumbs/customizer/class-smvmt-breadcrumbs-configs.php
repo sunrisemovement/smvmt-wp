@@ -78,7 +78,7 @@ if ( ! class_exists( 'SMVMT_Breadcrumbs_Configs' ) ) {
 					'choices'  => array(
 						'none'                      => __( 'None', 'smvmt' ),
 						'SMVMT_masthead_content'    => __( 'Inside Header', 'smvmt' ),
-						'SMVMT_header_markup_after' => __( 'After Header', 'smvmt' ),
+						'smvmt_header_markup_after' => __( 'After Header', 'smvmt' ),
 						'SMVMT_entry_top'           => __( 'Before Title', 'smvmt' ),
 					),
 					'partial'  => array(

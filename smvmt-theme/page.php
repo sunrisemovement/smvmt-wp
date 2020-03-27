@@ -29,7 +29,7 @@ get_header(); ?>
 
 		<?php smvmt_primary_content_top(); ?>
 
-		<?php SMVMT_content_page_loop(); ?>
+		<?php smvmt_content_page_loop(); ?>
 
 		<?php smvmt_primary_content_bottom(); ?>
 

@@ -43,7 +43,7 @@ if ( ! class_exists( 'SMVMT_ExtTransparenty_Header_Markup' ) ) {
 			add_action( 'body_class', array( $this, 'add_body_class' ) );
 
 			/* Fixed header markup */
-			add_action( 'SMVMT_header', array( $this, 'transparent_header_logo' ), 1 );
+			add_action( 'smvmt_header', array( $this, 'transparent_header_logo' ), 1 );
 
 			/**
 			 * Metabox setup

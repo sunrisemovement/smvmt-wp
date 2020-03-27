@@ -250,7 +250,7 @@ if ( ! function_exists( 'smvmt_get_blog_post_title_meta' ) ) {
 					sprintf(
 						'<h2 class="entry-title" %2$s><a href="%1$s" rel="bookmark">',
 						esc_url( get_permalink() ),
-						SMVMT_attr(
+						smvmt_attr(
 							'article-title-blog',
 							array(
 								'class' => '',
@@ -302,7 +302,7 @@ if ( ! function_exists( 'smvmt_get_single_post_title_meta' ) ) {
 			do_action( 'SMVMT_single_post_title_before' );
 
 			smvmt_the_title(
-				'<h1 class="entry-title" ' . SMVMT_attr(
+				'<h1 class="entry-title" ' . smvmt_attr(
 					'article-title-blog-single',
 					array(
 						'class' => '',

@@ -29,7 +29,7 @@
 
 	<div class="entry-content clear"
 	<?php
-				echo SMVMT_attr(
+				echo smvmt_attr(
 					'article-entry-content-single-layout',
 					array(
 						'class' => '',
@@ -59,7 +59,7 @@
 		<?php
 			wp_link_pages(
 				array(
-					'before'      => '<div class="page-links">' . esc_html( SMVMT_default_strings( 'string-single-page-links-before', false ) ),
+					'before'      => '<div class="page-links">' . esc_html( smvmt_default_strings( 'string-single-page-links-before', false ) ),
 					'after'       => '</div>',
 					'link_before' => '<span class="page-link">',
 					'link_after'  => '</span>',

@@ -58,7 +58,7 @@ class SMVMT_Schema {
 	 * @since 2.1.3
 	 */
 	protected function schema_enabled() {
-		return apply_filters( 'SMVMT_schema_enabled', true );
+		return apply_filters( 'smvmt_schema_enabled', true );
 	}
 
 }

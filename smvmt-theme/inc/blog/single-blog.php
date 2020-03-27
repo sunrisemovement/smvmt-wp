@@ -148,7 +148,7 @@ if ( ! function_exists( 'smvmt_theme_comment' ) ) {
 							<div class="smvmt-comment-meta-wrap">
 								<?php
 								echo '<header ';
-								echo SMVMT_attr(
+								echo smvmt_attr(
 									'commen-meta-author',
 									array(
 										'class' => 'smvmt-comment-meta smvmt-row smvmt-comment-author vcard capitalize',
@@ -180,13 +180,13 @@ if ( ! function_exists( 'smvmt_theme_comment' ) ) {
 							<section class="smvmt-comment-content comment">
 								<?php comment_text(); ?>
 								<div class="smvmt-comment-edit-reply-wrap">
-									<?php edit_comment_link( SMVMT_default_strings( 'string-comment-edit-link', false ), '<span class="smvmt-edit-link">', '</span>' ); ?>
+									<?php edit_comment_link( smvmt_default_strings( 'string-comment-edit-link', false ), '<span class="smvmt-edit-link">', '</span>' ); ?>
 									<?php
 									comment_reply_link(
 										array_merge(
 											$args,
 											array(
-												'reply_text' => SMVMT_default_strings( 'string-comment-reply-link', false ),
+												'reply_text' => smvmt_default_strings( 'string-comment-reply-link', false ),
 												'add_below' => 'comment',
 												'depth'  => $depth,
 												'max_depth' => $args['max_depth'],
@@ -198,7 +198,7 @@ if ( ! function_exists( 'smvmt_theme_comment' ) ) {
 									?>
 								</div>
 								<?php if ( '0' == $comment->comment_approved ) : ?>
-									<p class="smvmt-highlight-text comment-awaiting-moderation"><?php echo esc_html( SMVMT_default_strings( 'string-comment-awaiting-moderation', false ) ); ?></p>
+									<p class="smvmt-highlight-text comment-awaiting-moderation"><?php echo esc_html( smvmt_default_strings( 'string-comment-awaiting-moderation', false ) ); ?></p>
 								<?php endif; ?>
 							</section> <!-- .smvmt-comment-content -->
 						</div>
@@ -231,12 +231,12 @@ if ( ! function_exists( 'SMVMT_single_post_navigation_markup' ) ) {
 			$post_obj = get_post_type_object( get_post_type() );
 
 			$next_text = sprintf(
-				SMVMT_default_strings( 'string-single-navigation-next', false ),
+				smvmt_default_strings( 'string-single-navigation-next', false ),
 				$post_obj->labels->singular_name
 			);
 
 			$prev_text = sprintf(
-				SMVMT_default_strings( 'string-single-navigation-previous', false ),
+				smvmt_default_strings( 'string-single-navigation-previous', false ),
 				$post_obj->labels->singular_name
 			);
 			/**

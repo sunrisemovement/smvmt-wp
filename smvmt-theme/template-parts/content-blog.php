@@ -14,7 +14,7 @@
 
 <article
 	<?php
-		echo SMVMT_attr(
+		echo smvmt_attr(
 			'article-blog',
 			array(
 				'id'    => 'post-' . get_the_id(),

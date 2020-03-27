@@ -51,7 +51,7 @@ if ( ! class_exists( 'SMVMT_Loop' ) ) :
 		public function __construct() {
 			// Loop.
 			add_action( 'smvmt_content_loop', array( $this, 'loop_markup' ) );
-			add_action( 'SMVMT_content_page_loop', array( $this, 'loop_markup_page' ) );
+			add_action( 'smvmt_content_page_loop', array( $this, 'loop_markup_page' ) );
 
 			// Template Parts.
 			add_action( 'SMVMT_page_template_parts_content', array( $this, 'template_parts_page' ) );
@@ -225,7 +225,7 @@ if ( ! class_exists( 'SMVMT_Loop' ) ) :
 		 */
 		public function template_parts_content_top() {
 			if ( is_archive() ) {
-				SMVMT_content_while_before();
+				smvmt_content_while_before();
 			}
 		}
 
@@ -237,7 +237,7 @@ if ( ! class_exists( 'SMVMT_Loop' ) ) :
 		 */
 		public function template_parts_content_bottom() {
 			if ( is_archive() ) {
-				SMVMT_content_while_after();
+				smvmt_content_while_after();
 			}
 		}
 

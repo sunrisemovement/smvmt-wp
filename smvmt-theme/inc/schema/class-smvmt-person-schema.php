@@ -31,13 +31,13 @@ class SMVMT_Person_Schema extends SMVMT_Schema {
 			return false;
 		}
 
-		add_filter( 'SMVMT_attr_post-meta-author', array( $this, 'person_Schema' ) );
-		add_filter( 'SMVMT_attr_author-name', array( $this, 'author_name_schema_itemprop' ) );
-		add_filter( 'SMVMT_attr_author-url', array( $this, 'author_url_schema_itemprop' ) );
-		add_filter( 'SMVMT_attr_author-name-info', array( $this, 'author_name_info_schema_itemprop' ) );
-		add_filter( 'SMVMT_attr_author-url-info', array( $this, 'author_info_url_schema_itemprop' ) );
-		add_filter( 'SMVMT_attr_author-item-info', array( $this, 'author_item_schema_itemprop' ) );
-		add_filter( 'SMVMT_attr_author-desc-info', array( $this, 'author_desc_schema_itemprop' ) );
+		add_filter( 'smvmt_attr_post-meta-author', array( $this, 'person_Schema' ) );
+		add_filter( 'smvmt_attr_author-name', array( $this, 'author_name_schema_itemprop' ) );
+		add_filter( 'smvmt_attr_author-url', array( $this, 'author_url_schema_itemprop' ) );
+		add_filter( 'smvmt_attr_author-name-info', array( $this, 'author_name_info_schema_itemprop' ) );
+		add_filter( 'smvmt_attr_author-url-info', array( $this, 'author_info_url_schema_itemprop' ) );
+		add_filter( 'smvmt_attr_author-item-info', array( $this, 'author_item_schema_itemprop' ) );
+		add_filter( 'smvmt_attr_author-desc-info', array( $this, 'author_desc_schema_itemprop' ) );
 	}
 
 	/**

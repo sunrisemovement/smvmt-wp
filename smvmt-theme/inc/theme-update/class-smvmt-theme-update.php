@@ -205,7 +205,7 @@ if ( ! class_exists( 'SMVMT_Theme_Update' ) ) {
 		public static function SMVMT_pro_compatibility() {
 
 			if ( defined( 'SMVMT_THEME_VERSION' ) && version_compare( SMVMT_THEME_VERSION, '1.0.0-beta.6', '<' ) ) {
-				remove_action( 'SMVMT_footer_content', 'SMVMT_advanced_footer_markup', 1 );
+				remove_action( 'smvmt_footer_content', 'SMVMT_advanced_footer_markup', 1 );
 			}
 		}
 

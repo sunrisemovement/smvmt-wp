@@ -31,7 +31,7 @@ class SMVMT_Site_Navigation_Schema extends SMVMT_Schema {
 			return false;
 		}
 
-		add_filter( 'SMVMT_attr_site-navigation', array( $this, 'site_navigation_schema' ) );
+		add_filter( 'smvmt_attr_site-navigation', array( $this, 'site_navigation_schema' ) );
 	}
 
 	/**

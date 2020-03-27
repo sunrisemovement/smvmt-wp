@@ -146,7 +146,7 @@ if ( ! class_exists( 'SMVMT_PB_Compatibility' ) ) {
 		 */
 		public function update_meta_values( $id ) {
 
-			$layout_flag = get_post_meta( $id, '_SMVMT_content_layout_flag', true );
+			$layout_flag = get_post_meta( $id, '_smvmt_content_layout_flag', true );
 			if ( empty( $layout_flag ) ) {
 				$site_content = get_post_meta( $id, 'site-content-layout', true );
 
@@ -166,12 +166,12 @@ if ( ! class_exists( 'SMVMT_PB_Compatibility' ) ) {
 				$elementor = get_post_meta( $id, '_elementor_edit_mode', true );
 				$vc        = get_post_meta( $id, '_wpb_vc_js_status', true );
 				if ( 'page-builder' === $site_content ) {
-					update_post_meta( $id, '_SMVMT_content_layout_flag', 'disabled' );
+					update_post_meta( $id, '_smvmt_content_layout_flag', 'disabled' );
 					update_post_meta( $id, 'site-post-title', 'disabled' );
 					update_post_meta( $id, 'smvmt-title-bar-display', 'disabled' );
 					update_post_meta( $id, 'site-sidebar-layout', 'no-sidebar' );
 				} elseif ( 'builder' === $elementor || true === $vc || 'true' === $vc ) {
-					update_post_meta( $id, '_SMVMT_content_layout_flag', 'disabled' );
+					update_post_meta( $id, '_smvmt_content_layout_flag', 'disabled' );
 				}
 			}
 		}

@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Default Strings
  */
-if ( ! function_exists( 'SMVMT_default_strings' ) ) {
+if ( ! function_exists( 'smvmt_default_strings' ) ) {
 
 	/**
 	 * Default Strings
@@ -26,10 +26,10 @@ if ( ! function_exists( 'SMVMT_default_strings' ) ) {
 	 * @param  boolean $echo Print string.
 	 * @return mixed        Return string or nothing.
 	 */
-	function SMVMT_default_strings( $key, $echo = true ) {
+	function smvmt_default_strings( $key, $echo = true ) {
 
 		$defaults = apply_filters(
-			'SMVMT_default_strings',
+			'smvmt_default_strings',
 			array(
 
 				// Header.

@@ -89,12 +89,12 @@ if ( ! class_exists( 'SMVMT_Breadcrumbs_Markup' ) ) {
 		public function SMVMT_hook_breadcrumb_position() {
 			$breadcrumb_position = smvmt_get_option( 'breadcrumb-position' );
 
-			if ( $breadcrumb_position && 'SMVMT_header_markup_after' === $breadcrumb_position ) {
+			if ( $breadcrumb_position && 'smvmt_header_markup_after' === $breadcrumb_position ) {
 				echo '<div class="main-header-bar smvmt-header-breadcrumb">
 							<div class="smvmt-container">';
 			}
 			smvmt_get_breadcrumb();
-			if ( $breadcrumb_position && 'SMVMT_header_markup_after' === $breadcrumb_position ) {
+			if ( $breadcrumb_position && 'smvmt_header_markup_after' === $breadcrumb_position ) {
 				echo '	</div>
 					</div>';
 			}

@@ -47,7 +47,7 @@ if ( ! class_exists( 'SMVMT_Attr' ) ) :
 		/**
 		 * Build list of attributes into a string and apply contextual filter on string.
 		 *
-		 * The contextual filter is of the form `SMVMT_attr_{context}_output`.
+		 * The contextual filter is of the form `smvmt_attr_{context}_output`.
 		 *
 		 * @since 1.6.2
 		 *
@@ -56,7 +56,7 @@ if ( ! class_exists( 'SMVMT_Attr' ) ) :
 		 * @param array  $args       Optional. Custom data to pass to filter.
 		 * @return string String of HTML attributes and values.
 		 */
-		public function SMVMT_attr( $context, $attributes = array(), $args = array() ) {
+		public function smvmt_attr( $context, $attributes = array(), $args = array() ) {
 
 			$attributes = $this->SMVMT_parse_attr( $context, $attributes, $args );
 
@@ -76,7 +76,7 @@ if ( ! class_exists( 'SMVMT_Attr' ) ) :
 				}
 			}
 
-			$output = apply_filters( "SMVMT_attr_{$context}_output", $output, $attributes, $context, $args );
+			$output = apply_filters( "smvmt_attr_{$context}_output", $output, $attributes, $context, $args );
 
 			return trim( $output );
 		}
@@ -84,7 +84,7 @@ if ( ! class_exists( 'SMVMT_Attr' ) ) :
 		/**
 		 * Merge array of attributes with defaults, and apply contextual filter on array.
 		 *
-		 * The contextual filter is of the form `SMVMT_attr_{context}`.
+		 * The contextual filter is of the form `smvmt_attr_{context}`.
 		 *
 		 * @since 1.6.2
 		 *
@@ -102,7 +102,7 @@ if ( ! class_exists( 'SMVMT_Attr' ) ) :
 			$attributes = wp_parse_args( $attributes, $defaults );
 
 			// Contextual filter.
-			return apply_filters( "SMVMT_attr_{$context}", $attributes, $context, $args );
+			return apply_filters( "smvmt_attr_{$context}", $attributes, $context, $args );
 		}
 
 	}

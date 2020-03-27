@@ -95,7 +95,7 @@ if ( ! class_exists( 'SMVMT_LifterLMS' ) ) :
 				}
 
 				if ( 'disabled' === $footer_layout ) {
-					remove_action( 'SMVMT_footer_content', 'SMVMT_footer_small_footer_template', 5 );
+					remove_action( 'smvmt_footer_content', 'smvmt_footer_small_footer_template', 5 );
 				}
 			}
 
@@ -115,7 +115,7 @@ if ( ! class_exists( 'SMVMT_LifterLMS' ) ) :
 				}
 
 				if ( 'disabled' === $footer_layout ) {
-					remove_action( 'SMVMT_footer_content', 'SMVMT_footer_small_footer_template', 5 );
+					remove_action( 'smvmt_footer_content', 'smvmt_footer_small_footer_template', 5 );
 				}
 			}
 

@@ -65,11 +65,11 @@ if ( ! class_exists( 'SMVMT_AMP' ) ) :
 			add_filter( 'SMVMT_search_slide_toggle_data_attrs', array( $this, 'add_search_slide_toggle_attrs' ) );
 			add_filter( 'SMVMT_search_field_toggle_data_attrs', array( $this, 'add_search_field_toggle_attrs' ) );
 			add_action( 'wp_footer', array( $this, 'render_amp_states' ) );
-			add_filter( 'SMVMT_attr_smvmt-main-header-bar-alignment', array( $this, 'nav_menu_wrapper' ) );
-			add_filter( 'SMVMT_attr_smvmt-menu-toggle', array( $this, 'menu_toggle_button' ), 20, 3 );
+			add_filter( 'smvmt_attr_smvmt-main-header-bar-alignment', array( $this, 'nav_menu_wrapper' ) );
+			add_filter( 'smvmt_attr_smvmt-menu-toggle', array( $this, 'menu_toggle_button' ), 20, 3 );
 			add_filter( 'smvmt_theme_dynamic_css', array( $this, 'dynamic_css' ) );
 			add_filter( 'SMVMT_toggle_button_markup', array( $this, 'toggle_button_markup' ), 20, 2 );
-			add_filter( 'SMVMT_schema_body', array( $this, 'body_id' ) );
+			add_filter( 'smvmt_schema_body', array( $this, 'body_id' ) );
 		}
 
 		/**
@@ -216,7 +216,7 @@ if ( ! class_exists( 'SMVMT_AMP' ) ) :
 
 			);
 
-			$parse_css = $compiled_css . smvmt_parse_css( $css, '', SMVMT_header_break_point() );
+			$parse_css = $compiled_css . smvmt_parse_css( $css, '', smvmt_header_break_point() );
 
 			// Move all header-break-point css from class based css to media query based CSS.
 			$SMVMT_break_point_navigation = array(
@@ -898,7 +898,7 @@ if ( ! class_exists( 'SMVMT_AMP' ) ) :
 					'border-width' => '1px',
 				),
 			);
-			$parse_css                   .= smvmt_parse_css( $SMVMT_break_point_navigation, '', SMVMT_header_break_point() );
+			$parse_css                   .= smvmt_parse_css( $SMVMT_break_point_navigation, '', smvmt_header_break_point() );
 
 			// 768px
 			$SMVMT_medium_break_point_navigation = array(

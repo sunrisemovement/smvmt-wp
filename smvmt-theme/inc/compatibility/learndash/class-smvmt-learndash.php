@@ -85,7 +85,7 @@ if ( ! class_exists( 'SMVMT_LearnDash' ) ) :
 			$text_color   = smvmt_get_option( 'text-color' );
 			$link_h_color = smvmt_get_option( 'link-h-color' );
 
-			$body_font_family = SMVMT_body_font_family();
+			$body_font_family = smvmt_body_font_family();
 
 			$link_forground_color  = smvmt_get_foreground_color( $link_color );
 			$theme_forground_color = smvmt_get_foreground_color( $theme_color );

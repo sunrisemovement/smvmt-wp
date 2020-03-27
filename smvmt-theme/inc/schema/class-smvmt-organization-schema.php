@@ -31,13 +31,13 @@ class SMVMT_Organization_Schema extends SMVMT_Schema {
 			return false;
 		}
 
-		add_filter( 'SMVMT_attr_site-identity', array( $this, 'organization_Schema' ) );
-		add_filter( 'SMVMT_attr_site-title', array( $this, 'site_title_attr' ) );
-		add_filter( 'SMVMT_attr_site-title-link', array( $this, 'site_title_link_attr' ) );
-		add_filter( 'SMVMT_attr_site-title-custom-link', array( $this, 'site_title_custom_link_attr' ) );
-		add_filter( 'SMVMT_attr_site-title-sticky-custom-link', array( $this, 'site_title_sticky_custom_link_attr' ) );
-		add_filter( 'SMVMT_attr_site-title-none-sticky-custom-link', array( $this, 'site_title_none_sticky_custom_link_attr' ) );
-		add_filter( 'SMVMT_attr_site-title-sticky-custom-logo-link', array( $this, 'site_title_sticky_custom_logo_link_attr' ) );
+		add_filter( 'smvmt_attr_site-identity', array( $this, 'organization_Schema' ) );
+		add_filter( 'smvmt_attr_site-title', array( $this, 'site_title_attr' ) );
+		add_filter( 'smvmt_attr_site-title-link', array( $this, 'site_title_link_attr' ) );
+		add_filter( 'smvmt_attr_site-title-custom-link', array( $this, 'site_title_custom_link_attr' ) );
+		add_filter( 'smvmt_attr_site-title-sticky-custom-link', array( $this, 'site_title_sticky_custom_link_attr' ) );
+		add_filter( 'smvmt_attr_site-title-none-sticky-custom-link', array( $this, 'site_title_none_sticky_custom_link_attr' ) );
+		add_filter( 'smvmt_attr_site-title-sticky-custom-logo-link', array( $this, 'site_title_sticky_custom_logo_link_attr' ) );
 	}
 
 	/**

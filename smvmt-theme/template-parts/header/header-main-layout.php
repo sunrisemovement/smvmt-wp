@@ -17,7 +17,7 @@
 ?>
 
 <div class="main-header-bar-wrap">
-	<div <?php echo SMVMT_attr( 'main-header-bar' ); ?>>
+	<div <?php echo smvmt_attr( 'main-header-bar' ); ?>>
 		<?php SMVMT_main_header_bar_top(); ?>
 		<div class="smvmt-container">
 

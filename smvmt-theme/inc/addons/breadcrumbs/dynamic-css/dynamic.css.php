@@ -396,7 +396,7 @@ function SMVMT_breadcrumb_section_dynamic_css( $dynamic_css, $dynamic_css_filter
 	);
 
 	/* Breadcrumb CSS for Spacing */
-	if ( 'SMVMT_header_markup_after' === $breadcrumb_position ) {
+	if ( 'smvmt_header_markup_after' === $breadcrumb_position ) {
 		// After Header.
 		$breadcrumbs_desktop['.main-header-bar.smvmt-header-breadcrumb, .smvmt-header-break-point .main-header-bar.smvmt-header-breadcrumb, .smvmt-header-break-point .header-main-layout-2 .main-header-bar.smvmt-header-breadcrumb, .smvmt-header-break-point .smvmt-mobile-header-stack .main-header-bar.smvmt-header-breadcrumb, .smvmt-default-menu-enable.smvmt-main-header-nav-open.smvmt-header-break-point .main-header-bar-wrap .main-header-bar.smvmt-header-breadcrumb, .smvmt-main-header-nav-open .main-header-bar-wrap .main-header-bar.smvmt-header-breadcrumb'] = array(
 			'padding-top'    => smvmt_responsive_spacing( $breadcrumb_spacing, 'top', 'desktop' ),

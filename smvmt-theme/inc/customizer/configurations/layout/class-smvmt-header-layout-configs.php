@@ -149,7 +149,7 @@ if ( ! class_exists( 'SMVMT_Header_Layout_Configs' ) ) {
 					'priority' => 7,
 					'title'    => __( 'Last Item in Menu', 'smvmt' ),
 					'choices'  => apply_filters(
-						'SMVMT_header_section_elements',
+						'smvmt_header_section_elements',
 						array(
 							'none'      => __( 'None', 'smvmt' ),
 							'search'    => __( 'Search', 'smvmt' ),

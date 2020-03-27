@@ -61,7 +61,7 @@ if ( ! class_exists( 'SMVMT_Visual_Composer' ) ) :
 				return;
 			}
 
-			update_post_meta( $id, '_SMVMT_content_layout_flag', 'disabled' );
+			update_post_meta( $id, '_smvmt_content_layout_flag', 'disabled' );
 			update_post_meta( $id, 'site-post-title', 'disabled' );
 			update_post_meta( $id, 'smvmt-title-bar-display', 'disabled' );
 			update_post_meta( $id, 'smvmt-featured-img', 'disabled' );
@@ -87,7 +87,7 @@ if ( ! class_exists( 'SMVMT_Visual_Composer' ) ) :
 
 			global $post;
 			$id                = smvmt_get_post_id();
-			$page_builder_flag = get_post_meta( $id, '_SMVMT_content_layout_flag', true );
+			$page_builder_flag = get_post_meta( $id, '_smvmt_content_layout_flag', true );
 
 			if ( empty( $page_builder_flag ) ) {
 				if ( $id > 0 && empty( $post->post_content ) ) {
@@ -107,7 +107,7 @@ if ( ! class_exists( 'SMVMT_Visual_Composer' ) ) :
 			global $post;
 			$id = smvmt_get_post_id();
 
-			$page_builder_flag = get_post_meta( $id, '_SMVMT_content_layout_flag', true );
+			$page_builder_flag = get_post_meta( $id, '_smvmt_content_layout_flag', true );
 
 			if ( isset( $post ) && empty( $page_builder_flag ) && ( is_admin() || is_singular() ) ) {
 				$vc_active = get_post_meta( $id, '_wpb_vc_js_status', true );

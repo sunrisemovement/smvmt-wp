@@ -97,7 +97,7 @@ function SMVMT_vertical_horizontal_padding_migration() {
  *
  * @return void
  */
-function SMVMT_header_button_new_options() {
+function smvmt_header_button_new_options() {
 
 	$theme_options = get_option( 'smvmt-settings', array() );
 

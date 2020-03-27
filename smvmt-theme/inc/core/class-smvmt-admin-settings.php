@@ -354,7 +354,7 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 								</a>
 							</div>
 
-							<?php do_action( 'SMVMT_header_right_section' ); ?>
+							<?php do_action( 'smvmt_header_right_section' ); ?>
 
 						</div>
 					</div>
@@ -536,7 +536,7 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 												$plugin_active_status = ' active';
 											}
 
-											echo '<li ' . SMVMT_attr(
+											echo '<li ' . smvmt_attr(
 												'smvmt-recommended-plugin-' . esc_attr( $slug ),
 												array(
 													'id' => esc_attr( $slug ),
@@ -554,7 +554,7 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 											if ( ! is_plugin_active( $plugin['plugin-init'] ) ) {
 
 												if ( file_exists( WP_CONTENT_DIR . '/plugins/' . $plugin['plugin-init'] ) ) {
-													echo '<a ' . SMVMT_attr(
+													echo '<a ' . smvmt_attr(
 														'smvmt-activate-recommended-plugin',
 														array(
 															'data-slug' => $slug,
@@ -571,7 +571,7 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 
 												} else {
 
-													echo '<a ' . SMVMT_attr(
+													echo '<a ' . smvmt_attr(
 														'smvmt-install-recommended-plugin',
 														array(
 															'data-slug' => $slug,
@@ -588,7 +588,7 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 												}
 											} else {
 
-												echo '<a ' . SMVMT_attr(
+												echo '<a ' . smvmt_attr(
 													'smvmt-deactivate-recommended-plugin',
 													array(
 														'data-slug' => $slug,
@@ -605,7 +605,7 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 
 												if ( '' !== $plugin['settings-link'] ) {
 
-													echo '<a ' . SMVMT_attr(
+													echo '<a ' . smvmt_attr(
 														'smvmt-recommended-plugin-links',
 														array(
 															'data-slug' => $slug,

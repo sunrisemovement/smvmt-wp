@@ -39,7 +39,7 @@ if ( ! function_exists( 'smvmt_get_post_meta' ) ) {
 					$author = get_the_author();
 					if ( ! empty( $author ) ) {
 						$output_str .= ( 1 != $loop_count && '' != $output_str ) ? ' ' . $separator . ' ' : '';
-						$output_str .= esc_html( SMVMT_default_strings( 'string-blog-meta-author-by', false ) ) . SMVMT_post_author();
+						$output_str .= esc_html( smvmt_default_strings( 'string-blog-meta-author-by', false ) ) . SMVMT_post_author();
 					}
 					break;
 
@@ -137,7 +137,7 @@ if ( ! function_exists( 'SMVMT_post_author' ) ) {
 		ob_start();
 
 		echo '<span ';
-			echo SMVMT_attr(
+			echo smvmt_attr(
 				'post-meta-author',
 				array(
 					'class' => 'posted-by vcard author',
@@ -148,7 +148,7 @@ if ( ! function_exists( 'SMVMT_post_author' ) ) {
 			<a title="<?php printf( esc_attr__( 'View all posts by %1$s', 'smvmt' ), get_the_author() ); ?>"
 				href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"
 				<?php
-					echo SMVMT_attr(
+					echo smvmt_attr(
 						'author-url',
 						array(
 							'class' => 'url fn n',
@@ -158,7 +158,7 @@ if ( ! function_exists( 'SMVMT_post_author' ) ) {
 				>
 				<span
 				<?php
-					echo SMVMT_attr(
+					echo smvmt_attr(
 						'author-name',
 						array(
 							'class' => 'author-name',
@@ -239,9 +239,9 @@ if ( ! function_exists( 'SMVMT_post_comments' ) ) {
 				/**
 				 * Get Comment Link
 				 *
-				 * @see SMVMT_default_strings()
+				 * @see smvmt_default_strings()
 				 */
-				comments_popup_link( SMVMT_default_strings( 'string-blog-meta-leave-a-comment', false ), SMVMT_default_strings( 'string-blog-meta-one-comment', false ), SMVMT_default_strings( 'string-blog-meta-multiple-comment', false ) );
+				comments_popup_link( smvmt_default_strings( 'string-blog-meta-leave-a-comment', false ), smvmt_default_strings( 'string-blog-meta-one-comment', false ), smvmt_default_strings( 'string-blog-meta-multiple-comment', false ) );
 				?>
 			</span>
 

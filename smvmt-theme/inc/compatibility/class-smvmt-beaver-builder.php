@@ -64,12 +64,12 @@ if ( ! class_exists( 'SMVMT_Beaver_Builder' ) ) :
 
 			$do_render = apply_filters( 'fl_builder_do_render_content', true, FLBuilderModel::get_post_id() );
 
-			$page_builder_flag = get_post_meta( $id, '_SMVMT_content_layout_flag', true );
+			$page_builder_flag = get_post_meta( $id, '_smvmt_content_layout_flag', true );
 			if ( isset( $post ) && empty( $page_builder_flag ) && ( is_admin() || is_singular() ) ) {
 
 				if ( empty( $post->post_content ) && $do_render && FLBuilderModel::is_builder_enabled() ) {
 
-					update_post_meta( $id, '_SMVMT_content_layout_flag', 'disabled' );
+					update_post_meta( $id, '_smvmt_content_layout_flag', 'disabled' );
 					update_post_meta( $id, 'site-post-title', 'disabled' );
 					update_post_meta( $id, 'smvmt-title-bar-display', 'disabled' );
 					update_post_meta( $id, 'smvmt-featured-img', 'disabled' );

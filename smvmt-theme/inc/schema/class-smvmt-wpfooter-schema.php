@@ -31,7 +31,7 @@ class SMVMT_WPFooter_Schema extends SMVMT_Schema {
 			return false;
 		}
 
-		add_filter( 'SMVMT_attr_footer', array( $this, 'wpfooter_Schema' ) );
+		add_filter( 'smvmt_attr_footer', array( $this, 'wpfooter_Schema' ) );
 	}
 
 	/**

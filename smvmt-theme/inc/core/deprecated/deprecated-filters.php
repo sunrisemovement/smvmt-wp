@@ -49,7 +49,7 @@ function SMVMT_deprecated_sigle_post_navigation_enabled( $post_nav ) {
 }
 
 // Deprecating SMVMT_primary_header_main_rt_section filter.
-add_filter( 'SMVMT_header_section_elements', 'SMVMT_deprecated_primary_header_main_rt_section', 10, 2 );
+add_filter( 'smvmt_header_section_elements', 'SMVMT_deprecated_primary_header_main_rt_section', 10, 2 );
 
 /**
  * smvmt Header elements.
@@ -61,7 +61,7 @@ add_filter( 'SMVMT_header_section_elements', 'SMVMT_deprecated_primary_header_ma
  */
 function SMVMT_deprecated_primary_header_main_rt_section( $elements, $header ) {
 
-	$elements = SMVMT_apply_filters_deprecated( 'SMVMT_primary_header_main_rt_section', array( $elements, $header ), '1.2.2', 'SMVMT_header_section_elements', '' );
+	$elements = SMVMT_apply_filters_deprecated( 'SMVMT_primary_header_main_rt_section', array( $elements, $header ), '1.2.2', 'smvmt_header_section_elements', '' );
 
 	return $elements;
 }

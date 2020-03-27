@@ -219,8 +219,8 @@ if ( ! class_exists( 'SMVMT_Beaver_Themer' ) ) :
 
 			// If we have a header, remove the theme header and hook in Theme Builder's.
 			if ( ! empty( $header_ids ) ) {
-				remove_action( 'SMVMT_header', 'SMVMT_header_markup' );
-				add_action( 'SMVMT_header', 'FLThemeBuilderLayoutRenderer::render_header' );
+				remove_action( 'smvmt_header', 'smvmt_header_markup' );
+				add_action( 'smvmt_header', 'FLThemeBuilderLayoutRenderer::render_header' );
 			}
 
 			// Get the footer ID.
@@ -228,8 +228,8 @@ if ( ! class_exists( 'SMVMT_Beaver_Themer' ) ) :
 
 			// If we have a footer, remove the theme footer and hook in Theme Builder's.
 			if ( ! empty( $footer_ids ) ) {
-				remove_action( 'SMVMT_footer', 'SMVMT_footer_markup' );
-				add_action( 'SMVMT_footer', 'FLThemeBuilderLayoutRenderer::render_footer' );
+				remove_action( 'smvmt_footer', 'smvmt_footer_markup' );
+				add_action( 'smvmt_footer', 'FLThemeBuilderLayoutRenderer::render_footer' );
 			}
 
 			// BB Themer Support.
@@ -318,15 +318,15 @@ if ( ! class_exists( 'SMVMT_Beaver_Themer' ) ) :
 				array(
 					'label' => 'Page',
 					'hooks' => array(
-						'SMVMT_body_top'    => __( 'Before Page', 'smvmt' ),
-						'SMVMT_body_bottom' => __( 'After Page', 'smvmt' ),
+						'smvmt_body_top'    => __( 'Before Page', 'smvmt' ),
+						'smvmt_body_bottom' => __( 'After Page', 'smvmt' ),
 					),
 				),
 				array(
 					'label' => 'Header',
 					'hooks' => array(
-						'SMVMT_header_before' => __( 'Before Header', 'smvmt' ),
-						'SMVMT_header_after'  => __( 'After Header', 'smvmt' ),
+						'smvmt_header_before' => __( 'Before Header', 'smvmt' ),
+						'smvmt_header_after'  => __( 'After Header', 'smvmt' ),
 					),
 				),
 				array(
@@ -339,15 +339,15 @@ if ( ! class_exists( 'SMVMT_Beaver_Themer' ) ) :
 				array(
 					'label' => 'Footer',
 					'hooks' => array(
-						'SMVMT_footer_before' => __( 'Before Footer', 'smvmt' ),
-						'SMVMT_footer_after'  => __( 'After Footer', 'smvmt' ),
+						'smvmt_footer_before' => __( 'Before Footer', 'smvmt' ),
+						'smvmt_footer_after'  => __( 'After Footer', 'smvmt' ),
 					),
 				),
 				array(
 					'label' => 'Sidebar',
 					'hooks' => array(
-						'SMVMT_sidebars_before' => __( 'Before Sidebar', 'smvmt' ),
-						'SMVMT_sidebars_after'  => __( 'After Sidebar', 'smvmt' ),
+						'smvmt_sidebars_before' => __( 'Before Sidebar', 'smvmt' ),
+						'smvmt_sidebars_after'  => __( 'After Sidebar', 'smvmt' ),
 					),
 				),
 				array(

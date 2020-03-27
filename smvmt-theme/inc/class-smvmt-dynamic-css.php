@@ -185,7 +185,7 @@ if ( ! class_exists( 'SMVMT_Dynamic_CSS' ) ) {
 			$footer_adv_link_h_color       = smvmt_get_option( 'footer-adv-link-h-color' );
 
 			// Header Break Point.
-			$header_break_point = SMVMT_header_break_point();
+			$header_break_point = smvmt_header_break_point();
 
 			// Submenu Bordercolor.
 			$submenu_border               = smvmt_get_option( 'primary-submenu-border' );
@@ -259,7 +259,7 @@ if ( ! class_exists( 'SMVMT_Dynamic_CSS' ) ) {
 			 * Small Footer Styling
 			 */
 			$small_footer_layout = smvmt_get_option( 'footer-sml-layout', 'footer-sml-layout-1' );
-			$SMVMT_footer_width  = smvmt_get_option( 'footer-layout-width' );
+			$smvmt_footer_width  = smvmt_get_option( 'footer-layout-width' );
 
 			// Blog Post Title Typography Options.
 			$single_post_max                        = smvmt_get_option( 'blog-single-width' );
@@ -281,7 +281,7 @@ if ( ! class_exists( 'SMVMT_Dynamic_CSS' ) ) {
 
 			$css_output = array();
 			// Body Font Family.
-			$body_font_family = SMVMT_body_font_family();
+			$body_font_family = smvmt_body_font_family();
 			$body_font_weight = smvmt_get_option( 'body-font-weight' );
 
 			if ( is_array( $body_font_size ) ) {
@@ -1003,7 +1003,7 @@ if ( ! class_exists( 'SMVMT_Dynamic_CSS' ) ) {
 			}
 
 			/* Width for Footer */
-			if ( 'content' != $SMVMT_footer_width ) {
+			if ( 'content' != $smvmt_footer_width ) {
 				$genral_global_responsive = array(
 					'.smvmt-small-footer .smvmt-container' => array(
 						'max-width'     => '100%',

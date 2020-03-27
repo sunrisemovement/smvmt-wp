@@ -36,7 +36,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 			$headings_text_transform     = smvmt_get_option( 'headings-text-transform' );
 			$headings_line_height        = smvmt_get_option( 'headings-line-height' );
 			$single_post_title_font_size = smvmt_get_option( 'font-size-entry-title' );
-			$body_font_family            = SMVMT_body_font_family();
+			$body_font_family            = smvmt_body_font_family();
 			$para_margin_bottom          = smvmt_get_option( 'para-margin-bottom' );
 			$theme_color                 = smvmt_get_option( 'theme-color' );
 			$link_color                  = smvmt_get_option( 'link-color', $theme_color );

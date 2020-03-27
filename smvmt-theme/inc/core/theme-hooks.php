@@ -76,7 +76,7 @@ add_theme_support(
  * Example:
  * <code>
  *      if ( current_theme_supports( 'SMVMT_hooks', 'header' ) )
- *          add_action( 'SMVMT_head_top', 'prefix_header_top' );
+ *          add_action( 'smvmt_head_top', 'prefix_header_top' );
  * </code>
  *
  * @param bool  $bool true.
@@ -95,22 +95,22 @@ add_filter( 'current_theme_supports-SMVMT_hooks', 'SMVMT_current_theme_supports'
  * Special case, useful for <DOCTYPE>, etc.
  * $SMVMT_supports[] = 'html;
  */
-function SMVMT_html_before() {
-	do_action( 'SMVMT_html_before' );
+function smvmt_html_before() {
+	do_action( 'smvmt_html_before' );
 }
 /**
  * HTML <body> hooks
  * $SMVMT_supports[] = 'body';
  */
-function SMVMT_body_top() {
-	do_action( 'SMVMT_body_top' );
+function smvmt_body_top() {
+	do_action( 'smvmt_body_top' );
 }
 
 /**
  * Body Bottom
  */
-function SMVMT_body_bottom() {
-	do_action( 'SMVMT_body_bottom' );
+function smvmt_body_bottom() {
+	do_action( 'smvmt_body_bottom' );
 }
 
 /**
@@ -118,15 +118,15 @@ function SMVMT_body_bottom() {
  *
  * $SMVMT_supports[] = 'head';
  */
-function SMVMT_head_top() {
-	do_action( 'SMVMT_head_top' );
+function smvmt_head_top() {
+	do_action( 'smvmt_head_top' );
 }
 
 /**
  * Head Bottom
  */
-function SMVMT_head_bottom() {
-	do_action( 'SMVMT_head_bottom' );
+function smvmt_head_bottom() {
+	do_action( 'smvmt_head_bottom' );
 }
 
 /**
@@ -134,15 +134,15 @@ function SMVMT_head_bottom() {
  *
  * $SMVMT_supports[] = 'header';
  */
-function SMVMT_header_before() {
-	do_action( 'SMVMT_header_before' );
+function smvmt_header_before() {
+	do_action( 'smvmt_header_before' );
 }
 
 /**
  * Site Header
  */
-function SMVMT_header() {
-	do_action( 'SMVMT_header' );
+function smvmt_header() {
+	do_action( 'smvmt_header' );
 }
 
 /**
@@ -169,8 +169,8 @@ function SMVMT_masthead_bottom() {
 /**
  * Header After
  */
-function SMVMT_header_after() {
-	do_action( 'SMVMT_header_after' );
+function smvmt_header_after() {
+	do_action( 'smvmt_header_after' );
 }
 
 /**
@@ -219,36 +219,36 @@ function SMVMT_masthead_toggle_buttons_after() {
  *
  * $SMVMT_supports[] = 'content';
  */
-function SMVMT_content_before() {
-	do_action( 'SMVMT_content_before' );
+function smvmt_content_before() {
+	do_action( 'smvmt_content_before' );
 }
 
 /**
  * Content after
  */
-function SMVMT_content_after() {
-	do_action( 'SMVMT_content_after' );
+function smvmt_content_after() {
+	do_action( 'smvmt_content_after' );
 }
 
 /**
  * Content top
  */
-function SMVMT_content_top() {
-	do_action( 'SMVMT_content_top' );
+function smvmt_content_top() {
+	do_action( 'smvmt_content_top' );
 }
 
 /**
  * Content bottom
  */
-function SMVMT_content_bottom() {
-	do_action( 'SMVMT_content_bottom' );
+function smvmt_content_bottom() {
+	do_action( 'smvmt_content_bottom' );
 }
 
 /**
  * Content while before
  */
-function SMVMT_content_while_before() {
-	do_action( 'SMVMT_content_while_before' );
+function smvmt_content_while_before() {
+	do_action( 'smvmt_content_while_before' );
 }
 
 /**
@@ -263,15 +263,15 @@ function smvmt_content_loop() {
  *
  * Called from page.php
  */
-function SMVMT_content_page_loop() {
-	do_action( 'SMVMT_content_page_loop' );
+function smvmt_content_page_loop() {
+	do_action( 'smvmt_content_page_loop' );
 }
 
 /**
  * Content while after
  */
-function SMVMT_content_while_after() {
-	do_action( 'SMVMT_content_while_after' );
+function smvmt_content_while_after() {
+	do_action( 'smvmt_content_while_after' );
 }
 
 /**
@@ -367,15 +367,15 @@ function SMVMT_comments_after() {
  *
  * $SMVMT_supports[] = 'sidebar';
  */
-function SMVMT_sidebars_before() {
-	do_action( 'SMVMT_sidebars_before' );
+function smvmt_sidebars_before() {
+	do_action( 'smvmt_sidebars_before' );
 }
 
 /**
  * Sidebars after
  */
-function SMVMT_sidebars_after() {
-	do_action( 'SMVMT_sidebars_after' );
+function smvmt_sidebars_after() {
+	do_action( 'smvmt_sidebars_after' );
 }
 
 /**
@@ -383,43 +383,43 @@ function SMVMT_sidebars_after() {
  *
  * $SMVMT_supports[] = 'footer';
  */
-function SMVMT_footer() {
-	do_action( 'SMVMT_footer' );
+function smvmt_footer() {
+	do_action( 'smvmt_footer' );
 }
 
 /**
  * Footer before
  */
-function SMVMT_footer_before() {
-	do_action( 'SMVMT_footer_before' );
+function smvmt_footer_before() {
+	do_action( 'smvmt_footer_before' );
 }
 
 /**
  * Footer after
  */
-function SMVMT_footer_after() {
-	do_action( 'SMVMT_footer_after' );
+function smvmt_footer_after() {
+	do_action( 'smvmt_footer_after' );
 }
 
 /**
  * Footer top
  */
-function SMVMT_footer_content_top() {
-	do_action( 'SMVMT_footer_content_top' );
+function smvmt_footer_content_top() {
+	do_action( 'smvmt_footer_content_top' );
 }
 
 /**
  * Footer
  */
-function SMVMT_footer_content() {
-	do_action( 'SMVMT_footer_content' );
+function smvmt_footer_content() {
+	do_action( 'smvmt_footer_content' );
 }
 
 /**
  * Footer bottom
  */
-function SMVMT_footer_content_bottom() {
-	do_action( 'SMVMT_footer_content_bottom' );
+function smvmt_footer_content_bottom() {
+	do_action( 'smvmt_footer_content_bottom' );
 }
 
 /**

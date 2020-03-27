@@ -101,7 +101,7 @@ if ( ! function_exists( 'SMVMT_widgets_init' ) ) :
 		 */
 		register_sidebar(
 			apply_filters(
-				'SMVMT_header_widgets_init',
+				'smvmt_header_widgets_init',
 				array(
 					'name'          => esc_html__( 'Header', 'smvmt' ),
 					'id'            => 'header-widget',
@@ -119,7 +119,7 @@ if ( ! function_exists( 'SMVMT_widgets_init' ) ) :
 		 */
 		register_sidebar(
 			apply_filters(
-				'SMVMT_footer_1_widgets_init',
+				'smvmt_footer_1_widgets_init',
 				array(
 					'name'          => esc_html__( 'Footer Bar Section 1', 'smvmt' ),
 					'id'            => 'footer-widget-1',
@@ -134,7 +134,7 @@ if ( ! function_exists( 'SMVMT_widgets_init' ) ) :
 
 		register_sidebar(
 			apply_filters(
-				'SMVMT_footer_2_widgets_init',
+				'smvmt_footer_2_widgets_init',
 				array(
 					'name'          => esc_html__( 'Footer Bar Section 2', 'smvmt' ),
 					'id'            => 'footer-widget-2',

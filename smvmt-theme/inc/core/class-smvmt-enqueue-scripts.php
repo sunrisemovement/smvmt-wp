@@ -254,7 +254,7 @@ if ( ! class_exists( 'SMVMT_Enqueue_Scripts' ) ) {
 			}
 
 			$SMVMT_localize = array(
-				'break_point' => SMVMT_header_break_point(),    // Header Break Point.
+				'break_point' => smvmt_header_break_point(),    // Header Break Point.
 				'isRtl'       => is_rtl(),
 			);
 

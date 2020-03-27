@@ -88,7 +88,7 @@
 	 */
 	wp.customize( 'smvmt-settings[breadcrumb-spacing]', function( value ) {
 		value.bind( function( padding ) {
-			if( 'SMVMT_header_markup_after' == wp.customize( 'smvmt-settings[breadcrumb-position]' ).get() ) {
+			if( 'smvmt_header_markup_after' == wp.customize( 'smvmt-settings[breadcrumb-position]' ).get() ) {
 				smvmt_responsive_spacing( 'smvmt-settings[breadcrumb-spacing]','.main-header-bar.smvmt-header-breadcrumb', 'padding',  ['top', 'right', 'bottom', 'left' ] );
 			} else if( 'SMVMT_masthead_content' == wp.customize( 'smvmt-settings[breadcrumb-position]' ).get() ) {
 				smvmt_responsive_spacing( 'smvmt-settings[breadcrumb-spacing]','.smvmt-breadcrumbs-wrapper .smvmt-breadcrumbs-inner #smvmt-breadcrumbs-yoast, .smvmt-breadcrumbs-wrapper .smvmt-breadcrumbs-inner .breadcrumbs, .smvmt-breadcrumbs-wrapper .smvmt-breadcrumbs-inner .rank-math-breadcrumb, .smvmt-breadcrumbs-wrapper .smvmt-breadcrumbs-inner .smvmt-breadcrumbs', 'padding',  ['top', 'right', 'bottom', 'left' ] );

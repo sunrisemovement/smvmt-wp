@@ -23,9 +23,9 @@ if ( ! function_exists( 'SMVMT_entry_footer' ) ) :
 			/**
 			 * Get default strings.
 			 *
-			 * @see SMVMT_default_strings
+			 * @see smvmt_default_strings
 			 */
-			comments_popup_link( SMVMT_default_strings( 'string-blog-meta-leave-a-comment', false ), SMVMT_default_strings( 'string-blog-meta-one-comment', false ), SMVMT_default_strings( 'string-blog-meta-multiple-comment', false ) );
+			comments_popup_link( smvmt_default_strings( 'string-blog-meta-leave-a-comment', false ), smvmt_default_strings( 'string-blog-meta-one-comment', false ), smvmt_default_strings( 'string-blog-meta-multiple-comment', false ) );
 			echo '</span>';
 		}
 

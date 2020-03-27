@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Heading Colors
  */
-add_filter( 'SMVMT_dynamic_theme_css', 'SMVMT_heading_colors_section_dynamic_css' );
+add_filter( 'SMVMT_dynamic_theme_css', 'smvmt_heading_colors_section_dynamic_css' );
 
 /**
  * Dynamic CSS
@@ -24,7 +24,7 @@ add_filter( 'SMVMT_dynamic_theme_css', 'SMVMT_heading_colors_section_dynamic_css
  *
  * @since 2.1.4
  */
-function SMVMT_heading_colors_section_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' ) {
+function smvmt_heading_colors_section_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' ) {
 
 	/**
 	 * Heading Colors - h1 - h6.

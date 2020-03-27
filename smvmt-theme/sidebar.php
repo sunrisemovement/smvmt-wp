@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $sidebar = apply_filters( 'smvmt_get_sidebar', 'sidebar-1' );
 
 echo '<div ';
-	echo SMVMT_attr(
+	echo smvmt_attr(
 		'sidebar',
 		array(
 			'id'    => 'secondary',
@@ -26,9 +26,9 @@ echo '<div ';
 	echo '>';
 	?>
 
-	<div class="sidebar-main" <?php echo apply_filters( 'SMVMT_sidebar_data_attrs', '', $sidebar ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<div class="sidebar-main" <?php echo apply_filters( 'smvmt_sidebar_data_attrs', '', $sidebar ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 
-		<?php SMVMT_sidebars_before(); ?>
+		<?php smvmt_sidebars_before(); ?>
 
 		<?php if ( is_active_sidebar( $sidebar ) ) : ?>
 
@@ -36,7 +36,7 @@ echo '<div ';
 
 		<?php endif; ?>
 
-		<?php SMVMT_sidebars_after(); ?>
+		<?php smvmt_sidebars_after(); ?>
 
 	</div><!-- .sidebar-main -->
 </div><!-- #secondary -->

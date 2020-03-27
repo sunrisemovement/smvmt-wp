@@ -193,9 +193,9 @@ if ( ! class_exists( 'SMVMT_After_Setup_Theme' ) ) {
 					$blog_width = smvmt_get_option( 'blog-width' );
 
 					if ( 'custom' === $blog_width ) {
-						$content_width = apply_filters( 'SMVMT_content_width', smvmt_get_option( 'blog-max-width', 1200 ) );
+						$content_width = apply_filters( 'smvmt_content_width', smvmt_get_option( 'blog-max-width', 1200 ) );
 					} else {
-						$content_width = apply_filters( 'SMVMT_content_width', smvmt_get_option( 'site-content-width', 1200 ) );
+						$content_width = apply_filters( 'smvmt_content_width', smvmt_get_option( 'site-content-width', 1200 ) );
 					}
 				} elseif ( is_single() ) {
 
@@ -203,16 +203,16 @@ if ( ! class_exists( 'SMVMT_After_Setup_Theme' ) ) {
 						$single_post_max = smvmt_get_option( 'blog-single-width' );
 
 						if ( 'custom' === $single_post_max ) {
-							$content_width = apply_filters( 'SMVMT_content_width', smvmt_get_option( 'blog-single-max-width', 1200 ) );
+							$content_width = apply_filters( 'smvmt_content_width', smvmt_get_option( 'blog-single-max-width', 1200 ) );
 						} else {
-							$content_width = apply_filters( 'SMVMT_content_width', smvmt_get_option( 'site-content-width', 1200 ) );
+							$content_width = apply_filters( 'smvmt_content_width', smvmt_get_option( 'site-content-width', 1200 ) );
 						}
 					}
 
 					// For custom post types set the global content width.
-					$content_width = apply_filters( 'SMVMT_content_width', smvmt_get_option( 'site-content-width', 1200 ) );
+					$content_width = apply_filters( 'smvmt_content_width', smvmt_get_option( 'site-content-width', 1200 ) );
 				} else {
-					$content_width = apply_filters( 'SMVMT_content_width', smvmt_get_option( 'site-content-width', 1200 ) );
+					$content_width = apply_filters( 'smvmt_content_width', smvmt_get_option( 'site-content-width', 1200 ) );
 				}
 			}
 

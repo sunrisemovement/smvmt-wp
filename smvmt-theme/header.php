@@ -15,25 +15,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?><!DOCTYPE html>
-<?php SMVMT_html_before(); ?>
+<?php smvmt_html_before(); ?>
 <html <?php language_attributes(); ?>>
 <head>
-<?php SMVMT_head_top(); ?>
+<?php smvmt_head_top(); ?>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="https://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
-<?php SMVMT_head_bottom(); ?>
+<?php smvmt_head_bottom(); ?>
 </head>
 
-<body <?php SMVMT_schema_body(); ?> <?php body_class(); ?>>
+<body <?php smvmt_schema_body(); ?> <?php body_class(); ?>>
 
-<?php SMVMT_body_top(); ?>
+<?php smvmt_body_top(); ?>
 <?php wp_body_open(); ?>
 <div
 	<?php
-	echo SMVMT_attr(
+	echo smvmt_attr(
 		'site',
 		array(
 			'id'    => 'page',
@@ -42,18 +42,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	);
 	?>
 >
-	<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( SMVMT_default_strings( 'string-header-skip-link', false ) ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( smvmt_default_strings( 'string-header-skip-link', false ) ); ?></a>
 
-	<?php SMVMT_header_before(); ?>
+	<?php smvmt_header_before(); ?>
 
-	<?php SMVMT_header(); ?>
+	<?php smvmt_header(); ?>
 
-	<?php SMVMT_header_after(); ?>
+	<?php smvmt_header_after(); ?>
 
-	<?php SMVMT_content_before(); ?>
+	<?php smvmt_content_before(); ?>
 
 	<div id="content" class="site-content">
 
 		<div class="smvmt-container">
 
-		<?php SMVMT_content_top(); ?>
+		<?php smvmt_content_top(); ?>

@@ -17,12 +17,12 @@ add_action( 'SMVMT_masthead_toggle_buttons', 'SMVMT_masthead_toggle_buttons_prim
 add_action( 'SMVMT_masthead', 'SMVMT_masthead_primary_template' );
 add_filter( 'wp_page_menu_args', 'SMVMT_masthead_custom_page_menu_items', 10, 2 );
 add_filter( 'wp_nav_menu_items', 'SMVMT_masthead_custom_nav_menu_items', 10, 2 );
-add_action( 'SMVMT_footer_content', 'SMVMT_footer_small_footer_template', 5 );
+add_action( 'smvmt_footer_content', 'smvmt_footer_small_footer_template', 5 );
 add_action( 'SMVMT_entry_content_single', 'SMVMT_entry_content_single_template' );
 add_action( 'SMVMT_entry_content_blog', 'SMVMT_entry_content_blog_template' );
 add_action( 'SMVMT_entry_content_404_page', 'SMVMT_entry_content_404_page_template' );
-add_action( 'SMVMT_footer_content', 'SMVMT_advanced_footer_markup', 1 );
-add_action( 'SMVMT_masthead_content', 'SMVMT_header_custom_item_outside_menu', 10 );
+add_action( 'smvmt_footer_content', 'SMVMT_advanced_footer_markup', 1 );
+add_action( 'SMVMT_masthead_content', 'smvmt_header_custom_item_outside_menu', 10 );
 
 /**
  * Header Custom Menu Item
@@ -199,7 +199,7 @@ if ( ! function_exists( 'SMVMT_masthead_toggle_buttons_primary' ) ) {
 /**
  * Small Footer
  */
-if ( ! function_exists( 'SMVMT_footer_small_footer_template' ) ) {
+if ( ! function_exists( 'smvmt_footer_small_footer_template' ) ) {
 
 	/**
 	 * Small Footer
@@ -210,7 +210,7 @@ if ( ! function_exists( 'SMVMT_footer_small_footer_template' ) ) {
 	 *
 	 * @since 1.0.0
 	 */
-	function SMVMT_footer_small_footer_template() {
+	function smvmt_footer_small_footer_template() {
 
 		$small_footer_layout = smvmt_get_option_meta( 'footer-sml-layout', 'footer-sml-layout-2' );
 		$small_footer_layout = apply_filters( 'ast_footer_sml_layout', $small_footer_layout );
@@ -344,7 +344,7 @@ if ( ! function_exists( 'SMVMT_advanced_footer_markup' ) ) {
 /**
  * Header menu item outside custom menu
  */
-if ( ! function_exists( 'SMVMT_header_custom_item_outside_menu' ) ) {
+if ( ! function_exists( 'smvmt_header_custom_item_outside_menu' ) ) {
 
 	/**
 	 * Footer widgets markup
@@ -353,7 +353,7 @@ if ( ! function_exists( 'SMVMT_header_custom_item_outside_menu' ) ) {
 	 *
 	 * @since 1.0.12
 	 */
-	function SMVMT_header_custom_item_outside_menu() {
+	function smvmt_header_custom_item_outside_menu() {
 
 		if ( smvmt_get_option( 'header-display-outside-menu' ) ) {
 			$markup = SMVMT_masthead_get_menu_items( true );

@@ -17,7 +17,7 @@
 	<div class="page-content">
 
 		<div class="page-sub-title">
-			<?php echo esc_html( SMVMT_default_strings( 'string-404-sub-title', false ) ); ?>
+			<?php echo esc_html( smvmt_default_strings( 'string-404-sub-title', false ) ); ?>
 		</div>
 
 		<div class="smvmt-404-search">

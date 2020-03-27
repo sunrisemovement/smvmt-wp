@@ -72,10 +72,10 @@ if ( ! class_exists( 'SMVMT_Edd' ) ) :
 			add_action( 'init', array( $this, 'edd_set_defaults_initialization' ) );
 
 			// Add Cart option in dropdown.
-			add_filter( 'SMVMT_header_section_elements', array( $this, 'header_section_elements' ) );
+			add_filter( 'smvmt_header_section_elements', array( $this, 'header_section_elements' ) );
 
 			// Add Cart icon in Menu.
-			add_filter( 'smvmt_get_dynamic_header_content', array( $this, 'SMVMT_header_cart' ), 10, 3 );
+			add_filter( 'smvmt_get_dynamic_header_content', array( $this, 'smvmt_header_cart' ), 10, 3 );
 
 			add_filter( 'SMVMT_single_post_navigation', array( $this, 'edd_single_post_navigation' ) );
 		}
@@ -290,7 +290,7 @@ if ( ! class_exists( 'SMVMT_Edd' ) ) :
 		 *
 		 * @since 1.5.5
 		 */
-		public function SMVMT_header_cart( $output, $section, $section_type ) {
+		public function smvmt_header_cart( $output, $section, $section_type ) {
 
 			if ( 'edd' === $section_type && apply_filters( 'SMVMT_edd_header_cart_icon', true ) ) {
 

@@ -29,16 +29,16 @@ function SMVMT_pingback_header() {
 /**
  * Schema for <body> tag.
  */
-if ( ! function_exists( 'SMVMT_schema_body' ) ) :
+if ( ! function_exists( 'smvmt_schema_body' ) ) :
 
 	/**
 	 * Adds schema tags to the body classes.
 	 *
 	 * @since 1.0.0
 	 */
-	function SMVMT_schema_body() {
+	function smvmt_schema_body() {
 
-		if ( true !== apply_filters( 'SMVMT_schema_enabled', true ) ) {
+		if ( true !== apply_filters( 'smvmt_schema_enabled', true ) ) {
 			return;
 		}
 
@@ -54,17 +54,17 @@ if ( ! function_exists( 'SMVMT_schema_body' ) ) :
 		// Get itemtype for search results.
 		$itemtype = ( is_search() ) ? 'SearchResultsPage' : $itemtype;
 		// Get the result.
-		$result = apply_filters( 'SMVMT_schema_body_itemtype', $itemtype );
+		$result = apply_filters( 'smvmt_schema_body_itemtype', $itemtype );
 
 		// Return our HTML.
-		echo apply_filters( 'SMVMT_schema_body', "itemtype='https://schema.org/" . esc_attr( $result ) . "' itemscope='itemscope'" ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo apply_filters( 'smvmt_schema_body', "itemtype='https://schema.org/" . esc_attr( $result ) . "' itemscope='itemscope'" ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 endif;
 
 /**
  * Adds custom classes to the array of body classes.
  */
-if ( ! function_exists( 'SMVMT_body_classes' ) ) {
+if ( ! function_exists( 'smvmt_body_classes' ) ) {
 
 	/**
 	 * Adds custom classes to the array of body classes.
@@ -73,7 +73,7 @@ if ( ! function_exists( 'SMVMT_body_classes' ) ) {
 	 * @param array $classes Classes for the body element.
 	 * @return array
 	 */
-	function SMVMT_body_classes( $classes ) {
+	function smvmt_body_classes( $classes ) {
 
 		if ( wp_is_mobile() ) {
 			$classes[] = 'smvmt-header-break-point';
@@ -125,7 +125,7 @@ if ( ! function_exists( 'SMVMT_body_classes' ) ) {
 	}
 }
 
-add_filter( 'body_class', 'SMVMT_body_classes' );
+add_filter( 'body_class', 'smvmt_body_classes' );
 
 
 /**
@@ -148,8 +148,8 @@ if ( ! function_exists( 'SMVMT_number_pagination' ) ) {
 			echo "<div class='smvmt-pagination'>";
 			the_posts_pagination(
 				array(
-					'prev_text'    => SMVMT_default_strings( 'string-blog-navigation-previous', false ),
-					'next_text'    => SMVMT_default_strings( 'string-blog-navigation-next', false ),
+					'prev_text'    => smvmt_default_strings( 'string-blog-navigation-previous', false ),
+					'next_text'    => smvmt_default_strings( 'string-blog-navigation-next', false ),
 					'taxonomy'     => 'category',
 					'in_same_term' => true,
 				)
@@ -275,13 +275,13 @@ function smvmt_get_site_title_tagline( $display_site_title, $display_site_taglin
 				* @param string site title
 				*/
 				apply_filters( 'SMVMT_site_title', get_bloginfo( 'name' ) ),
-				SMVMT_attr(
+				smvmt_attr(
 					'site-title',
 					array(
 						'class' => 'site-title',
 					)
 				),
-				SMVMT_attr(
+				smvmt_attr(
 					'site-title-link',
 					array()
 				)
@@ -501,7 +501,7 @@ if ( ! function_exists( 'smvmt_get_custom_widget' ) ) {
 			$widget_id = 'footer-widget-2';
 		}
 
-		echo '<div class="smvmt-' . esc_attr( $widget_id ) . '-area"' . apply_filters( 'SMVMT_sidebar_data_attrs', '', $widget_id ) . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<div class="smvmt-' . esc_attr( $widget_id ) . '-area"' . apply_filters( 'smvmt_sidebar_data_attrs', '', $widget_id ) . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				smvmt_get_sidebar( $widget_id );
 		echo '</div>';
 
@@ -621,21 +621,21 @@ if ( ! function_exists( 'smvmt_get_small_footer_menu' ) ) {
 /**
  * Function to get site Header
  */
-if ( ! function_exists( 'SMVMT_header_markup' ) ) {
+if ( ! function_exists( 'smvmt_header_markup' ) ) {
 
 	/**
 	 * Site Header - <header>
 	 *
 	 * @since 1.0.0
 	 */
-	function SMVMT_header_markup() {
+	function smvmt_header_markup() {
 
-		do_action( 'SMVMT_header_markup_before' );
+		do_action( 'smvmt_header_markup_before' );
 		?>
 
 		<header
 			<?php
-				echo SMVMT_attr(
+				echo smvmt_attr(
 					'header',
 					array(
 						'id'    => 'masthead',
@@ -654,12 +654,12 @@ if ( ! function_exists( 'SMVMT_header_markup' ) ) {
 		</header><!-- #masthead -->
 
 		<?php
-		do_action( 'SMVMT_header_markup_after' );
+		do_action( 'smvmt_header_markup_after' );
 
 	}
 }
 
-add_action( 'SMVMT_header', 'SMVMT_header_markup' );
+add_action( 'smvmt_header', 'smvmt_header_markup' );
 
 /**
  * Function to get site title/logo
@@ -677,7 +677,7 @@ if ( ! function_exists( 'SMVMT_site_branding_markup' ) ) {
 		<div class="site-branding">
 			<div
 			<?php
-				echo SMVMT_attr(
+				echo smvmt_attr(
 					'site-identity',
 					array(
 						'class' => 'smvmt-site-identity',
@@ -819,7 +819,7 @@ if ( ! function_exists( 'SMVMT_primary_navigation_markup' ) ) {
 			);
 
 			$items_wrap  = '<nav ';
-			$items_wrap .= SMVMT_attr(
+			$items_wrap .= smvmt_attr(
 				'site-navigation',
 				array(
 					'id'         => 'site-navigation',
@@ -846,15 +846,15 @@ if ( ! function_exists( 'SMVMT_primary_navigation_markup' ) ) {
 			if ( has_nav_menu( 'primary' ) ) {
 				// To add default alignment for navigation which can be added through any third party plugin.
 				// Do not add any CSS from theme except header alignment.
-				echo '<div ' . SMVMT_attr( 'smvmt-main-header-bar-alignment' ) . '>';
+				echo '<div ' . smvmt_attr( 'smvmt-main-header-bar-alignment' ) . '>';
 					wp_nav_menu( $primary_menu_args );
 				echo '</div>';
 			} else {
 
-				echo '<div ' . SMVMT_attr( 'smvmt-main-header-bar-alignment' ) . '>';
+				echo '<div ' . smvmt_attr( 'smvmt-main-header-bar-alignment' ) . '>';
 					echo '<div class="main-header-bar-navigation">';
 						echo '<nav ';
-						echo SMVMT_attr(
+						echo smvmt_attr(
 							'site-navigation',
 							array(
 								'id' => 'site-navigation',
@@ -917,19 +917,19 @@ add_filter( 'page_css_class', 'SMVMT_page_css_class', 20, 5 );
 /**
  * Function to get site Footer
  */
-if ( ! function_exists( 'SMVMT_footer_markup' ) ) {
+if ( ! function_exists( 'smvmt_footer_markup' ) ) {
 
 	/**
 	 * Site Footer - <footer>
 	 *
 	 * @since 1.0.0
 	 */
-	function SMVMT_footer_markup() {
+	function smvmt_footer_markup() {
 		?>
 
 		<footer
 			<?php
-				echo SMVMT_attr(
+				echo smvmt_attr(
 					'footer',
 					array(
 						'id'    => 'colophon',
@@ -939,23 +939,23 @@ if ( ! function_exists( 'SMVMT_footer_markup' ) ) {
 			?>
 		>
 
-			<?php SMVMT_footer_content_top(); ?>
+			<?php smvmt_footer_content_top(); ?>
 
-			<?php SMVMT_footer_content(); ?>
+			<?php smvmt_footer_content(); ?>
 
-			<?php SMVMT_footer_content_bottom(); ?>
+			<?php smvmt_footer_content_bottom(); ?>
 
 		</footer><!-- #colophon -->
 		<?php
 	}
 }
 
-add_action( 'SMVMT_footer', 'SMVMT_footer_markup' );
+add_action( 'smvmt_footer', 'smvmt_footer_markup' );
 
 /**
  * Function to get Header Breakpoint
  */
-if ( ! function_exists( 'SMVMT_header_break_point' ) ) {
+if ( ! function_exists( 'smvmt_header_break_point' ) ) {
 
 	/**
 	 * Function to get Header Breakpoint
@@ -964,16 +964,16 @@ if ( ! function_exists( 'SMVMT_header_break_point' ) ) {
 	 * @since 1.0.0
 	 * @return number
 	 */
-	function SMVMT_header_break_point() {
+	function smvmt_header_break_point() {
 		$mobile_header_brakpoint = smvmt_get_option( 'mobile-header-breakpoint', 921 );
-		return absint( apply_filters( 'SMVMT_header_break_point', $mobile_header_brakpoint ) );
+		return absint( apply_filters( 'smvmt_header_break_point', $mobile_header_brakpoint ) );
 	}
 }
 
 /**
  * Function to get Body Font Family
  */
-if ( ! function_exists( 'SMVMT_body_font_family' ) ) {
+if ( ! function_exists( 'smvmt_body_font_family' ) ) {
 
 	/**
 	 * Function to get Body Font Family
@@ -981,7 +981,7 @@ if ( ! function_exists( 'SMVMT_body_font_family' ) ) {
 	 * @since 1.0.0
 	 * @return string
 	 */
-	function SMVMT_body_font_family() {
+	function smvmt_body_font_family() {
 
 		$font_family = smvmt_get_option( 'body-font-family' );
 
@@ -990,7 +990,7 @@ if ( ! function_exists( 'SMVMT_body_font_family' ) ) {
 			$font_family = '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif';
 		}
 
-		return apply_filters( 'SMVMT_body_font_family', $font_family );
+		return apply_filters( 'smvmt_body_font_family', $font_family );
 	}
 }
 
@@ -1021,14 +1021,14 @@ if ( ! function_exists( 'SMVMT_edit_post_link' ) ) {
 /**
  * Function to get Header Classes
  */
-if ( ! function_exists( 'SMVMT_header_classes' ) ) {
+if ( ! function_exists( 'smvmt_header_classes' ) ) {
 
 	/**
 	 * Function to get Header Classes
 	 *
 	 * @since 1.0.0
 	 */
-	function SMVMT_header_classes() {
+	function smvmt_header_classes() {
 		echo 'class="' . esc_attr( join( ' ', smvmt_get_header_classes() ) ) . '"';
 	}
 }
@@ -1090,7 +1090,7 @@ function smvmt_get_header_classes() {
 
 	$classes[] = 'smvmt-mobile-header-' . $mobile_header_alignment;
 
-	$classes = array_unique( apply_filters( 'SMVMT_header_class', $classes ) );
+	$classes = array_unique( apply_filters( 'smvmt_header_class', $classes ) );
 
 	$classes = array_map( 'sanitize_html_class', $classes );
 
@@ -1100,14 +1100,14 @@ function smvmt_get_header_classes() {
 /**
  * Function to get Footer Classes
  */
-if ( ! function_exists( 'SMVMT_footer_classes' ) ) {
+if ( ! function_exists( 'smvmt_footer_classes' ) ) {
 
 	/**
 	 * Function to get Footer Classes
 	 *
 	 * @since 1.0.0
 	 */
-	function SMVMT_footer_classes() {
+	function smvmt_footer_classes() {
 		echo 'class="' . esc_attr( join( ' ', smvmt_get_footer_classes() ) ) . '"';
 	}
 }
@@ -1119,7 +1119,7 @@ if ( ! function_exists( 'SMVMT_footer_classes' ) ) {
  * @return Array classnames for the <footer>
  */
 function smvmt_get_footer_classes() {
-	$classes = array_unique( apply_filters( 'SMVMT_footer_class', array( 'site-footer' ) ) );
+	$classes = array_unique( apply_filters( 'smvmt_footer_class', array( 'site-footer' ) ) );
 	$classes = array_map( 'sanitize_html_class', $classes );
 
 	return apply_filters( 'smvmt_get_footer_classes', $classes );
@@ -1128,7 +1128,7 @@ function smvmt_get_footer_classes() {
 /**
  * Function to Add Header Breakpoint Style
  */
-if ( ! function_exists( 'SMVMT_header_breakpoint_style' ) ) {
+if ( ! function_exists( 'smvmt_header_breakpoint_style' ) ) {
 
 	/**
 	 * Function to Add Header Breakpoint Style
@@ -1138,15 +1138,15 @@ if ( ! function_exists( 'SMVMT_header_breakpoint_style' ) ) {
 	 * @since 1.5.2 Remove ob_start, ob_get_clean and .main-header-bar-wrap::before{content} for our .smvmt-header-break-point class
 	 * @since 1.0.0
 	 */
-	function SMVMT_header_breakpoint_style( $dynamic_css, $dynamic_css_filtered = '' ) {
+	function smvmt_header_breakpoint_style( $dynamic_css, $dynamic_css_filtered = '' ) {
 
 		// Header Break Point.
-		$header_break_point = SMVMT_header_break_point();
+		$header_break_point = smvmt_header_break_point();
 
-		$SMVMT_header_width = smvmt_get_option( 'header-main-layout-width' );
+		$smvmt_header_width = smvmt_get_option( 'header-main-layout-width' );
 
 		/* Width for Header */
-		if ( 'content' != $SMVMT_header_width ) {
+		if ( 'content' != $smvmt_header_width ) {
 			$genral_global_responsive = array(
 				'#masthead .smvmt-container, .smvmt-header-breadcrumb .smvmt-container' => array(
 					'max-width'     => '100%',
@@ -1173,7 +1173,7 @@ if ( ! function_exists( 'SMVMT_header_breakpoint_style' ) ) {
 	}
 }
 
-add_filter( 'SMVMT_dynamic_theme_css', 'SMVMT_header_breakpoint_style' );
+add_filter( 'SMVMT_dynamic_theme_css', 'smvmt_header_breakpoint_style' );
 
 /**
  * Function to filter comment form's default fields
@@ -1194,14 +1194,14 @@ if ( ! function_exists( 'SMVMT_comment_form_default_fields_markup' ) ) {
 		$aria_req  = ( $req ? " aria-required='true'" : '' );
 
 		$fields['author'] = '<div class="smvmt-comment-formwrap smvmt-row"><p class="comment-form-author smvmt-col-xs-12 smvmt-col-sm-12 smvmt-col-md-4 smvmt-col-lg-4">' .
-					'<label for="author" class="screen-reader-text">' . esc_html( SMVMT_default_strings( 'string-comment-label-name', false ) ) . '</label><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-					'" placeholder="' . esc_attr( SMVMT_default_strings( 'string-comment-label-name', false ) ) . '" size="30"' . $aria_req . ' /></p>';
+					'<label for="author" class="screen-reader-text">' . esc_html( smvmt_default_strings( 'string-comment-label-name', false ) ) . '</label><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+					'" placeholder="' . esc_attr( smvmt_default_strings( 'string-comment-label-name', false ) ) . '" size="30"' . $aria_req . ' /></p>';
 		$fields['email']  = '<p class="comment-form-email smvmt-col-xs-12 smvmt-col-sm-12 smvmt-col-md-4 smvmt-col-lg-4">' .
-					'<label for="email" class="screen-reader-text">' . esc_html( SMVMT_default_strings( 'string-comment-label-email', false ) ) . '</label><input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
-					'" placeholder="' . esc_attr( SMVMT_default_strings( 'string-comment-label-email', false ) ) . '" size="30"' . $aria_req . ' /></p>';
+					'<label for="email" class="screen-reader-text">' . esc_html( smvmt_default_strings( 'string-comment-label-email', false ) ) . '</label><input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) .
+					'" placeholder="' . esc_attr( smvmt_default_strings( 'string-comment-label-email', false ) ) . '" size="30"' . $aria_req . ' /></p>';
 		$fields['url']    = '<p class="comment-form-url smvmt-col-xs-12 smvmt-col-sm-12 smvmt-col-md-4 smvmt-col-lg-4"><label for="url">' .
-					'<label for="url" class="screen-reader-text">' . esc_html( SMVMT_default_strings( 'string-comment-label-website', false ) ) . '</label><input id="url" name="url" type="text" value="' . esc_url( $commenter['comment_author_url'] ) .
-					'" placeholder="' . esc_attr( SMVMT_default_strings( 'string-comment-label-website', false ) ) . '" size="30" /></label></p></div>';
+					'<label for="url" class="screen-reader-text">' . esc_html( smvmt_default_strings( 'string-comment-label-website', false ) ) . '</label><input id="url" name="url" type="text" value="' . esc_url( $commenter['comment_author_url'] ) .
+					'" placeholder="' . esc_attr( smvmt_default_strings( 'string-comment-label-website', false ) ) . '" size="30" /></label></p></div>';
 
 		return apply_filters( 'SMVMT_comment_form_default_fields_markup', $fields );
 	}
@@ -1232,10 +1232,10 @@ if ( ! function_exists( 'SMVMT_comment_form_default_markup' ) ) {
 		$all_post_type_support = apply_filters( 'SMVMT_comment_form_all_post_type_support', false );
 		if ( 'post' == get_post_type() || $all_post_type_support ) {
 			$args['id_form']           = 'smvmt-commentform';
-			$args['title_reply']       = SMVMT_default_strings( 'string-comment-title-reply', false );
-			$args['cancel_reply_link'] = SMVMT_default_strings( 'string-comment-cancel-reply-link', false );
-			$args['label_submit']      = SMVMT_default_strings( 'string-comment-label-submit', false );
-			$args['comment_field']     = '<div class="smvmt-row comment-textarea"><fieldset class="comment-form-comment"><div class="comment-form-textarea smvmt-col-lg-12"><label for="comment" class="screen-reader-text">' . esc_html( SMVMT_default_strings( 'string-comment-label-message', false ) ) . '</label><textarea id="comment" name="comment" placeholder="' . esc_attr( SMVMT_default_strings( 'string-comment-label-message', false ) ) . '" cols="45" rows="8" aria-required="true"></textarea></div></fieldset></div>';
+			$args['title_reply']       = smvmt_default_strings( 'string-comment-title-reply', false );
+			$args['cancel_reply_link'] = smvmt_default_strings( 'string-comment-cancel-reply-link', false );
+			$args['label_submit']      = smvmt_default_strings( 'string-comment-label-submit', false );
+			$args['comment_field']     = '<div class="smvmt-row comment-textarea"><fieldset class="comment-form-comment"><div class="comment-form-textarea smvmt-col-lg-12"><label for="comment" class="screen-reader-text">' . esc_html( smvmt_default_strings( 'string-comment-label-message', false ) ) . '</label><textarea id="comment" name="comment" placeholder="' . esc_attr( smvmt_default_strings( 'string-comment-label-message', false ) ) . '" cols="45" rows="8" aria-required="true"></textarea></div></fieldset></div>';
 		}
 		return apply_filters( 'SMVMT_comment_form_default_markup', $args );
 
@@ -1521,7 +1521,7 @@ if ( ! function_exists( 'smvmt_get_post_thumbnail' ) ) {
 					if ( ! $check_is_singular ) {
 						$output .= apply_filters(
 							'SMVMT_blog_post_featured_image_link_before',
-							'<a ' . SMVMT_attr(
+							'<a ' . smvmt_attr(
 								'article-image-url',
 								array(
 									'class' => '',
@@ -1825,7 +1825,7 @@ endif;
 /**
  * Build list of attributes into a string and apply contextual filter on string.
  *
- * The contextual filter is of the form `SMVMT_attr_{context}_output`.
+ * The contextual filter is of the form `smvmt_attr_{context}_output`.
  *
  * @since 1.6.2
  * @credits - Genesis Theme By StudioPress.
@@ -1835,8 +1835,8 @@ endif;
  * @param array  $args       Optional. Custom data to pass to filter.
  * @return string String of HTML attributes and values.
  */
-function SMVMT_attr( $context, $attributes = array(), $args = array() ) {
-	return SMVMT_Attr::get_instance()->SMVMT_attr( $context, $attributes, $args );
+function smvmt_attr( $context, $attributes = array(), $args = array() ) {
+	return SMVMT_Attr::get_instance()->smvmt_attr( $context, $attributes, $args );
 }
 
 /**

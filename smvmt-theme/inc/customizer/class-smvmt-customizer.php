@@ -829,7 +829,7 @@ if ( ! class_exists( 'SMVMT_Customizer' ) ) {
 			wp_enqueue_script( 'smvmt-customizer-preview-js', SMVMT_THEME_URI . 'assets/js/' . $dir . '/customizer-preview' . $js_prefix, array( 'customize-preview' ), SMVMT_THEME_VERSION, null );
 
 			$localize_array = array(
-				'headerBreakpoint'                     => SMVMT_header_break_point(),
+				'headerBreakpoint'                     => smvmt_header_break_point(),
 				'includeAnchorsInHeadindsCss'          => SMVMT_Dynamic_CSS::anchors_in_css_selectors_heading(),
 				'googleFonts'                          => SMVMT_Font_Families::get_google_fonts(),
 				'page_builder_button_style_css'        => SMVMT_Dynamic_CSS::page_builder_button_style_css(),

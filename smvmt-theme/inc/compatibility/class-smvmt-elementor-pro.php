@@ -64,8 +64,8 @@ if ( ! class_exists( 'SMVMT_Elementor_Pro' ) ) :
 			add_action( 'elementor/theme/register_locations', array( $this, 'register_locations' ) );
 
 			// Override theme templates.
-			add_action( 'SMVMT_header', array( $this, 'do_header' ), 0 );
-			add_action( 'SMVMT_footer', array( $this, 'do_footer' ), 0 );
+			add_action( 'smvmt_header', array( $this, 'do_header' ), 0 );
+			add_action( 'smvmt_footer', array( $this, 'do_footer' ), 0 );
 			add_action( 'SMVMT_template_parts_content_top', array( $this, 'do_template_parts' ), 0 );
 
 			add_action( 'SMVMT_entry_content_404_page', array( $this, 'do_template_part_404' ), 0 );
@@ -271,7 +271,7 @@ if ( ! class_exists( 'SMVMT_Elementor_Pro' ) ) :
 		public function do_header() {
 			$did_location = Module::instance()->get_locations_manager()->do_location( 'header' );
 			if ( $did_location ) {
-				remove_action( 'SMVMT_header', 'SMVMT_header_markup' );
+				remove_action( 'smvmt_header', 'smvmt_header_markup' );
 			}
 		}
 
@@ -284,7 +284,7 @@ if ( ! class_exists( 'SMVMT_Elementor_Pro' ) ) :
 		public function do_footer() {
 			$did_location = Module::instance()->get_locations_manager()->do_location( 'footer' );
 			if ( $did_location ) {
-				remove_action( 'SMVMT_footer', 'SMVMT_footer_markup' );
+				remove_action( 'smvmt_footer', 'smvmt_footer_markup' );
 			}
 		}
 

@@ -37,7 +37,7 @@ if ( ! class_exists( 'SMVMT_Theme_Background_Updater' ) ) {
 				'SMVMT_vertical_horizontal_padding_migration',
 			),
 			'2.3.0' => array(
-				'SMVMT_header_button_new_options',
+				'smvmt_header_button_new_options',
 			),
 			'2.3.3' => array(
 				'SMVMT_elementor_default_color_typo_comp',

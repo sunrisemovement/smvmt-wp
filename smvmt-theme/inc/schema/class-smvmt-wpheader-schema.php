@@ -31,7 +31,7 @@ class SMVMT_WPHeader_Schema extends SMVMT_Schema {
 			return false;
 		}
 
-		add_filter( 'SMVMT_attr_header', array( $this, 'wpheader_Schema' ) );
+		add_filter( 'smvmt_attr_header', array( $this, 'wpheader_Schema' ) );
 	}
 
 	/**

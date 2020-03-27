@@ -15,23 +15,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-			<?php SMVMT_content_bottom(); ?>
+			<?php smvmt_content_bottom(); ?>
 
 			</div> <!-- smvmt-container -->
 
 		</div><!-- #content -->
 
-		<?php SMVMT_content_after(); ?>
+		<?php smvmt_content_after(); ?>
 
-		<?php SMVMT_footer_before(); ?>
+		<?php smvmt_footer_before(); ?>
 
-		<?php SMVMT_footer(); ?>
+		<?php smvmt_footer(); ?>
 
-		<?php SMVMT_footer_after(); ?>
+		<?php smvmt_footer_after(); ?>
 
 	</div><!-- #page -->
 
-	<?php SMVMT_body_bottom(); ?>
+	<?php smvmt_body_bottom(); ?>
 
 	<?php wp_footer(); ?>
 

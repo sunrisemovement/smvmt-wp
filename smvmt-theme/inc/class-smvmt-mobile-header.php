@@ -49,7 +49,7 @@ if ( ! class_exists( 'SMVMT_Mobile_Header' ) ) :
 		 * @since 1.4.0
 		 */
 		public function __construct() {
-			add_action( 'SMVMT_header', array( $this, 'mobile_header_markup' ), 5 );
+			add_action( 'smvmt_header', array( $this, 'mobile_header_markup' ), 5 );
 			add_action( 'body_class', array( $this, 'add_body_class' ) );
 			add_filter( 'SMVMT_main_menu_toggle_classes', array( $this, 'menu_toggle_classes' ) );
 			add_filter( 'walker_nav_menu_start_el', array( $this, 'toggle_button' ), 20, 4 );
@@ -100,7 +100,7 @@ if ( ! class_exists( 'SMVMT_Mobile_Header' ) ) :
 		 */
 		public function menu_arrow_button_markup( $item_output, $item ) {
 			$item_output  = apply_filters( 'SMVMT_toggle_button_markup', $item_output, $item );
-			$item_output .= '<button ' . SMVMT_attr(
+			$item_output .= '<button ' . smvmt_attr(
 				'smvmt-menu-toggle',
 				array(
 					'role'          => 'button',
