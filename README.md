@@ -12,9 +12,15 @@ The smvmt-plugin is a blank slate, generated using the wppb.me generator. Curren
 
 ## Development
 
-Clone smvmt-theme into the themes directory of your local WP install. Then, run `npm install` to install dependencies. Once installed, run `npm install -g grunt-cli` to install Grunt cli globally. Finally, run various Grunt tasks found toward the bottom of the Gruntfile to build styles, js, language files, etc.
+First, setup a local install of WordPress. One easy solution for this is Local (https://localwp.com/). If you are using Local, you can find the path of your WP install in the `Local Sites` directory.
 
-To get started with the smvmt-plugin, simply clone that directory into the plugins directory of local WP install. At this time, the plugin has no build steps.
+Clone this repo (smvmt-wp) to a known directory (ex: a GitHub project folder).
+
+Use `ln -sF [**your smvmt-wp repo path**]/smvmt-theme [**your wp install path**]/wp-content/themes` to link the theme directory in your smvmt-wp directory to your local WP install's theme directory.
+
+Then, from within your smvmt-wp directory, use `cd smvmt-theme` to enter the theme directory. Run `npm install` to install dependencies. Once installed, run `npm install -g grunt-cli` to install Grunt cli globally. Finally, run various Grunt tasks found toward the bottom of the Gruntfile to build styles, js, language files, etc (ex: `grunt style`).
+
+To get started with the smvmt-plugin, use `ln -sF [**your smvmt-wp repo path**]/smvmt-plugin [**your wp install path**]/wp-content/plugins` to link the plugin directory in your smvmt-wp directory to your local WP install's plugin directory. At this time, the plugin has no build steps.
 
 Once both are installed and ready for development, activate the `smvmt` theme and `smvmt-plugin` plugin in your WordPress admin dashboard.
 
