@@ -17,3 +17,11 @@ Clone smvmt-theme into the themes directory of your local WP install. Then, run 
 To get started with the smvmt-plugin, simply clone that directory into the plugins directory of local WP install. At this time, the plugin has no build steps.
 
 Once both are installed and ready for development, activate the `smvmt` theme and `smvmt-plugin` plugin in your WordPress admin dashboard.
+
+## coming soon!!
+
+After facing troubles with Lando on my local machine, I will be rebuilding the landofile and updating this readme to include information on installing/running Lando locally for development.
+
+I will also be creating a step by step video on setting up Local for WP, and getting this project running that way.
+
+-Henry
