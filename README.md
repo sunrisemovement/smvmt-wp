@@ -4,7 +4,7 @@ This project aims to build a robust set of WordPress tools for Sunrise National 
 
 ## smvmt-theme
 
-The smvmt-theme is a fork of the Astra theme, slightly slimmed down to fit our exact needs. Overtime, this theme should only become more lean, as we determine what customizeability is actually necessary for Sunrise.
+The smvmt-theme is a fork of the Astra theme project (https://github.com/brainstormforce/astra), slightly slimmed down to fit our exact needs. Overtime, this theme should only become more lean, as we determine what customizeability is actually necessary for Sunrise.
 
 ## smvmt-plugin
 
