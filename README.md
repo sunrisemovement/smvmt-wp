@@ -4,11 +4,13 @@ This project aims to build a robust set of WordPress tools for Sunrise National 
 
 ## smvmt-theme
 
-The smvmt-theme is a fork of the Astra theme, slightly slimmed down to fit our exact needs. Overtime, this theme should only become more lean, as we determine what customizeability is actually necessary for Sunrise.
+The smvmt-theme is a fork of the Astra theme project (https://github.com/brainstormforce/astra), slightly slimmed down to fit our exact needs. Overtime, this theme should only become more lean, as we determine what customizeability is actually necessary for Sunrise.
 
 ## smvmt-plugin
 
 The smvmt-plugin is a blank slate, generated using the wppb.me generator. Currently, it is only used to provide Advanced Custom Fields and Ultimate Addons for Gutenberg in a controlled way. Ultimately, this plugin should be used for providing support for custom post types like events, calls, etc. Similar to smvmt-theme, this plugin should be made more lean over time as we know exactly which blocks Hubs will use, and which they won't.
+
+One reason for including UAG, is that we could start building out a template library like the Gutenberg Hub template library (https://templates.gutenberghub.com/) but have access to more rich design options than vanilla gutenberg. Hubs could then visit the central template library and copy/paste fully designed blocks they like directly onto their site. 
 
 ## Development
 
