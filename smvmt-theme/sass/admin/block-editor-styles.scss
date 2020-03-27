@@ -13,8 +13,8 @@ html {
 @import "../site/mixins/mixins-master";
 
 // Import WordPress's Mixins for promary button CSS.
-@import "../../../../../wp-admin/css/colors/variables";
-@import "../../../../../wp-admin/css/colors/mixins";
+@import "../wp-admin/colors/variables";
+@import "../wp-admin/colors/mixins";
 
 .edit-post-visual-editor {
     // Import CSS for the headings in the block editor.
