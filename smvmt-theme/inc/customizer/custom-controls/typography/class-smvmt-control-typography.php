@@ -5,7 +5,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2020, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       1.0.0
  */
 
@@ -79,17 +79,17 @@ final class SMVMT_Control_Typography extends WP_Customize_Control {
 	 * Used to set the default font options.
 	 *
 	 * @since 1.0.8
-	 * @var string $ast_inherit
+	 * @var string $smvmt_inherit
 	 */
-	public $ast_inherit = '';
+	public $smvmt_inherit = '';
 
 	/**
 	 * All font weights
 	 *
 	 * @since 1.0.8
-	 * @var string $ast_inherit
+	 * @var string $smvmt_inherit
 	 */
-	public $ast_all_font_weight = array();
+	public $smvmt_all_font_weight = array();
 
 	/**
 	 * If true, the preview button for a control will be rendered.
@@ -108,8 +108,8 @@ final class SMVMT_Control_Typography extends WP_Customize_Control {
 	 * @param array                $args    Default parent's arguments.
 	 */
 	public function __construct( $manager, $id, $args = array() ) {
-		$this->ast_inherit         = __( 'Inherit', 'smvmt' );
-		$this->ast_all_font_weight = array(
+		$this->smvmt_inherit         = __( 'Inherit', 'smvmt' );
+		$this->smvmt_all_font_weight = array(
 			'100'       => __( 'Thin 100', 'smvmt' ),
 			'100italic' => __( '100 Italic', 'smvmt' ),
 			'200'       => __( 'Extra-Light 200', 'smvmt' ),
@@ -145,15 +145,15 @@ final class SMVMT_Control_Typography extends WP_Customize_Control {
 		switch ( $this->type ) {
 
 			case 'smvmt-font-family':
-				$this->render_font( $this->ast_inherit );
+				$this->render_font( $this->smvmt_inherit );
 				break;
 
 			case 'smvmt-font-variant':
-				$this->render_font_variant( $this->ast_inherit );
+				$this->render_font_variant( $this->smvmt_inherit );
 				break;
 
 			case 'smvmt-font-weight':
-				$this->render_font_weight( $this->ast_inherit );
+				$this->render_font_weight( $this->smvmt_inherit );
 				break;
 		}
 	}
@@ -172,7 +172,7 @@ final class SMVMT_Control_Typography extends WP_Customize_Control {
 		wp_enqueue_script( 'smvmt-select-woo-script', $js_uri . 'selectWoo.js', array( 'jquery' ), SMVMT_THEME_VERSION, true );
 
 		wp_enqueue_script( 'smvmt-typography', $js_uri . 'typography.js', array( 'jquery', 'customize-base' ), SMVMT_THEME_VERSION, true );
-		$SMVMT_typo_localize = $this->ast_all_font_weight;
+		$SMVMT_typo_localize = $this->smvmt_all_font_weight;
 
 		wp_localize_script( 'smvmt-typography', 'smvmtTypo', $SMVMT_typo_localize );
 	}
@@ -202,11 +202,11 @@ final class SMVMT_Control_Typography extends WP_Customize_Control {
 	protected function render_connect_attribute() {
 		if ( $this->connect ) {
 			echo ' data-connected-control="' . esc_attr( $this->connect ) . '"';
-			echo ' data-inherit="' . esc_attr( $this->ast_inherit ) . '"';
+			echo ' data-inherit="' . esc_attr( $this->smvmt_inherit ) . '"';
 		}
 		if ( $this->variant ) {
 			echo ' data-connected-variant="' . esc_attr( $this->variant ) . '"';
-			echo ' data-inherit="' . esc_attr( $this->ast_inherit ) . '"';
+			echo ' data-inherit="' . esc_attr( $this->smvmt_inherit ) . '"';
 		}
 
 		echo ' data-value="' . esc_attr( $this->value() ) . '"';
@@ -257,7 +257,7 @@ final class SMVMT_Control_Typography extends WP_Customize_Control {
 		}
 		$selected       = '';
 		$selected_value = $this->value();
-		$all_fonts      = $this->ast_all_font_weight;
+		$all_fonts      = $this->smvmt_all_font_weight;
 
 		foreach ( $all_fonts as $key => $value ) {
 			if ( $key == $selected_value ) {
@@ -332,7 +332,7 @@ final class SMVMT_Control_Typography extends WP_Customize_Control {
 		<# } #>
 
 		</label>
-		<select data-inherit="<?php echo esc_attr( $this->ast_inherit ); ?>" <?php $this->link(); ?> class={{ data.font_type }} data-name={{ data.name }}
+		<select data-inherit="<?php echo esc_attr( $this->smvmt_inherit ); ?>" <?php $this->link(); ?> class={{ data.font_type }} data-name={{ data.name }}
 		data-value="{{data.value}}"
 
 		<# if ( data.connect ) { #>

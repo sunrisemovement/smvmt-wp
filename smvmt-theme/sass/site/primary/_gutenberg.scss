@@ -96,7 +96,7 @@
 		padding-right: 10px;
 	}
 
-	.has-2-columns .wp-block-column:lsmvmt-child {
+	.has-2-columns .wp-block-column:last-child {
 		padding-left: 10px;
 	}
 }
@@ -113,7 +113,7 @@
 			padding-right: 0;
 		}
 
-		.has-2-columns .wp-block-column:lsmvmt-child {
+		.has-2-columns .wp-block-column:last-child {
 			padding-left: 0;
 		}
 	}

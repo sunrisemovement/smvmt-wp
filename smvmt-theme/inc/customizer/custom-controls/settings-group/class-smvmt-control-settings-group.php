@@ -5,7 +5,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2020, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       2.0.0
  */
 
@@ -60,7 +60,7 @@ if ( ! class_exists( 'SMVMT_Control_Settings_Group' ) && class_exists( 'WP_Custo
 		 * @access public
 		 * @var string
 		 */
-		public $ast_fields = '';
+		public $smvmt_fields = '';
 
 		/**
 		 * The control type.

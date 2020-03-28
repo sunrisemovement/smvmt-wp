@@ -5,7 +5,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2020, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       smvmt 1.0.0
  */
 
@@ -1076,8 +1076,8 @@ if ( ! function_exists( 'smvmt_enable_page_builder_compatibility' ) ) :
 	/**
 	 * Allow filter to enable/disable page builder compatibility.
 	 *
-	 * @see  https://wpsmvmt.com/docs/recommended-settings-beaver-builder-smvmt/
-	 * @see  https://wpsmvmt.com/docs/recommended-settings-for-elementor/
+	 * @see  https://smvmt.org/docs/recommended-settings-beaver-builder-smvmt/
+	 * @see  https://smvmt.org/docs/recommended-settings-for-elementor/
 	 *
 	 * @since  1.2.2
 	 * @return  bool True - If the page builder compatibility is enabled. False - IF the page builder compatibility is disabled.

@@ -66,7 +66,7 @@
       .smvmt-border-connected {
         color: #ffffff;
       }
-      &:lsmvmt-child input.smvmt-border-input {
+      &:last-child input.smvmt-border-input {
         border-right-width: 1px;
         border-radius: 0 3px 3px 0;
       }

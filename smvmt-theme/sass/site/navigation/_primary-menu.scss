@@ -144,7 +144,7 @@
 .smvmt-desktop{
 	.submenu-with-border{
 		.sub-menu {
-			> li:lsmvmt-child{
+			> li:last-child{
 				> a{
 					border-bottom-width: 0;
 				}

@@ -5,7 +5,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2020, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       smvmt 1.4.3
  */
 

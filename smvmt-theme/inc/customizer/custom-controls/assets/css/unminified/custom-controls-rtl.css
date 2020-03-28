@@ -39,7 +39,7 @@
   transition: background-color 140ms linear;
 }
 
-.customize-control-smvmt-background .background-attachment .buttonset .switch-label:lsmvmt-child, .customize-control-smvmt-background .background-size .buttonset .switch-label:lsmvmt-child {
+.customize-control-smvmt-background .background-attachment .buttonset .switch-label:last-child, .customize-control-smvmt-background .background-size .buttonset .switch-label:last-child {
   margin-left: 0;
 }
 
@@ -152,7 +152,7 @@
   color: #ffffff;
 }
 
-.customize-control-smvmt-border .input-wrapper .smvmt-border-wrapper li:lsmvmt-child input.smvmt-border-input {
+.customize-control-smvmt-border .input-wrapper .smvmt-border-wrapper li:last-child input.smvmt-border-input {
   border-left-width: 1px;
   border-radius: 3px 0 0 3px;
 }
@@ -236,7 +236,7 @@
   transition: background-color 140ms linear;
 }
 
-.customize-control-smvmt-background .background-attachment .buttonset .switch-label:lsmvmt-child, .customize-control-smvmt-background .background-size .buttonset .switch-label:lsmvmt-child {
+.customize-control-smvmt-background .background-attachment .buttonset .switch-label:last-child, .customize-control-smvmt-background .background-size .buttonset .switch-label:last-child {
   margin-left: 0;
 }
 
@@ -349,7 +349,7 @@
   color: #ffffff;
 }
 
-.customize-control-smvmt-border .input-wrapper .smvmt-border-wrapper li:lsmvmt-child input.smvmt-border-input {
+.customize-control-smvmt-border .input-wrapper .smvmt-border-wrapper li:last-child input.smvmt-border-input {
   border-left-width: 1px;
   border-radius: 3px 0 0 3px;
 }
@@ -495,14 +495,14 @@ input[type="text"].select2-search__field {
 
 /* Firefox Browser specific CSS */
 @-moz-document url-prefix() {
-  .control-section.open .customize-control:lsmvmt-child {
+  .control-section.open .customize-control:last-child {
     margin-bottom: 20px;
   }
 }
 
 /* IE Browser specific CSS */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .control-section.open .customize-control:lsmvmt-child {
+  .control-section.open .customize-control:last-child {
     padding-bottom: 20px;
   }
   #customize-control-smvmt-settings-blog-archive-image-width .customize-control-title, #customize-control-smvmt-settings-blog-archive-image-height .customize-control-title, #customize-control-smvmt-settings-blog-single-post-image-width .customize-control-title, #customize-control-smvmt-settings-blog-single-post-image-height .customize-control-title {
@@ -1223,7 +1223,7 @@ input[type="text"].select2-search__field {
   border-radius: 0px 3px 3px 0px;
 }
 
-.smvmt-group-tabs .ui-tabs-nav .ui-corner-top:lsmvmt-child {
+.smvmt-group-tabs .ui-tabs-nav .ui-corner-top:last-child {
   border-radius: 3px 0px 0px 3px;
 }
 
@@ -1277,7 +1277,7 @@ input[type="text"].select2-search__field {
   margin-top: 0;
 }
 
-.smvmt-field-settings-modal .customize-control:lsmvmt-child {
+.smvmt-field-settings-modal .customize-control:last-child {
   padding-bottom: 15px;
 }
 
@@ -1594,14 +1594,14 @@ input[type="text"].select2-search__field {
 
 /* Firefox Browser specific CSS */
 @-moz-document url-prefix() {
-  .control-section.open .customize-control:lsmvmt-child {
+  .control-section.open .customize-control:last-child {
     margin-bottom: 20px;
   }
 }
 
 /* IE Browser specific CSS */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .control-section.open .customize-control:lsmvmt-child {
+  .control-section.open .customize-control:last-child {
     padding-bottom: 20px;
   }
   #customize-control-smvmt-settings-blog-archive-image-width .customize-control-title, #customize-control-smvmt-settings-blog-archive-image-height .customize-control-title, #customize-control-smvmt-settings-blog-single-post-image-width .customize-control-title, #customize-control-smvmt-settings-blog-single-post-image-height .customize-control-title {
@@ -2322,7 +2322,7 @@ input[type="text"].select2-search__field {
   border-radius: 0px 3px 3px 0px;
 }
 
-.smvmt-group-tabs .ui-tabs-nav .ui-corner-top:lsmvmt-child {
+.smvmt-group-tabs .ui-tabs-nav .ui-corner-top:last-child {
   border-radius: 3px 0px 0px 3px;
 }
 
@@ -2376,7 +2376,7 @@ input[type="text"].select2-search__field {
   margin-top: 0;
 }
 
-.smvmt-field-settings-modal .customize-control:lsmvmt-child {
+.smvmt-field-settings-modal .customize-control:last-child {
   padding-bottom: 15px;
 }
 

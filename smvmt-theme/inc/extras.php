@@ -7,7 +7,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2020, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       smvmt 1.0.0
  */
 
@@ -569,7 +569,7 @@ if ( ! function_exists( 'smvmt_get_small_footer_custom_text' ) ) {
 				'smvmt_theme_author',
 				array(
 					'theme_name'       => __( 'smvmt WordPress Theme', 'smvmt' ),
-					'theme_author_url' => 'https://wpsmvmt.com/',
+					'theme_author_url' => 'https://smvmt.org/',
 				)
 			);
 

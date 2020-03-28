@@ -5,7 +5,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2018, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       smvmt 1.0.0
  */
 
@@ -494,7 +494,7 @@ if ( ! class_exists( 'SMVMT_AMP' ) ) :
 				'.smvmt-amp .main-navigation .widget li'     => array(
 					'width' => 'auto',
 				),
-				'.smvmt-amp .main-navigation .widget:lsmvmt-child' => array(
+				'.smvmt-amp .main-navigation .widget:last-child' => array(
 					'margin-bottom' => '0',
 				),
 				'.smvmt-amp .main-header-bar-navigation'     => array(
@@ -797,7 +797,7 @@ if ( ! class_exists( 'SMVMT_AMP' ) ) :
 					'margin-bottom' => '1em',
 					'margin-top'    => '1em',
 				),
-				'.smvmt-amp .smvmt-header-custom-item .widget:lsmvmt-child' => array(
+				'.smvmt-amp .smvmt-header-custom-item .widget:last-child' => array(
 					'margin-bottom' => '1em',
 				),
 				'.smvmt-header-custom-item-inside.smvmt-amp .button-custom-menu-item .menu-link' => array(
@@ -894,7 +894,7 @@ if ( ! class_exists( 'SMVMT_AMP' ) ) :
 				'.smvmt-amp .submenu-with-border .sub-menu a' => array(
 					'border-width' => '1px',
 				),
-				'.smvmt-amp .submenu-with-border .sub-menu > li:lsmvmt-child > a' => array(
+				'.smvmt-amp .submenu-with-border .sub-menu > li:last-child > a' => array(
 					'border-width' => '1px',
 				),
 			);

@@ -82,7 +82,7 @@
   color: #ffffff;
 }
 
-.customize-control-smvmt-border .input-wrapper .smvmt-border-wrapper li:lsmvmt-child input.smvmt-border-input {
+.customize-control-smvmt-border .input-wrapper .smvmt-border-wrapper li:last-child input.smvmt-border-input {
   border-right-width: 1px;
   border-radius: 0 3px 3px 0;
 }

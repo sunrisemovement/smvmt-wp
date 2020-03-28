@@ -7,7 +7,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2019, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       2.3.0
  */
 

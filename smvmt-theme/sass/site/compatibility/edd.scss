@@ -1105,7 +1105,7 @@ a.edd-add-to-cart .edd-add-to-cart-label, .edd-loading {
 			padding-top: 5px;
 			padding-bottom: 5px;
 			margin-bottom: 5px;
-			&:lsmvmt-child {
+			&:last-child {
 				padding-bottom: 15px;
 			}
 		}
@@ -1246,10 +1246,10 @@ a.edd-add-to-cart .edd-add-to-cart-label, .edd-loading {
 .edd-alert p {
 	padding: 0;
 }
-.edd-alert p:not(:lsmvmt-child) {
+.edd-alert p:not(:last-child) {
 	margin-bottom: 5px;
 }
-.edd-alert p:lsmvmt-child {
+.edd-alert p:last-child {
 	margin-bottom: 0;
 }
 .edd-alert-error {

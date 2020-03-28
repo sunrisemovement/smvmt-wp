@@ -10,7 +10,7 @@
  *
  * @since 2.1.2
  */
-class SMVMT_Yoast_SEO {
+class SMVMT_Yosmvmt_SEO {
 
 	/**
 	 * Constructor
@@ -37,4 +37,4 @@ class SMVMT_Yoast_SEO {
 /**
  * Kicking this off by object
  */
-new SMVMT_Yoast_SEO();
+new SMVMT_Yosmvmt_SEO();

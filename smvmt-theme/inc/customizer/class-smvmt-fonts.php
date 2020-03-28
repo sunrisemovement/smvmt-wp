@@ -5,7 +5,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2020, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       smvmt 1.0.0
  */
 
@@ -84,13 +84,13 @@ final class SMVMT_Fonts {
 	/**
 	 * Renders the <link> tag for all fonts in the $fonts array.
 	 *
-	 * @since 1.0.16 Added the filter 'SMVMT_render_fonts' to support custom fonts.
+	 * @since 1.0.16 Added the filter 'smvmt_render_fonts' to support custom fonts.
 	 * @since 1.0.0
 	 * @return void
 	 */
 	public static function render_fonts() {
 
-		$font_list = apply_filters( 'SMVMT_render_fonts', self::get_fonts() );
+		$font_list = apply_filters( 'smvmt_render_fonts', self::get_fonts() );
 
 		$google_fonts = array();
 		$font_subset  = array();

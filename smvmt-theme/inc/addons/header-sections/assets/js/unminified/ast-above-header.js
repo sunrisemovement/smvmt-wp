@@ -136,16 +136,16 @@
 				below_header_toggle.classList.remove( 'toggled' );
 			}
 
-			var ast_below_header = document.querySelector( '.smvmt-below-header' );
-			if ( null != ast_below_header ) {
+			var smvmt_below_header = document.querySelector( '.smvmt-below-header' );
+			if ( null != smvmt_below_header ) {
 
-				var ast_below_header_nav = document.querySelector( '.smvmt-below-header-actual-nav' );
+				var smvmt_below_header_nav = document.querySelector( '.smvmt-below-header-actual-nav' );
 
-				ast_below_header.classList.remove( 'toggle-on' );
-				//ast_below_header.style.display = '';
+				smvmt_below_header.classList.remove( 'toggle-on' );
+				//smvmt_below_header.style.display = '';
 
-				if ( null != ast_below_header_nav ) {
-					ast_below_header_nav.style.display = '';
+				if ( null != smvmt_below_header_nav ) {
+					smvmt_below_header_nav.style.display = '';
 				}
 			}
 

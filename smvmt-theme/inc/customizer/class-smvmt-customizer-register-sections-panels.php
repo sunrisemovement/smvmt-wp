@@ -5,7 +5,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2020, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       smvmt 1.0.0
  */
 
@@ -57,13 +57,13 @@ if ( ! class_exists( 'SMVMT_Customizer_Register_Sections_Panels' ) ) {
 								array(
 									'text'  => __( 'Site Layout Overview', 'smvmt' ) . ' &#187;',
 									'attrs' => array(
-										'href' => smvmt_get_pro_url( 'https://wpsmvmt.com/docs/site-layout-overview/', 'customizer', 'site-layout', 'helpful-information' ),
+										'href' => smvmt_get_pro_url( 'https://smvmt.org/docs/site-layout-overview/', 'customizer', 'site-layout', 'helpful-information' ),
 									),
 								),
 								array(
 									'text'  => __( 'Container Overview', 'smvmt' ) . ' &#187;',
 									'attrs' => array(
-										'href' => smvmt_get_pro_url( 'https://wpsmvmt.com/docs/container-overview/', 'customizer', 'container', 'helpful-information' ),
+										'href' => smvmt_get_pro_url( 'https://smvmt.org/docs/container-overview/', 'customizer', 'container', 'helpful-information' ),
 									),
 								),
 							),
@@ -102,7 +102,7 @@ if ( ! class_exists( 'SMVMT_Customizer_Register_Sections_Panels' ) ) {
 								array(
 									'text'  => __( 'Site Identity Overview', 'smvmt' ) . ' &#187;',
 									'attrs' => array(
-										'href' => smvmt_get_pro_url( 'https://wpsmvmt.com/docs/site-identity-free/', 'customizer', 'site-identity', 'helpful-information' ),
+										'href' => smvmt_get_pro_url( 'https://smvmt.org/docs/site-identity-free/', 'customizer', 'site-identity', 'helpful-information' ),
 									),
 								),
 							),
@@ -129,7 +129,7 @@ if ( ! class_exists( 'SMVMT_Customizer_Register_Sections_Panels' ) ) {
 								array(
 									'text'  => __( 'Primary Header Overview', 'smvmt' ) . ' &#187;',
 									'attrs' => array(
-										'href' => smvmt_get_pro_url( 'https://wpsmvmt.com/docs/header-overview/', 'customizer', 'primary-header', 'helpful-information' ),
+										'href' => smvmt_get_pro_url( 'https://smvmt.org/docs/header-overview/', 'customizer', 'primary-header', 'helpful-information' ),
 									),
 								),
 							),
@@ -184,7 +184,7 @@ if ( ! class_exists( 'SMVMT_Customizer_Register_Sections_Panels' ) ) {
 								array(
 									'text'  => __( 'Footer Bar Overview', 'smvmt' ) . ' &#187;',
 									'attrs' => array(
-										'href' => smvmt_get_pro_url( 'https://wpsmvmt.com/docs/footer-bar/', 'customizer', 'footer-bar', 'helpful-information' ),
+										'href' => smvmt_get_pro_url( 'https://smvmt.org/docs/footer-bar/', 'customizer', 'footer-bar', 'helpful-information' ),
 									),
 								),
 							),
@@ -226,7 +226,7 @@ if ( ! class_exists( 'SMVMT_Customizer_Register_Sections_Panels' ) ) {
 								array(
 									'text'  => __( 'Sidebar Overview', 'smvmt' ) . ' &#187;',
 									'attrs' => array(
-										'href' => smvmt_get_pro_url( 'https://wpsmvmt.com/docs/sidebar-free/', 'customizer', 'sidebar', 'helpful-information' ),
+										'href' => smvmt_get_pro_url( 'https://smvmt.org/docs/sidebar-free/', 'customizer', 'sidebar', 'helpful-information' ),
 									),
 								),
 							),
@@ -250,7 +250,7 @@ if ( ! class_exists( 'SMVMT_Customizer_Register_Sections_Panels' ) ) {
 								array(
 									'text'  => __( 'Colors & Background Overview', 'smvmt' ) . ' &#187;',
 									'attrs' => array(
-										'href' => smvmt_get_pro_url( 'https://wpsmvmt.com/docs/colors-background/', 'customizer', 'colors-background', 'helpful-information' ),
+										'href' => smvmt_get_pro_url( 'https://smvmt.org/docs/colors-background/', 'customizer', 'colors-background', 'helpful-information' ),
 									),
 								),
 							),
@@ -292,7 +292,7 @@ if ( ! class_exists( 'SMVMT_Customizer_Register_Sections_Panels' ) ) {
 								array(
 									'text'  => __( 'Typography Overview', 'smvmt' ) . ' &#187;',
 									'attrs' => array(
-										'href' => smvmt_get_pro_url( 'https://wpsmvmt.com/docs/typography-free/', 'customizer', 'typography', 'helpful-information' ),
+										'href' => smvmt_get_pro_url( 'https://smvmt.org/docs/typography-free/', 'customizer', 'typography', 'helpful-information' ),
 									),
 								),
 							),

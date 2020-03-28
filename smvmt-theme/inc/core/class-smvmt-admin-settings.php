@@ -7,7 +7,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2020, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       smvmt 1.0
  */
 
@@ -336,17 +336,17 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 			$active_tab   = str_replace( '_', '-', $current_slug );
 			$current_slug = str_replace( '-', '_', $current_slug );
 
-			$ast_icon           = apply_filters( 'SMVMT_page_top_icon', true );
-			$ast_visit_site_url = apply_filters( 'SMVMT_site_url', 'https://wpsmvmt.com' );
-			$ast_wrapper_class  = apply_filters( 'SMVMT_welcome_wrapper_class', array( $current_slug ) );
+			$smvmt_icon           = apply_filters( 'SMVMT_page_top_icon', true );
+			$smvmt_visit_site_url = apply_filters( 'SMVMT_site_url', 'https://smvmt.org' );
+			$smvmt_wrapper_class  = apply_filters( 'SMVMT_welcome_wrapper_class', array( $current_slug ) );
 
 			?>
-			<div class="smvmt-menu-page-wrapper wrap smvmt-clear <?php echo esc_attr( implode( ' ', $ast_wrapper_class ) ); ?>">
+			<div class="smvmt-menu-page-wrapper wrap smvmt-clear <?php echo esc_attr( implode( ' ', $smvmt_wrapper_class ) ); ?>">
 					<div class="smvmt-theme-page-header">
 						<div class="smvmt-container smvmt-flex">
 							<div class="smvmt-theme-title">
-								<a href="<?php echo esc_url( $ast_visit_site_url ); ?>" target="_blank" rel="noopener" >
-								<?php if ( $ast_icon ) { ?>
+								<a href="<?php echo esc_url( $smvmt_visit_site_url ); ?>" target="_blank" rel="noopener" >
+								<?php if ( $smvmt_icon ) { ?>
 									<img src="<?php echo esc_url( SMVMT_THEME_URI . 'inc/assets/images/smvmt.svg' ); ?>" class="smvmt-theme-icon" alt="<?php echo esc_attr( self::$page_title ); ?> " >
 									<span class="smvmt-theme-version"><?php echo esc_html( SMVMT_THEME_VERSION ); ?></span>
 								<?php } ?>
@@ -743,7 +743,7 @@ if ( ! class_exists( 'SMVMT_Admin_Settings' ) ) {
 
 					// If addon is not updated & White Label for Addon is added then show the white labelewd pro name.
 					$smvmt_addon_name        = smvmt_get_addon_name();
-					$update_smvmt_addon_link = smvmt_get_pro_url( 'https://wpsmvmt.com/?p=25258', 'smvmt-dashboard', 'update-to-smvmt-pro', 'welcome-page' );
+					$update_smvmt_addon_link = smvmt_get_pro_url( 'https://smvmt.org/?p=25258', 'smvmt-dashboard', 'update-to-smvmt-pro', 'welcome-page' );
 					if ( class_exists( 'SMVMT_Ext_White_Label_Markup' ) ) {
 						$plugin_data = SMVMT_Ext_White_Label_Markup::$branding;
 						if ( ! empty( $plugin_data['smvmt-pro']['name'] ) ) {

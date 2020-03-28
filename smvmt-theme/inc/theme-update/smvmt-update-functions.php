@@ -101,7 +101,7 @@ function smvmt_header_button_new_options() {
 
 	$theme_options = get_option( 'smvmt-settings', array() );
 
-	$btn_url = isset( $theme_options['header-main-rt-section-button-link'] ) ? $theme_options['header-main-rt-section-button-link'] : 'https://www.wpsmvmt.com';
+	$btn_url = isset( $theme_options['header-main-rt-section-button-link'] ) ? $theme_options['header-main-rt-section-button-link'] : 'https://www.smvmt.org';
 	error_log( 'smvmt: Migrating button url - ' . $btn_url ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 	$theme_options['header-main-rt-section-button-link-option'] = array(
 		'url'      => $btn_url,

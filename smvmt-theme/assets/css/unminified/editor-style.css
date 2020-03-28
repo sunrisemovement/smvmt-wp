@@ -1375,7 +1375,7 @@ blockquote {
   position: relative;
 }
 
-blockquote p:lsmvmt-child {
+blockquote p:last-child {
   margin: 0;
 }
 
@@ -2082,7 +2082,7 @@ textarea,
   border-radius: 2px;
 }
 
-.gallery-item:lsmvmt-child {
+.gallery-item:last-child {
   margin-bottom: 2em;
 }
 

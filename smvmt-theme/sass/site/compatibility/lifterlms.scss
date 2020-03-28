@@ -37,7 +37,7 @@ $secondary: desaturate(lighten($primary, 40%), 21%);    // Secondary buttons
 			margin-bottom: 0.5em;
 			padding-bottom: 0.5em;
 
-			&:lsmvmt-child {
+			&:last-child {
 				border-bottom: none;
 				margin-bottom: 0;
 				padding-bottom: 0;
@@ -360,11 +360,11 @@ body {
 			padding: 20px;
 			margin:20px 0px;
 
-			&:lsmvmt-of-type {
+			&:last-of-type {
 				margin-bottom: 2em;
 			}
 
-			p:lsmvmt-child {
+			p:last-child {
 				margin-bottom: 0;
 			}
 
@@ -373,8 +373,8 @@ body {
 			}
 		}
 
-		&:lsmvmt-child {
-			.llms_review:lsmvmt-of-type {
+		&:last-child {
+			.llms_review:last-of-type {
 				margin-bottom: 0;
 			}
 		}
@@ -782,7 +782,7 @@ body {
 			margin-left: calc(1em + 5px);
 		}
 
-		li:lsmvmt-child:after {
+		li:last-child:after {
 			margin: 10px auto;
 		}
 	}

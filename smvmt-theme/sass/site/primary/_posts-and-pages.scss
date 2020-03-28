@@ -51,8 +51,8 @@
 }
 
 
-.page-content > :lsmvmt-child,
-.entry-content > :lsmvmt-child,
-.entry-summary > :lsmvmt-child {
+.page-content > :last-child,
+.entry-content > :last-child,
+.entry-summary > :last-child {
     margin-bottom: 0;
 }

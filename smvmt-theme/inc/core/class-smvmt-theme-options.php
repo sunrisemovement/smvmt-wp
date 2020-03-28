@@ -5,7 +5,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2020, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       smvmt 1.0.0
  */
 
@@ -207,9 +207,9 @@ if ( ! class_exists( 'SMVMT_Theme_Options' ) ) {
 					'header-display-outside-menu'         => false,
 					'header-main-rt-section-html'         => '<button>' . __( 'Contact Us', 'smvmt' ) . '</button>',
 					'header-main-rt-section-button-text'  => __( 'Button', 'smvmt' ),
-					'header-main-rt-section-button-link'  => apply_filters( 'SMVMT_site_url', 'https://www.wpsmvmt.com' ),
+					'header-main-rt-section-button-link'  => apply_filters( 'SMVMT_site_url', 'https://www.smvmt.org' ),
 					'header-main-rt-section-button-link-option' => array(
-						'url'      => apply_filters( 'SMVMT_site_url', 'https://www.wpsmvmt.com' ),
+						'url'      => apply_filters( 'SMVMT_site_url', 'https://www.smvmt.org' ),
 						'new_tab'  => false,
 						'link_rel' => '',
 					),

@@ -33,7 +33,7 @@
     flex-grow: 1;
     transition: background-color 140ms linear;
   }
-  .background-attachment .buttonset .switch-label:lsmvmt-child, .background-size .buttonset .switch-label:lsmvmt-child {
+  .background-attachment .buttonset .switch-label:last-child, .background-size .buttonset .switch-label:last-child {
     margin-right: 0;
   }
   .background-attachment .buttonset .switch-input:checked + .switch-label, .background-size .buttonset .switch-input:checked + .switch-label, .background-attachment .buttonset .switch-input[checked="checked"] + .switch-label, .background-size .buttonset .switch-input[checked="checked"] + .switch-label {

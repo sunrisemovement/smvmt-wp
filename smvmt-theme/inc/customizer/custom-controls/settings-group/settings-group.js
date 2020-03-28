@@ -116,10 +116,10 @@
             });
         },
 
-        ast_render_field: function( wrap, fields, control_elem ) {
+        smvmt_render_field: function( wrap, fields, control_elem ) {
 
             var control = this;
-            var ast_field_wrap = wrap.find( '.smvmt-fields-wrap' );
+            var smvmt_field_wrap = wrap.find( '.smvmt-fields-wrap' );
             var fields_html = '';
             var control_types = [];
             var field_values = control.isJsonString( control_elem.params.value ) ? JSON.parse( control_elem.params.value ) : {};
@@ -169,7 +169,7 @@
 
                 fields_html += '</div></div>';
 
-                ast_field_wrap.html( fields_html );
+                smvmt_field_wrap.html( fields_html );
 
                 $( "#" + clean_param_name + "-tabs" ).tabs();
 
@@ -187,7 +187,7 @@
                     });
                 });
 
-                ast_field_wrap.html(fields_html);
+                smvmt_field_wrap.html(fields_html);
             }
 
             _.each( control_types, function( control_type, index ) {
@@ -195,11 +195,11 @@
                 switch( control_type.key ) {
 
                     case "smvmt-responsive-color":
-                        control.initResponsiveColor( ast_field_wrap, control_elem, control_type.name );
+                        control.initResponsiveColor( smvmt_field_wrap, control_elem, control_type.name );
                     break;
 
                     case "smvmt-color":
-                        control.initColor( ast_field_wrap, control_elem, control_type.name );
+                        control.initColor( smvmt_field_wrap, control_elem, control_type.name );
                     break;
 
                     case "smvmt-font":
@@ -260,7 +260,7 @@
 
                     case "smvmt-responsive":
 
-                        control.initResponsiveTrigger( ast_field_wrap, control_elem );
+                        control.initResponsiveTrigger( smvmt_field_wrap, control_elem );
 
                         control.container.on( 'change keyup paste', 'input.smvmt-responsive-input, select.smvmt-responsive-select', function() {
 

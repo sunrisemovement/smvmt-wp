@@ -254,7 +254,7 @@
         */
         hideEmptySections: function () {
 
-            $('ul.accordion-section.control-section-ast_section').each(function () {
+            $('ul.accordion-section.control-section-smvmt_section').each(function () {
 
                 var parentId = $(this).attr('id');
                 var visibleIt = false;

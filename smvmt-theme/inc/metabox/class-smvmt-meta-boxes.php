@@ -5,7 +5,7 @@
  * @package     smvmt
  * @author      smvmt
  * @copyright   Copyright (c) 2020, smvmt
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       smvmt 1.0.0
  */
 
@@ -214,7 +214,7 @@ if ( ! class_exists( 'SMVMT_Meta_Boxes' ) ) {
 			$footer_bar          = ( isset( $meta['footer-sml-layout']['default'] ) ) ? $meta['footer-sml-layout']['default'] : '';
 			$footer_widgets      = ( isset( $meta['footer-adv-display']['default'] ) ) ? $meta['footer-adv-display']['default'] : '';
 			$primary_header      = ( isset( $meta['smvmt-main-header-display']['default'] ) ) ? $meta['smvmt-main-header-display']['default'] : '';
-			$ast_featured_img    = ( isset( $meta['smvmt-featured-img']['default'] ) ) ? $meta['smvmt-featured-img']['default'] : '';
+			$smvmt_featured_img    = ( isset( $meta['smvmt-featured-img']['default'] ) ) ? $meta['smvmt-featured-img']['default'] : '';
 			$breadcrumbs_content = ( isset( $meta['smvmt-breadcrumbs-content']['default'] ) ) ? $meta['smvmt-breadcrumbs-content']['default'] : '';
 
 			$show_meta_field = ! self::is_bb_themer_layout();
@@ -279,8 +279,8 @@ if ( ! class_exists( 'SMVMT_Meta_Boxes' ) ) {
 							</label>
 						</div>
 						<?php
-						$ast_breadcrumbs_content = smvmt_get_option( 'smvmt-breadcrumbs-content' );
-						if ( 'disabled' != $ast_breadcrumbs_content && 'none' !== smvmt_get_option( 'breadcrumb-position' ) ) {
+						$smvmt_breadcrumbs_content = smvmt_get_option( 'smvmt-breadcrumbs-content' );
+						if ( 'disabled' != $smvmt_breadcrumbs_content && 'none' !== smvmt_get_option( 'breadcrumb-position' ) ) {
 							?>
 					<div class="smvmt-breadcrumbs-content-option-wrap">
 						<label for="smvmt-breadcrumbs-content">
@@ -292,7 +292,7 @@ if ( ! class_exists( 'SMVMT_Meta_Boxes' ) ) {
 
 						<div class="smvmt-featured-img-option-wrap">
 							<label for="smvmt-featured-img">
-								<input type="checkbox" id="smvmt-featured-img" name="smvmt-featured-img" value="disabled" <?php checked( $ast_featured_img, 'disabled' ); ?> />
+								<input type="checkbox" id="smvmt-featured-img" name="smvmt-featured-img" value="disabled" <?php checked( $smvmt_featured_img, 'disabled' ); ?> />
 								<?php esc_html_e( 'Disable Featured Image', 'smvmt' ); ?>
 							</label>
 						</div>

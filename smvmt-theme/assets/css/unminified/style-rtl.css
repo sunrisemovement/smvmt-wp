@@ -1376,7 +1376,7 @@ blockquote {
   position: relative;
 }
 
-blockquote p:lsmvmt-child {
+blockquote p:last-child {
   margin: 0;
 }
 
@@ -2095,7 +2095,7 @@ textarea,
   padding-left: 15px;
 }
 
-.smvmt-social-icons li:lsmvmt-child {
+.smvmt-social-icons li:last-child {
   padding-left: 0;
 }
 
@@ -2141,7 +2141,7 @@ textarea,
   border-radius: 2px;
 }
 
-.gallery-item:lsmvmt-child {
+.gallery-item:last-child {
   margin-bottom: 2em;
 }
 
@@ -2216,7 +2216,7 @@ body {
   margin-bottom: 0.25em;
 }
 
-#secondary li:lsmvmt-child {
+#secondary li:last-child {
   margin-bottom: 0;
 }
 
@@ -2624,7 +2624,7 @@ body {
 }
 
 /* Remove the last anchor border for desktop devices */
-.smvmt-desktop .submenu-with-border .sub-menu > li:lsmvmt-child > a {
+.smvmt-desktop .submenu-with-border .sub-menu > li:last-child > a {
   border-bottom-width: 0;
 }
 
@@ -3197,7 +3197,7 @@ body {
   margin-top: 1em;
 }
 
-.smvmt-header-break-point .smvmt-header-custom-item .widget:lsmvmt-child {
+.smvmt-header-break-point .smvmt-header-custom-item .widget:last-child {
   margin-bottom: 1em;
 }
 
@@ -3250,7 +3250,7 @@ body {
   padding: 10px 15px 10px 45px;
 }
 
-.smvmt-header-widget-area .widget:lsmvmt-child {
+.smvmt-header-widget-area .widget:last-child {
   margin-bottom: 0.5em;
   margin-left: 0;
 }
@@ -3754,7 +3754,7 @@ li.smvmt-masthead-custom-menu-items .smvmt-search-icon .smvmt-search-icon {
   width: auto;
 }
 
-.smvmt-header-break-point .main-navigation .widget:lsmvmt-child {
+.smvmt-header-break-point .main-navigation .widget:last-child {
   margin-bottom: 0;
 }
 
@@ -4129,9 +4129,9 @@ li.smvmt-masthead-custom-menu-items .smvmt-search-icon .smvmt-search-icon {
   }
 }
 
-.page-content > :lsmvmt-child,
-.entry-content > :lsmvmt-child,
-.entry-summary > :lsmvmt-child {
+.page-content > :last-child,
+.entry-content > :last-child,
+.entry-summary > :last-child {
   margin-bottom: 0;
 }
 
@@ -4247,7 +4247,7 @@ li.smvmt-masthead-custom-menu-items .smvmt-search-icon .smvmt-search-icon {
   padding-left: 10px;
 }
 
-.entry-content .has-2-columns .wp-block-column:lsmvmt-child {
+.entry-content .has-2-columns .wp-block-column:last-child {
   padding-right: 10px;
 }
 
@@ -4259,7 +4259,7 @@ li.smvmt-masthead-custom-menu-items .smvmt-search-icon .smvmt-search-icon {
   .entry-content .has-2-columns .wp-block-column:first-child {
     padding-left: 0;
   }
-  .entry-content .has-2-columns .wp-block-column:lsmvmt-child {
+  .entry-content .has-2-columns .wp-block-column:last-child {
     padding-right: 0;
   }
 }
@@ -4311,7 +4311,7 @@ body .entry-content .wp-block-latest-posts li {
   margin: 0 0 2.8em 0;
 }
 
-.widget:lsmvmt-child {
+.widget:last-child {
   margin-bottom: 0;
 }
 
@@ -4511,7 +4511,7 @@ body .entry-content .wp-block-latest-posts li {
 }
 
 @media (min-width: 769px) {
-  .smvmt-separate-container.smvmt-two-container #secondary .widget:lsmvmt-child {
+  .smvmt-separate-container.smvmt-two-container #secondary .widget:last-child {
     margin-bottom: 0;
   }
 }
@@ -4572,7 +4572,7 @@ body .entry-content .wp-block-latest-posts li {
   border: 0;
 }
 
-.smvmt-small-footer .widget:lsmvmt-child {
+.smvmt-small-footer .widget:last-child {
   margin-bottom: 0;
 }
 
@@ -4584,7 +4584,7 @@ body .entry-content .wp-block-latest-posts li {
   .smvmt-small-footer .nav-menu li:first-child a {
     padding-right: 0;
   }
-  .smvmt-small-footer .nav-menu li:lsmvmt-child a {
+  .smvmt-small-footer .nav-menu li:last-child a {
     padding-left: 0;
   }
 }
@@ -4672,7 +4672,7 @@ body .entry-content .wp-block-latest-posts li {
   padding-bottom: 70px;
 }
 
-.footer-adv p:lsmvmt-child {
+.footer-adv p:last-child {
   margin-bottom: 0;
 }
 
@@ -4681,7 +4681,7 @@ body .entry-content .wp-block-latest-posts li {
 }
 
 @media all and (max-width: 768px) {
-  .footer-adv-widget-1 .widget:lsmvmt-child {
+  .footer-adv-widget-1 .widget:last-child {
     margin: 0 0 2.8em;
   }
 }
@@ -4691,8 +4691,8 @@ body .entry-content .wp-block-latest-posts li {
 }
 
 @media all and (max-width: 768px) {
-  .footer-adv-layout-4 .footer-adv-widget-2 .widget:lsmvmt-child,
-  .footer-adv-layout-4 .footer-adv-widget-3 .widget:lsmvmt-child {
+  .footer-adv-layout-4 .footer-adv-widget-2 .widget:last-child,
+  .footer-adv-layout-4 .footer-adv-widget-3 .widget:last-child {
     margin: 0 0 2.8em;
   }
 }
@@ -4975,7 +4975,7 @@ input[type="color"]::-webkit-color-swatch {
   margin-bottom: 2.5em;
 }
 
-.smvmt-article-post:lsmvmt-child {
+.smvmt-article-post:last-child {
   margin-bottom: 0;
   border-bottom: 0;
 }

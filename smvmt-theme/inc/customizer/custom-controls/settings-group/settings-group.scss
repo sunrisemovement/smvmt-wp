@@ -115,7 +115,7 @@
       &:first-child {
         border-radius: 3px 0px 0px 3px;
       }
-      &:lsmvmt-child {
+      &:last-child {
         border-radius: 0px 3px 3px 0px;
       }
       align-items: center;
@@ -176,7 +176,7 @@
 	margin-top: 0;
 }
 
-.smvmt-field-settings-modal .customize-control:lsmvmt-child {
+.smvmt-field-settings-modal .customize-control:last-child {
 	padding-bottom: 15px
 }
 

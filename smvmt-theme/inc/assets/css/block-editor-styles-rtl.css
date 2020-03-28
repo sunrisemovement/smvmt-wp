@@ -95,7 +95,7 @@ html {
   position: relative;
 }
 
-.edit-post-visual-editor blockquote p:lsmvmt-child {
+.edit-post-visual-editor blockquote p:last-child {
   margin: 0;
 }
 

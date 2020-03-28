@@ -5,7 +5,7 @@
  * @package     Astra
  * @author      Brainstorm Force
  * @copyright   Copyright (c) 2020, Astra
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       1.4.3
  */
 

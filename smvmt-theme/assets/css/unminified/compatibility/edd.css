@@ -1126,7 +1126,7 @@ a.edd-add-to-cart .edd-add-to-cart-label, .edd-loading {
   margin-bottom: 5px;
 }
 
-#edd_checkout_wrap fieldset > p:lsmvmt-child {
+#edd_checkout_wrap fieldset > p:last-child {
   padding-bottom: 15px;
 }
 
@@ -1279,11 +1279,11 @@ a.edd-add-to-cart .edd-add-to-cart-label, .edd-loading {
   padding: 0;
 }
 
-.edd-alert p:not(:lsmvmt-child) {
+.edd-alert p:not(:last-child) {
   margin-bottom: 5px;
 }
 
-.edd-alert p:lsmvmt-child {
+.edd-alert p:last-child {
   margin-bottom: 0;
 }
 

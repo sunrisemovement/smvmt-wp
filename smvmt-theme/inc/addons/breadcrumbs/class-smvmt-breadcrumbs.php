@@ -79,7 +79,7 @@ if ( ! class_exists( 'SMVMT_Breadcrumbs' ) ) {
 			}
 
 			if ( function_exists( 'yoast_breadcrumb' ) && true === $wpseo_option['breadcrumbs-enable'] ) {
-				$options['yosmvmt-seo-breadcrumbs'] = 'Yoast SEO Breadcrumbs';
+				$options['yoast-seo-breadcrumbs'] = 'Yoast SEO Breadcrumbs';
 			}
 
 			if ( function_exists( 'bcn_display' ) ) {

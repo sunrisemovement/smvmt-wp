@@ -31,7 +31,7 @@
   margin-left: -1em;
 }
 
-.below-header-nav-padding-support .below-header-section-1 .smvmt-below-header-menu > li:lsmvmt-child > a {
+.below-header-nav-padding-support .below-header-section-1 .smvmt-below-header-menu > li:last-child > a {
   padding-right: 0;
 }
 

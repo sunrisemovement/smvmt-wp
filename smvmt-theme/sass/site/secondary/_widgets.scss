@@ -7,7 +7,7 @@
 .widget {
 	margin: 0 0 2.8em 0;
 
-	&:lsmvmt-child {
+	&:last-child {
 		margin-bottom: 0;
 	}
 
@@ -208,7 +208,7 @@
 				padding: 2em;
 				margin-bottom: 2em;
 				@media (min-width: $col-md) {
-					&:lsmvmt-child{
+					&:last-child{
 						margin-bottom: 0;
 					}
 				}

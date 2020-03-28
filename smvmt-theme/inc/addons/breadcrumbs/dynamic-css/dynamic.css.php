@@ -50,7 +50,7 @@ function SMVMT_breadcrumb_section_dynamic_css( $dynamic_css, $dynamic_css_filter
 				'padding' => '0 0.3em',
 				'content' => '"\00bb"',
 			),
-			'.trail-items li:lsmvmt-of-type::after' => array(
+			'.trail-items li:last-of-type::after' => array(
 				'display' => 'none',
 			),
 		),
@@ -121,7 +121,7 @@ function SMVMT_breadcrumb_section_dynamic_css( $dynamic_css, $dynamic_css_filter
 	/**
 	 * Breadcrumb Colors & Typography
 	 */
-	if ( function_exists( 'yoast_breadcrumb' ) && true === $wpseo_option['breadcrumbs-enable'] && $breadcrumb_source && 'yosmvmt-seo-breadcrumbs' == $breadcrumb_source ) {
+	if ( function_exists( 'yoast_breadcrumb' ) && true === $wpseo_option['breadcrumbs-enable'] && $breadcrumb_source && 'yoast-seo-breadcrumbs' == $breadcrumb_source ) {
 
 		/* Yoast SEO Breadcrumb CSS - Desktop */
 		$breadcrumbs_desktop = array(

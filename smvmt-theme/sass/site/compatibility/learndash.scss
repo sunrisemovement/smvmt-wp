@@ -258,7 +258,7 @@ body {
 				padding: 15px;
 				position: relative;
 
-				*:lsmvmt-child {
+				*:last-child {
 					margin-bottom: 0;
 				}
 
@@ -697,7 +697,7 @@ body {
 				overflow: hidden;
 
 				> li {
-					&:lsmvmt-child a {
+					&:last-child a {
 						border-bottom: none;
 					}
 
@@ -776,12 +776,12 @@ body {
 			&[data-type="single"],
 			&[data-type="multiple"] {
 				.wpProQuiz_answerIncorrect,
-				.wpProQuiz_answerIncorrect:lsmvmt-child {
+				.wpProQuiz_answerIncorrect:last-child {
 					color: #ff0000;
 				}
 
 				.wpProQuiz_questionListItem,
-				.wpProQuiz_questionListItem:lsmvmt-child {
+				.wpProQuiz_questionListItem:last-child {
 					padding: 0 10px;
 					input {
 						margin-right: 5px;
@@ -793,14 +793,14 @@ body {
 				.wpProQuiz_answerCorrect {
 
 					&,
-					&:lsmvmt-child {
+					&:last-child {
 						padding: 5px 10px;
 						background: none;
 					}
 				}
 
 				.wpProQuiz_answerCorrect,
-				.wpProQuiz_answerCorrect:lsmvmt-child {
+				.wpProQuiz_answerCorrect:last-child {
 					background-color: #6db46d;
 					color: #fff;
 				}
@@ -826,7 +826,7 @@ body {
 				background: #fff;
 
 				.wpProQuiz_questionListItem,
-				.wpProQuiz_questionListItem:lsmvmt-child {
+				.wpProQuiz_questionListItem:last-child {
 					padding: 0;
 					font-weight: 600;
 				}
@@ -869,7 +869,7 @@ body {
 			&[data-type="matrix_sort_answer"] {
 
 				.wpProQuiz_questionListItem,
-				.wpProQuiz_questionListItem:lsmvmt-child {
+				.wpProQuiz_questionListItem:last-child {
 					padding: 0;
 
 				}
@@ -948,7 +948,7 @@ body {
 					padding-bottom: 5px;
 				}
 
-				> p:lsmvmt-child {
+				> p:last-child {
 					margin-bottom: .5em;
 				}
 
@@ -996,7 +996,7 @@ body {
 			color: #ff0000;
 			background: rgba(255, 0, 0, 0.2);
 
-			p:lsmvmt-child{
+			p:last-child{
 				margin-bottom: 0;
 			}
 		}
@@ -1006,13 +1006,13 @@ body {
 			color: #6db46d;
 			background: rgba(109, 180, 109, .2);
 
-			p:lsmvmt-child{
+			p:last-child{
 				margin-bottom: 0;
 			}
 		}
 
 		.wpProQuiz_questionListItem,
-		.wpProQuiz_questionListItem:lsmvmt-child {
+		.wpProQuiz_questionListItem:last-child {
 			input {
 				background: #fff;
 			}

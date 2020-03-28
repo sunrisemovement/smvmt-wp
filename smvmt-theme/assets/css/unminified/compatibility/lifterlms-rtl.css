@@ -27,7 +27,7 @@
   padding-bottom: 0.5em;
 }
 
-.widget .llms-widget-syllabus .llms-section:lsmvmt-child {
+.widget .llms-widget-syllabus .llms-section:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -356,11 +356,11 @@ body #old_reviews .llms_review {
   margin: 20px 0px;
 }
 
-body #old_reviews .llms_review:lsmvmt-of-type {
+body #old_reviews .llms_review:last-of-type {
   margin-bottom: 2em;
 }
 
-body #old_reviews .llms_review p:lsmvmt-child {
+body #old_reviews .llms_review p:last-child {
   margin-bottom: 0;
 }
 
@@ -368,7 +368,7 @@ body #old_reviews .llms_review h5 {
   margin-bottom: 5px;
 }
 
-body #old_reviews:lsmvmt-child .llms_review:lsmvmt-of-type {
+body #old_reviews:last-child .llms_review:last-of-type {
   margin-bottom: 0;
 }
 
@@ -754,7 +754,7 @@ body .llms-loop-item-content .llms-progress-bar .progress-bar-complete {
   margin-right: calc(1em + 5px);
 }
 
-.lifterlms .llms-checkout-wrapper .llms-payment-gateways li:lsmvmt-child:after {
+.lifterlms .llms-checkout-wrapper .llms-payment-gateways li:last-child:after {
   margin: 10px auto;
 }
 

@@ -103,14 +103,14 @@ input[type="text"] {
 
 /* Firefox Browser specific CSS */
 @-moz-document url-prefix() {
-    .control-section.open .customize-control:lsmvmt-child {
+    .control-section.open .customize-control:last-child {
         margin-bottom: 20px;
     }
 }
 
 /* IE Browser specific CSS */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    .control-section.open .customize-control:lsmvmt-child {
+    .control-section.open .customize-control:last-child {
         padding-bottom: 20px;
     }
     #customize-control-smvmt-settings-blog-archive-image-width .customize-control-title, #customize-control-smvmt-settings-blog-archive-image-height .customize-control-title, #customize-control-smvmt-settings-blog-single-post-image-width .customize-control-title, #customize-control-smvmt-settings-blog-single-post-image-height .customize-control-title {

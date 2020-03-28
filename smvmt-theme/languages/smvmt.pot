@@ -1240,7 +1240,7 @@ msgstr ""
 #: inc/core/class-smvmt-admin-settings.php:250
 msgid ""
 "Did you know smvmt comes with dozens of ready-to-use <a "
-"href=\"https://wpsmvmt.com/ready-websites/?utm_source=install-notice\""
+"href=\"https://smvmt.org/ready-websites/?utm_source=install-notice\""
 ">starter templates</a>? Install the Starter Templates plugin to get started."
 msgstr ""
 
@@ -2541,7 +2541,7 @@ msgid "Continue reading %s"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://wpsmvmt.com/"
+msgid "https://smvmt.org/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -2566,7 +2566,7 @@ msgid "Brainstorm Force"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://wpsmvmt.com/about/"
+msgid "https://smvmt.org/about/"
 msgstr ""
 
 #: comments.php:40

@@ -129,14 +129,14 @@
 			if ( null != top_menu_toggle ) {
 				top_menu_toggle.classList.remove( 'toggled' );
 			}
-			var ast_above_header 	 = document.querySelector( '.smvmt-above-header' );
+			var smvmt_above_header 	 = document.querySelector( '.smvmt-above-header' );
 
-			if ( null != ast_above_header ) {
-				ast_above_header.classList.remove( 'toggle-on' );
+			if ( null != smvmt_above_header ) {
+				smvmt_above_header.classList.remove( 'toggle-on' );
 
-				var ast_above_header_nav = document.querySelector( '.smvmt-above-header-navigation' );
-				if ( null != ast_above_header_nav ) {
-					ast_above_header_nav.style.display = '';
+				var smvmt_above_header_nav = document.querySelector( '.smvmt-above-header-navigation' );
+				if ( null != smvmt_above_header_nav ) {
+					smvmt_above_header_nav.style.display = '';
 				}
 			}
 

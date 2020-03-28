@@ -9,7 +9,7 @@
 }
 
 .footer-adv {
-	p:lsmvmt-child {
+	p:last-child {
 	  	margin-bottom: 0;
 	}
 	.widget_calendar{
@@ -21,7 +21,7 @@
 
 @media all and (max-width : $mx-col-md) {
 	.footer-adv-widget-1 {
-		.widget:lsmvmt-child {
+		.widget:last-child {
 		  	margin: 0 0 2.8em;
 		}
 	}

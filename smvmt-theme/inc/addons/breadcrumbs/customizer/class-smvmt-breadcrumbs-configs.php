@@ -56,7 +56,7 @@ if ( ! class_exists( 'SMVMT_Breadcrumbs_Configs' ) ) {
 								array(
 									'text'  => __( 'Breadcrumb Overview', 'smvmt' ) . ' &#187;',
 									'attrs' => array(
-										'href' => smvmt_get_pro_url( 'https://wpsmvmt.com/docs/add-breadcrumbs-with-smvmt/', 'customizer', 'sidebar', 'helpful-information' ),
+										'href' => smvmt_get_pro_url( 'https://smvmt.org/docs/add-breadcrumbs-with-smvmt/', 'customizer', 'sidebar', 'helpful-information' ),
 									),
 								),
 							),
@@ -332,7 +332,7 @@ if ( ! class_exists( 'SMVMT_Breadcrumbs_Configs' ) ) {
 				);
 			}
 
-			if ( function_exists( 'yoast_breadcrumb' ) && true === $wpseo_option['breadcrumbs-enable'] && 'yosmvmt-seo-breadcrumbs' === $selected_breadcrumb_source ) {
+			if ( function_exists( 'yoast_breadcrumb' ) && true === $wpseo_option['breadcrumbs-enable'] && 'yoast-seo-breadcrumbs' === $selected_breadcrumb_source ) {
 				// Check if breadcrumb is turned on from SEO Yoast plugin.
 				return false;
 			} elseif ( function_exists( 'bcn_display' ) && 'breadcrumb-navxt' === $selected_breadcrumb_source ) {

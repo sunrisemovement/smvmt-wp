@@ -5,7 +5,7 @@
  * @package     Astra
  * @author      Astra
  * @copyright   Copyright (c) 2020, Astra
- * @link        https://wpsmvmt.com/
+ * @link        https://smvmt.org/
  * @since       Astra 1.0.0
  */
 

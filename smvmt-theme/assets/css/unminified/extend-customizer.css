@@ -4,7 +4,7 @@
 }
 
 /* Nested Customizer Section CSS */
-#customize-controls .control-section.control-section-ast_section .accordion-section-title {
+#customize-controls .control-section.control-section-smvmt_section .accordion-section-title {
     color: #555d66;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -12,22 +12,22 @@
     transition: .15s color ease-in-out, .15s background-color ease-in-out, .15s border-color ease-in-out;
 }
 
-#customize-controls .control-section.control-section-ast_section .accordion-section-title:after {
+#customize-controls .control-section.control-section-smvmt_section .accordion-section-title:after {
     color: #a0a5aa;
 }
 
-#customize-controls .control-section.control-section-ast_section .accordion-section-title:hover,
-#customize-controls .control-section.control-section-ast_section .accordion-section-title:focus {
+#customize-controls .control-section.control-section-smvmt_section .accordion-section-title:hover,
+#customize-controls .control-section.control-section-smvmt_section .accordion-section-title:focus {
     color: #0073aa;
     background: #f3f3f5;
     border-left-color: #0073aa;
 }
 
-#customize-controls .control-section.control-section-ast_section .accordion-section-title:hover:after {
+#customize-controls .control-section.control-section-smvmt_section .accordion-section-title:hover:after {
     color: #0073aa;
 }
 
-#customize-controls .control-section-ast_section .accordion-section {
+#customize-controls .control-section-smvmt_section .accordion-section {
     margin-left: -12px;
     margin-right: -12px;
 }
@@ -43,7 +43,7 @@
     list-style-type: none;
 }
 
-.customize-section-description .smvmt-section-description ul > li:lsmvmt-child {
+.customize-section-description .smvmt-section-description ul > li:last-child {
     margin-bottom: 0;
 }
 
@@ -58,6 +58,6 @@
     border-bottom-color: inherit;
 }
 
-#customize-controls .control-section-ast_section .customize-info .customize-section-description {
+#customize-controls .control-section-smvmt_section .customize-info .customize-section-description {
     margin-bottom: 0;
 }

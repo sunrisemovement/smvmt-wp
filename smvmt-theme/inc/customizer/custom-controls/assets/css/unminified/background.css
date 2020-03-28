@@ -39,7 +39,7 @@
   transition: background-color 140ms linear;
 }
 
-.customize-control-smvmt-background .background-attachment .buttonset .switch-label:lsmvmt-child, .customize-control-smvmt-background .background-size .buttonset .switch-label:lsmvmt-child {
+.customize-control-smvmt-background .background-attachment .buttonset .switch-label:last-child, .customize-control-smvmt-background .background-size .buttonset .switch-label:last-child {
   margin-right: 0;
 }
 
